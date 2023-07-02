@@ -8,6 +8,7 @@
     --very-light-pink: #c7c7c7;
     --text-input-field: #f7f7f7;
     --hospital-green: #ACD9B2;
+    --deep-ocean: #0a0e16;
     --sm: 14px;
     --md: 16px;
     --lg: 18px;
@@ -34,7 +35,7 @@ ul, li {
 
 footer{
     height: 100px;
-    background-color: var(--hospital-green);
+    background-color: var(--deep-ocean);
     display: flex;
     position: relative;
     justify-content: center;
