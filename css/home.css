@@ -1,3 +1,4 @@
+/* Ajustes generales */
 *{
     margin: 0;
     box-sizing: border-box;
@@ -34,7 +35,7 @@ ul, li {
     margin: 0; 
 }
   
-
+/* Cabezera y barra de navegacion */
 .navBar{
     background-color: var(--deep-ocean);
     position: relative;
@@ -71,7 +72,6 @@ ul, li {
 .second_nav{
     display: flex;
 }
-
 .into_btn{
     padding: 10px;
 }
@@ -92,6 +92,7 @@ ul, li {
     top: 0;
     margin-right: 10px;
 }
+/* Barra de navegacion secundaria */
 nav{
     height: 20px;
     background-color: var(--hospital-green-black);
@@ -101,6 +102,8 @@ nav a{
     font-size: var(--sm);
     color: var(--white);
 }
+
+/* Landscape pricipal  */
 .landscape{
     background-image: url('../multimedia/landscape_home_auto_x2.jpg');
     background-repeat: no-repeat;
@@ -122,6 +125,8 @@ nav a{
     background-color: #00000081; 
     border-radius: 20px;
 }
+
+/* Barra de busqueda */
 .land_busqueda{
     margin-top: 50px;
 }
@@ -158,6 +163,7 @@ nav a{
     color: var(--white)
 }
 
+/* Seccion de funcionalidades */
 .funcionalidades{
     background-image: linear-gradient(to bottom, #0a0e16, #182735, #1b4255, #136073, #007f8c);
 }
@@ -166,7 +172,6 @@ nav a{
     font-size: var(--mmd);
     color: var(--white);
 }
- 
 .funcionalidades .fun_cards{
     display: flex;
     flex-direction: row;
@@ -179,6 +184,8 @@ nav a{
     border: 1px solid var(--black);
     border-radius: 20px;
     margin: 20px;
+    width: 254px;
+    position: relative;
     box-shadow: 16px 12px 16px 4px rgba(0,0,0,0.75);
     -webkit-box-shadow: 16px 12px 16px 4px rgba(0,0,0,0.75);
     -moz-box-shadow: 16px 12px 16px 4px rgba(0,0,0,0.75);
@@ -187,9 +194,12 @@ nav a{
     box-shadow: -2px 1px 43px 5px rgba(20,224,73,0.78);
     -webkit-box-shadow: -2px 1px 43px 5px rgba(20,224,73,0.78);
     -moz-box-shadow: -2px 1px 43px 5px rgba(20,224,73,0.78);
+    
 }
 .funcionalidades .fun_cards .cards_into img{
     position: relative;
+    width: 250px;
+    height: 250px;
 }
 .cards_info{
     background-color: var(--hospital-green-black);
@@ -203,6 +213,22 @@ nav a{
 .cards_info p{
     color: var(--white);
 }
+.fun_extra_info{
+    position: absolute;
+    background-color: rgba(2, 49, 8, 0.609);
+    height: 255px;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    color: var(--white);
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.fun_extra_info:hover{
+    opacity: 1;
+}
+
+/* Seccion de ejemplos */
 .ejemplos{
     background-image: url('../multimedia/fondo_ejem.png');
     background-repeat: no-repeat;
@@ -233,7 +259,7 @@ nav a{
     padding-bottom: 20px;
 }
 
-
+/* Seccion de footer */
 footer{
     height: 100px;
     background-color: var(--deep-ocean);
