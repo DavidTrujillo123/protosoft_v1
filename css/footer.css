@@ -11,6 +11,9 @@
     --sm: 14px;
     --md: 16px;
     --lg: 18px;
+    --ssm: 24px;
+    --mmd: 28px;
+    --llg: 32px;
 }
 body{
     font-family: 'Quicksand', sans-serif;

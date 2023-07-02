@@ -8,9 +8,14 @@
     --very-light-pink: #c7c7c7;
     --text-input-field: #f7f7f7;
     --hospital-green: #ACD9B2;
+    --hospital-green-black: #3bdb50;
+    --deep-ocean: #0a0e16;
     --sm: 14px;
     --md: 16px;
     --lg: 18px;
+    --ssm: 24px;
+    --mmd: 28px;
+    --llg: 32px;
 }
 body{
     font-family: 'Quicksand', sans-serif;
@@ -31,7 +36,7 @@ ul, li {
   
 
 .navBar{
-    background-color: var(--white);
+    background-color: var(--deep-ocean);
     position: relative;
     display: flex;
     border-bottom: 1px solid var(--very-light-pink);
@@ -43,9 +48,12 @@ ul, li {
     height: 70px;
     align-items: center;
 }
+.navBar .logo p{
+    color: var(--white);
+}
 .navBar .logo span{
     font-weight: bold;
-    color: var(--hospital-green);
+    color: var(--hospital-green-black);
 }
 .navBar .logo img{
     height: 70px;
@@ -60,7 +68,7 @@ ul, li {
     align-items: center;
     height: 70px;
 }
-.nav{
+.second_nav{
     display: flex;
 }
 
@@ -71,11 +79,11 @@ ul, li {
     color: var(--very-light-pink);
 }
 .into_btn a:hover{
-    color: var(--hospital-green);
+    color: var(--hospital-green-black);
     font-weight: bold;
 }
 .into_btn:hover{
-    border: 2px solid var(--hospital-green);
+    border: 2px solid var(--hospital-green-black);
     border-radius: 10px;
 }
 .perfil{
@@ -84,4 +92,13 @@ ul, li {
     top: 0;
     margin-right: 10px;
 }
+nav{
+    height: 20px;
+    background-color: var(--hospital-green-black);
 
+}
+nav a{
+    padding-left: 20px;
+    font-size: var(--sm);
+    color: var(--white);
+}
