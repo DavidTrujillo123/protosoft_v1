@@ -42,6 +42,9 @@ header{
     width: 100%;
     z-index: 2;
 }
+.hamburgesa_menu{
+    display: none;
+}
 /* Cabezera y barra de navegacion */
 .navBar{
     background-color: var(--deep-ocean);
@@ -75,10 +78,13 @@ header{
     display: flex;
     align-items: center;
     height: 70px;
+    position: relative;
+    width: 100%;
 }
 .second_nav{
     display: flex;
 }
+
 .into_btn{
     padding: 10px;
 }
@@ -96,13 +102,13 @@ header{
 .perfil{
     position: absolute;
     right:0;
-    top: 0;
     margin-right: 10px;
 }
 /* Barra de navegacion secundaria */
 nav{
     height: 20px;
     background-color: var(--hospital-green-black);
+
 }
 nav a{
     padding-left: 20px;
@@ -266,7 +272,10 @@ nav a{
     align-items: center;
     padding-bottom: 20px;
 }
-
+.ejemplos .video_ejem iframe{
+    width: 942px;
+    height: 530px;
+}
 /* Seccion de footer */
 footer{
     height: 100px;
@@ -307,4 +316,75 @@ footer{
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+
+/* Mobile */
+@media (max-width:716px) {
+    :root{
+        --sm: 12px;
+        --md: 14px;
+        --lg: 16px;
+        --ssm: 18px;
+        --mmd: 22px;
+        --llg: 24px;
+    }
+    .general_nav{
+        display: inline-block;
+        position: absolute;
+        background-color: var(--deep-ocean);
+        top: 90px;
+        left: 0;
+        height: 300px;
+        width: 200px;
+        padding: 20px;
+        margin-bottom: 10px;
+        border: 1px solid var(--hospital-green-black);
+        border-radius: 0 0 20px 0;
+    }
+    .inactive{
+        display: none !important;
+    }
+    .second_nav{
+        display: inline-block;
+    }
+    .opciones{
+        display: block;
+        margin: 0;
+    }
+    .perfil{
+        display: inline-block;
+        position: absolute;
+        bottom: 20px;
+        right: auto;
+        border-top: 1px solid black;
+    }
+    .navBar{
+        justify-content: center;
+        align-items: center;
+        /* position: relative; */
+    }
+    .hamburgesa_menu{
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        width: 30px;
+        margin-left: 20px;
+    }
+
+    .landscape h1{
+        text-align: center;
+        padding: 50px 0 0 0;
+    }
+    .landscape p{
+        margin: 38px;
+    }
+    .subtitle{
+        text-align: center;
+        padding: 20px 0 0px 0px;
+    }
+    .ejemplos .video_ejem iframe{
+        width: 350px;
+        height: 200px;
+    }
 }
