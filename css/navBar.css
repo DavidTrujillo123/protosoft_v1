@@ -36,7 +36,7 @@ ul, li {
   
 
 .navBar{
-    background-color: var(--black);
+    background-color: var(--white);
     position: relative;
     display: flex;
     border-bottom: 1px solid var(--very-light-pink);
