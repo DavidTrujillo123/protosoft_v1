@@ -35,6 +35,13 @@ ul, li {
     margin: 0; 
 }
   
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
 /* Cabezera y barra de navegacion */
 .navBar{
     background-color: var(--deep-ocean);
@@ -114,6 +121,7 @@ nav a{
 .landscape h1{
     color: var(--white);
     font-size: var(--llg);
+    margin-top: 90px;
     padding: 50px 0 0 100px;
 }
 .landscape p{
