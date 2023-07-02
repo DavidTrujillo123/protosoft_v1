@@ -111,10 +111,6 @@ nav a{
     font-size: var(--sm);
     color: var(--white);
 }
-.borrar{
-    height: 2000px;
-    background-color: red;
-}
 
 @media (max-width:716px) {
     .general_nav{
@@ -129,6 +125,9 @@ nav a{
         margin-bottom: 10px;
         border: 1px solid var(--hospital-green-black);
         border-radius: 0 0 20px 0;
+    }
+    .inactive{
+        display: none !important;
     }
     .second_nav{
         display: inline-block;
