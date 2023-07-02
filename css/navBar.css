@@ -36,7 +36,7 @@ ul, li {
   
 
 .navBar{
-    background-color: var(--white);
+    background-color: var(--deep-ocean);
     position: relative;
     display: flex;
     border-bottom: 1px solid var(--very-light-pink);
@@ -101,4 +101,19 @@ nav a{
     padding-left: 20px;
     font-size: var(--sm);
     color: var(--white);
+}
+.borrar{
+    height: 2000px;
+    background-color: red;
+}
+
+@media (max-width:716px) {
+    .general_nav{
+        display: none;
+    }
+    .navBar{
+        justify-content: center;
+        align-items: center;
+    }
+    
 }
