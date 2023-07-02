@@ -111,11 +111,11 @@ nav a{
 .landscape h1{
     color: var(--white);
     font-size: var(--llg);
-    padding: 100px 0 0 100px;
+    padding: 50px 0 0 100px;
 }
 .landscape p{
     /* ojo */
-    margin: 50px 100px 10px 200px;
+    margin: 50px 120px 10px 120px;
     padding: 20px;
     font-size: var(--md);
     color: var(--white);
@@ -144,6 +144,7 @@ nav a{
 }
 .land_btn_buscar img{
     height: 20px;
+    padding-left: 10px;
 }
 .buscar_btn{
     display: flex;
@@ -151,6 +152,10 @@ nav a{
     justify-content: center;
     background-color: var(--hospital-green-black);
     border-radius: 0 20px 20px 0;
+    font-size: var(--sm);
+    
+    font-family: 'Quicksand', sans-serif;
+    color: var(--white)
 }
 
 .funcionalidades{
@@ -175,8 +180,13 @@ nav a{
     border-radius: 20px;
     margin: 20px;
     box-shadow: 16px 12px 16px 4px rgba(0,0,0,0.75);
--webkit-box-shadow: 16px 12px 16px 4px rgba(0,0,0,0.75);
--moz-box-shadow: 16px 12px 16px 4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 16px 12px 16px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 16px 12px 16px 4px rgba(0,0,0,0.75);
+}
+.funcionalidades .fun_cards .cards_into:hover{
+    box-shadow: -2px 1px 43px 5px rgba(20,224,73,0.78);
+    -webkit-box-shadow: -2px 1px 43px 5px rgba(20,224,73,0.78);
+    -moz-box-shadow: -2px 1px 43px 5px rgba(20,224,73,0.78);
 }
 .funcionalidades .fun_cards .cards_into img{
     position: relative;
@@ -193,15 +203,11 @@ nav a{
 .cards_info p{
     color: var(--white);
 }
-
 .ejemplos{
-    
     background-image: url('../multimedia/fondo_ejem.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    
-    
+    background-position: center;  
 }
 .ejem_cards{
     display: flex;
@@ -219,7 +225,13 @@ nav a{
     background-color: var(--hospital-green-black);
     color: var(--white);
 }
-
+.ejemplos .video_ejem{
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
 
 
 footer{
