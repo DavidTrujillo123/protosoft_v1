@@ -122,12 +122,16 @@ nav a{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 .landscape h1{
     color: var(--white);
     font-size: var(--llg);
-    margin-top: 90px;
+    /* margin-top: 90px; */
     padding: 50px 0 0 100px;
 }
 .landscape p{
@@ -192,7 +196,6 @@ nav a{
     align-items: center;
     flex-wrap: wrap;
     padding-bottom: 48px;
-    height: auto;
 }
 .funcionalidades .fun_cards .cards_into{
     border: 1px solid var(--black);
@@ -284,7 +287,6 @@ nav a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
 }
 .unete_container h2{
     margin-bottom: 40px;
@@ -395,6 +397,11 @@ footer{
         margin-left: 20px;
     }
 
+    .landscape{
+        display: block;
+        height: 500px;
+        margin-top: 90px;
+    }
     .landscape h1{
         text-align: center;
         padding: 50px 0 0 0;
