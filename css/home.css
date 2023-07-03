@@ -387,4 +387,23 @@ footer{
         width: 350px;
         height: 200px;
     }
+
+
+    @media (max-width:716px) {
+        footer{
+            height: auto;
+            align-items: center;    
+        }
+        .footer_logo img {
+            height: 115px;
+            left: 0px;
+            top: 0;
+        }
+        .footer_info ul {
+            display: block;
+        }
+        .footer_redes {
+            bottom: auto;
+        }
+    }
 }
