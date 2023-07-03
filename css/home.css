@@ -179,7 +179,7 @@ nav a{
 
 /* Seccion de funcionalidades */
 .funcionalidades{
-    background-image: linear-gradient(to bottom, #0a0e16, #182735, #1b4255, #136073, #007f8c);
+    background-image: linear-gradient(to bottom, #0a0e16, #182735, #1b4255, #136073, #007f8c); 
 }
 .subtitle{
     padding: 50px 0 0px 100px;
@@ -188,11 +188,11 @@ nav a{
 }
 .funcionalidades .fun_cards{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding-bottom: 48px;
+    height: auto;
 }
 .funcionalidades .fun_cards .cards_into{
     border: 1px solid var(--black);
@@ -276,6 +276,29 @@ nav a{
     width: 942px;
     height: 530px;
 }
+/* Seccion de unete */
+.unete_container{
+    height: 400px;
+    background-image: linear-gradient(to bottom, #0a0e16, #182735, #1b4255, #136073, #007f8c);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.unete_container h2{
+    margin-bottom: 40px;
+}
+.primary_btn{
+    height: 65px;
+    width: 250px;
+    border-radius: 20px;
+    background-color: var(--hospital-green-black);
+    color: var(--white);
+    font-size: var(--md);
+    font-weight: bold;
+}
+
 /* Seccion de footer */
 footer{
     height: 100px;
@@ -383,27 +406,25 @@ footer{
         text-align: center;
         padding: 20px 0 0px 0px;
     }
+
     .ejemplos .video_ejem iframe{
         width: 350px;
         height: 200px;
     }
 
-
-    @media (max-width:716px) {
-        footer{
-            height: auto;
-            align-items: center;    
-        }
-        .footer_logo img {
-            height: 115px;
-            left: 0px;
-            top: 0;
-        }
-        .footer_info ul {
-            display: block;
-        }
-        .footer_redes {
-            bottom: auto;
-        }
+    footer{
+        height: auto;
+        align-items: center;    
+    }
+    .footer_logo img {
+        height: 115px;
+        left: 0px;
+        top: 0;
+    }
+    .footer_info ul {
+        display: block;
+    }
+    .footer_redes {
+        bottom: auto;
     }
 }
