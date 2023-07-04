@@ -99,6 +99,14 @@ header{
     border: 2px solid var(--hospital-green-black);
     border-radius: 10px;
 }
+.into_btn:nth-child(3){
+    border: 2px solid var(--hospital-green-black);
+    border-radius: 10px;
+}
+.into_btn:nth-child(3) a{
+    color: var(--hospital-green-black);
+    font-weight: bold;
+}
 .perfil{
     position: absolute;
     right:0;
