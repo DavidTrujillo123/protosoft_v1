@@ -383,7 +383,7 @@ footer{
         position: absolute;
         bottom: 20px;
         right: auto;
-        border-top: 1px solid black;
+        border-top: 1px solid var(--hospital-green-black);
     }
     .navBar{
         justify-content: center;
@@ -422,7 +422,8 @@ footer{
 
     footer{
         height: auto;
-        align-items: center;    
+        align-items: center;   
+        text-align: center; 
     }
     .footer_logo img {
         height: 115px;
