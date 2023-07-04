@@ -1,0 +1,295 @@
+/* Ajustes generales */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-pink: #c7c7c7;
+    --text-input-field: #f7f7f7;
+    --hospital-green: #ACD9B2;
+    --hospital-green-black: #3bdb50;
+    --deep-ocean: #0a0e16;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --ssm: 24px;
+    --mmd: 28px;
+    --llg: 32px;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+a {
+    color: #000; 
+    text-decoration: none; 
+}
+a:hover {
+    text-decoration: none;
+}
+ul, li {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+  
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+.hamburgesa_menu{
+    display: none;
+}
+/* Cabezera y barra de navegacion */
+.navBar{
+    background-color: var(--deep-ocean);
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid var(--very-light-pink);
+    height: 70px;
+    width: auto;
+}
+.navBar .logo{
+    display: flex;
+    height: 70px;
+    align-items: center;
+}
+.navBar .logo p{
+    color: var(--white);
+}
+.navBar .logo span{
+    font-weight: bold;
+    color: var(--hospital-green-black);
+}
+.navBar .logo img{
+    height: 70px;
+    position: relative;
+}
+.opciones{
+    margin-left: 32px;
+    width: auto;
+}
+.general_nav{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    position: relative;
+    width: 100%;
+}
+.second_nav{
+    display: flex;
+}
+
+.into_btn{
+    padding: 10px;
+}
+.into_btn a{
+    color: var(--very-light-pink);
+}
+.into_btn a:hover{
+    color: var(--hospital-green-black);
+    font-weight: bold;
+}
+.into_btn:hover{
+    border: 2px solid var(--hospital-green-black);
+    border-radius: 10px;
+}
+.perfil{
+    position: absolute;
+    right:0;
+    margin-right: 10px;
+}
+/* Barra de navegacion secundaria */
+nav{
+    height: 20px;
+    background-color: var(--hospital-green-black);
+
+}
+nav a:nth-child(1){
+    padding-left: 20px;
+    color: var(--deep-ocean);
+}
+nav a{
+    display: inline-block;
+    font-size: var(--sm);
+    color: var(--white);
+}
+
+
+/* Landscape pricipal  */
+.landscape{
+    background-image: url('../multimedia/f_vision-transformed\ \(2\).png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.landscape:nth-child(2){
+    background-image: url('../multimedia/100ntificos-transformed.png');
+}
+
+
+.landscape h1{
+    color: var(--hospital-green-black);
+    background-color: #000000b6;
+    border-radius: 20px;
+    font-size: var(--llg);
+    width: 138px;
+    margin: 0px 0 0 100px;
+    padding: 20px;
+}
+.landscape:nth-child(3) h1{
+    width: 156px;
+}
+.landscape p{
+    /* ojo */
+    margin: 50px 120px 10px 120px;
+    padding: 20px;
+    font-size: var(--md);
+    color: var(--white);
+    background-color: #00000081; 
+    border-radius: 20px;
+}
+
+
+
+/* Seccion de footer */
+footer{
+    height: 100px;
+    background-color: var(--deep-ocean);
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.footer_logo img{
+    height: 100px;
+    position: absolute;
+    left: 0;
+}
+.footer_central_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer_info ul{
+    display: flex;
+    
+}
+.footer_info ul li{
+    padding: 20px;
+}
+.footer_info ul li a{
+    color: var(--white);
+}
+.footer_add_info p{
+    color: var(--white);
+}
+.footer_redes{
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+/* Mobile */
+@media (max-width:716px) {
+    :root{
+        --sm: 12px;
+        --md: 14px;
+        --lg: 16px;
+        --ssm: 18px;
+        --mmd: 22px;
+        --llg: 24px;
+    }
+    .general_nav{
+        display: inline-block;
+        position: absolute;
+        background-color: var(--deep-ocean);
+        top: 90px;
+        left: 0;
+        height: 300px;
+        width: 200px;
+        padding: 20px;
+        margin-bottom: 10px;
+        border: 1px solid var(--hospital-green-black);
+        border-radius: 0 0 20px 0;
+    }
+    .inactive{
+        display: none !important;
+    }
+    .second_nav{
+        display: inline-block;
+    }
+    .opciones{
+        display: block;
+        margin: 0;
+    }
+    .perfil{
+        display: inline-block;
+        position: absolute;
+        bottom: 20px;
+        right: auto;
+        border-top: 1px solid black;
+    }
+    .navBar{
+        justify-content: center;
+        align-items: center;
+        /* position: relative; */
+    }
+    .hamburgesa_menu{
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        width: 30px;
+        margin-left: 20px;
+    }
+
+    .landscape{
+        height: auto;
+        padding: 90px 0 20px 0 ;
+        align-items: center;
+    }
+    .landscape h1{
+        text-align: center;
+        margin: 0;
+    }
+    .landscape:nth-child(1) h1{
+        margin-top: 24px;
+    }
+    .landscape p{
+        margin: 38px 38px 0 38px;
+    }
+
+
+    
+
+    footer{
+        height: auto;
+        align-items: center;    
+    }
+    .footer_logo img {
+        height: 115px;
+        left: 0px;
+        top: 0;
+    }
+    .footer_info ul {
+        display: block;
+    }
+    .footer_redes {
+        bottom: auto;
+    }
+}
