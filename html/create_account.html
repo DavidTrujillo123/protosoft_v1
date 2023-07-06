@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/create_account.css">
+</head>
+
+<body>
+    <header>
+        <div class="navBar">
+            <a href="./home.html">
+                <div class="logo">
+                    <img src="../multimedia/logo_proto.png" alt="logo de protosoft">
+                    <p><span>Proto</span>soft</p>
+                </div>
+            </a>
+            <img class="hamburgesa_menu" src="../multimedia/icons8-menú-50.png" alt="menu de opciones">
+            <div class="general_nav inactive">
+                <div class="opciones">
+                    <ul class="second_nav">
+                        <li class="into_btn"><a href="">Búsqueda</a></li>
+                        <li class="into_btn"><a href="">Registros</a></li>
+                        <li class="into_btn"><a href="./about-us.html">Sobre nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="perfil">
+                    <ul class="second_nav">
+                        <li class="into_btn"><a href="./login.html">Iniciar Sesión</a></li>
+                        <li class="into_btn active_nav"><a href="">Crear Cuenta</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <a href="./home.html">Home/</a><a href="#">Crear cuenta</a>
+        </nav>
+    </header>
+
+    <section class="container_login">
+        <h1 class="title">Crear Cuenta</h1>
+        <div class="login_into">
+            <div class="login_options">
+                <ul class="cuenta_pasos">
+                    <li><a class="pasos_active" href="">Paso 1/ </a></li>
+                    <li><a href="">Paso 2/ </a></li>
+                    <li><a href="">Paso 3</a></li>
+                </ul>
+                <form class="primary_login" action="" method="post">
+                    <div class="primer_login_form">
+                        <div class="container_option">
+                            <label for="POST-email">Correo Eletrónico*:</label>
+                            <div class="create_two_op">
+                                <input placeholder="example@utn.edu.ec" id="POST-email" type="text" name="email"
+                                    required>
+                                <p>@utn.edu.ec</p>
+                            </div>
+                        </div>
+                        <div class="container_option">
+                            <label for="POST-password">Contraseña*:</label>
+                            <input id="POST-password" type="password" name="password" required>
+                        </div>
+                        <div class="container_option">
+                            <label for="POST-password">Nombres completos*:</label>
+                            <div class="create_two_op">
+                                <input placeholder="Nombres" id="POST-nombres" type="text" name="nombres" required>
+                                <input placeholder="Apellidos" id="POST-apellidos" type="text" name="apellidos"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="container_option">
+                            <label for="POST-password">Rol*:</label>
+                            <div class="create_two_op">
+                                <label clas="input_rol" for="estudiante">Estudiante</label>
+                                    <input type="radio" id="estudiante" name="rol" value="estudiante" required>
+                                <label class="input_rol" for="estudiante">Taxónomo</label>
+                                    <input type="radio" id="taxonomo" name="rol" value="taxonomo" required>
+                                <label class="input_rol" for="investigador">Investigador</label>
+                                    <input type="radio" id="investigador" name="rol" value="investigador" required>
+                            </div>
+                        </div>
+                        <button class="primary_btn">Siguiente</button>
+                    </div>
+                    <div class="segundo_login_form .login_form_inactive">
+                        
+                    </div>
+                    <input type="submit" class="primary_btn create_btn_inactive" value="Iniciar Sesión">
+                </form>
+                <a href="./login.html">¿Ya tienes una cuenta?</a>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_logo">
+            <img src="../multimedia/logo_proto.png" alt="logo de protosoft">
+        </div>
+        <div class="footer_central_info">
+            <div class="footer_info">
+                <ul>
+                    <li><a href="">Información de contacto</a></li>
+                    <li><a href="">Término de uso</a></li>
+                    <li><a href="">Créditos y atribuciones</a></li>
+                </ul>
+            </div>
+            <div class="footer_add_info">
+                <p>Página desarrollada por estudiantes de la Universidad Técnica del Norte</p>
+            </div>
+        </div>
+        <div class="footer_redes">
+            <a href="https://www.facebook.com/eduardo.echeverria.581"><img
+                    src="../multimedia/icons8-facebook-50 (1).png" alt="logo de facebook"></a>
+            <img src="../multimedia/icons8-instagram-50.png" alt="logo de instagram">
+        </div>
+    </footer>
+
+    <script src="../js/navBar.js"></script>
+</body>
+
+</html>

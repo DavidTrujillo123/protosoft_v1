@@ -330,9 +330,11 @@ footer{
 }
 .footer_info ul li a{
     color: var(--white);
+    font-size: var(--sm);
 }
 .footer_add_info p{
     color: var(--white);
+    font-size: var(--sm);
 }
 .footer_redes{
     display: flex;
