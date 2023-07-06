@@ -129,10 +129,9 @@ nav a{
     justify-content: center;
 }
 
-.landscape h1{
+.title{
     color: var(--white);
     font-size: var(--llg);
-    /* margin-top: 90px; */
     padding: 50px 0 0 100px;
 }
 .landscape p{
@@ -309,6 +308,7 @@ footer{
     display: flex;
     position: relative;
     justify-content: center;
+    text-align: center;
 }
 .footer_logo img{
     height: 100px;
