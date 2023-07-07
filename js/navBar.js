@@ -2,7 +2,7 @@ const hamburgesa_menu = document.querySelector('.hamburgesa_menu');
 const general_nav = document.querySelector('.general_nav');
 
 const lanzarMenu = () =>{
-    general_nav.classList.toggle('inactive');
+    general_nav.classList.toggle('inactive_nav');
 };
 
 hamburgesa_menu.addEventListener('click', lanzarMenu);

@@ -144,30 +144,41 @@ nav a{
     display: flex;
     padding: 0 20px 10px 10px;
 }
-.cuenta_pasos .pasos_active{
-    color: var(--hospital-green-black)
-    
+.cuenta_pasos li {
+    font-size: var(--md);
+    color: var(--hospital-green-black);
+    cursor: pointer;
+}
+.cuenta_pasos .pasos_inactive{
+    color: var(--white);
 }
 .title{
     color: var(--black);
     font-size: var(--llg);
 }
+.subtitle {
+    /* padding: 50px 0 0px 100px; */
+    margin-bottom: 10px;
+    font-size: var(--mmd);
+    color: var(--white);
+}
 .login_into{
     max-width: 100%;
     background-color: var(--deep-ocean); 
     border-radius: 20px;
+    position: relative;
     box-shadow: 13px 15px 14px -3px rgba(0,0,0,0.76);
 -webkit-box-shadow: 13px 15px 14px -3px rgba(0,0,0,0.76);
 -moz-box-shadow: 13px 15px 14px -3px rgba(0,0,0,0.76);
 }
 .login_options{
-    padding: 40px 40px 20px 40px;
+    padding: 20px 32px 32px 32px;
 }
-.login_options a{
+.login_options a, p{
     text-align: center;
     color: var(--white);
     margin: 0 auto;
-    display: block;
+    display: block;    
     font-size: var(--sm);
 }
 .container_option{
@@ -198,6 +209,11 @@ nav a{
     font-weight: bold;
     font-size: var(--sm);
 }
+.tienes_cuenta{
+    position: absolute;
+    margin: 14px auto !important;
+    bottom: 0;
+}
 .login_crear_cuenta{
     margin: 20px 40px;
 }
@@ -208,17 +224,21 @@ nav a{
 .create_two_op p{
     color: var(--white);
     font-size: var(--sm);
-    margin-left: 10px;
+    margin: 0 10px 0 10px;
+}
+.crear_foto_perfil{
+    height: auto !important;
 }
 .input_rol{
     padding-left: 10px;
 }
-.create_btn_inactive{
-    display: none;
+.select_menu{
+    width: 50%;
+    height: 30px;
+    border-radius: 20px;
+    font-size: var(--sm);
 }
-.login_form_inactive{
-    display: none;
-}
+
 
 /* Footer */
 footer{
@@ -265,6 +285,10 @@ footer{
     bottom: 0;
 }
 
+.inactive{
+    display: none !important;
+}
+
 @media (max-width:716px) {
     :root{
         --sm: 12px;
@@ -287,7 +311,7 @@ footer{
         border: 1px solid var(--hospital-green-black);
         border-radius: 0 0 20px 0;
     }
-    .inactive{
+    .inactive_nav{
         display: none !important;
     }
     .second_nav{
@@ -302,7 +326,7 @@ footer{
         position: absolute;
         bottom: 20px;
         right: auto;
-        border-top: 1px solid black;
+        border-top: 1px solid var(--hospital-green-black);
     }
     .navBar{
         justify-content: center;
