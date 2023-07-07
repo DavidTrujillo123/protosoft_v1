@@ -24,7 +24,7 @@
                 </div>
             </a>
             <img class="hamburgesa_menu" src="../multimedia/icons8-menú-50.png" alt="menu de opciones">
-            <div class="general_nav inactive">
+            <div class="general_nav inactive_nav">
                 <div class="opciones">
                     <ul class="second_nav">
                         <li class="into_btn"><a href="">Búsqueda</a></li>
@@ -50,17 +50,19 @@
         <div class="login_into">
             <div class="login_options">
                 <ul class="cuenta_pasos">
-                    <li><a class="pasos_active" href="">Paso 1/ </a></li>
-                    <li><a href="">Paso 2/ </a></li>
-                    <li><a href="">Paso 3</a></li>
+                    <li>Paso 1/</li>
+                    <li class="pasos_inactive">Paso 2/</li>
+                    <li class="pasos_inactive">Paso 3</li>
                 </ul>
                 <form class="primary_login" action="" method="post">
-                    <div class="primer_login_form">
+
+                    <!-- Primera parte del form -->
+
+                    <div class="primer_create_form">
                         <div class="container_option">
                             <label for="POST-email">Correo Eletrónico*:</label>
                             <div class="create_two_op">
-                                <input placeholder="example@utn.edu.ec" id="POST-email" type="text" name="email"
-                                    required>
+                                <input placeholder="example" id="POST-email" type="text" name="email" required>
                                 <p>@utn.edu.ec</p>
                             </div>
                         </div>
@@ -87,14 +89,56 @@
                                     <input type="radio" id="investigador" name="rol" value="investigador" required>
                             </div>
                         </div>
-                        <button class="primary_btn">Siguiente</button>
+                        <a class="tienes_cuenta" href="./login.html">¿Ya tienes una cuenta?</a>
                     </div>
-                    <div class="segundo_login_form .login_form_inactive">
-                        
+
+                    <!-- Segunda parte del form -->
+
+                    <div class="segundo_create_form inactive">
+                        <h2 class="subtitle">Preguntas de seguridad</h2>
+                        <div class="container_option">
+                            <label for="POST-pregunta-recuperacion-1">Pregunta 1*:</label>
+                            <input id="POST-pregunta-recuperacion-1" type="text" name="POST-pregunta-recuperacion-1" placeholder="¿Cómo se llama tu juguete favorito?" required>
+                            <label for="POST-pregunta-recuperacion-1">Respuesta 1*:</label>
+                            <input id="POST-respuesta-recuperacion-1" type="text" name="POST-respuesta-recuperacion-1" required>
+                        </div>
+                        <div class="container_option">
+                            <label for="POST-pregunta-recuperacion-2">Pregunta 2*:</label>
+                            <input id="POST-pregunta-recuperacion-2" type="text" name="POST-pregunta-recuperacion-2" placeholder="¿Cual es tu deporte favorito?" required>
+                            <label for="POST-pregunta-recuperacion-2">Respuesta 2*:</label>
+                            <input id="POST-respuesta-recuperacion-2" type="text" name="POST-respuesta-recuperacion-2" required>
+                        </div>
                     </div>
-                    <input type="submit" class="primary_btn create_btn_inactive" value="Iniciar Sesión">
+
+                    <!-- Tercera parte del form -->
+
+                    <div class="tercero_create_form inactive">
+                        <h2 class="subtitle">Configuraciones opcionales</h2>
+                        <div class="container_option">
+                            <label for="POST-pais">País o región:</label>
+                            <select class="select_menu" name="POST-pais" id="POST-pais">
+                                <option value="ecuador">Ecuador</option>
+                                <option value="eeuu">EEUU</option>
+                                <option value="argentina">Argentina</option>
+                                <option value="españa">España</option>
+                            </select>
+                        </div>
+                        <div class="container_option">
+                            <label for="POST-telefono">Teléfono:</label>
+                            <div class="create_two_op">
+                                <p>+593</p>
+                                <input id="POST-telefono" type="text" name="POST-telefono">
+                            </div>
+                        </div>
+                        <div class="container_option">
+                            <label for="POST-foto">Foto de perfil:</label>
+                            <input class="crear_foto_perfil" id="POST-foto" type="file" name="POST-foto">
+                        </div>
+                    </div>
+                    <button class="primary_btn bnt_siguiente" type="button">Siguiente</button>
+                    <input type="submit" class="primary_btn inactive" value="Crear Cuenta">
                 </form>
-                <a href="./login.html">¿Ya tienes una cuenta?</a>
+                
 
             </div>
         </div>
@@ -124,6 +168,7 @@
     </footer>
 
     <script src="../js/navBar.js"></script>
+    <script src="../js/create_account.js"></script>
 </body>
 
 </html>
