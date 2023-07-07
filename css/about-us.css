@@ -240,7 +240,7 @@ footer{
         border: 1px solid var(--hospital-green-black);
         border-radius: 0 0 20px 0;
     }
-    .inactive{
+    .inactive_nav{
         display: none !important;
     }
     .second_nav{
@@ -254,6 +254,7 @@ footer{
         display: inline-block;
         position: absolute;
         bottom: 20px;
+        padding-top: 12px;
         right: auto;
         border-top: 1px solid black;
     }

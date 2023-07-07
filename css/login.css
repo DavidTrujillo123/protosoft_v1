@@ -263,7 +263,7 @@ footer{
         border: 1px solid var(--hospital-green-black);
         border-radius: 0 0 20px 0;
     }
-    .inactive{
+    .inactive_nav{
         display: none !important;
     }
     .second_nav{
@@ -276,9 +276,10 @@ footer{
     .perfil{
         display: inline-block;
         position: absolute;
+        padding-top: 12px;
         bottom: 20px;
         right: auto;
-        border-top: 1px solid black;
+        border-top: 1px solid var(--hospital-green-black);
     }
     .navBar{
         justify-content: center;
