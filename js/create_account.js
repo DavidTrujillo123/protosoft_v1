@@ -4,6 +4,7 @@ const tercero_create_form = document.querySelector('.tercero_create_form');
 const cuenta_pasos = document.querySelector('.cuenta_pasos');
 const pasos_list = cuenta_pasos.querySelectorAll('li'); 
 const bnt_siguiente = document.querySelector('.bnt_siguiente');
+const bnt_crear_cuenta = document.querySelector('.bnt_crear_cuenta');
 const inputs = document.querySelectorAll('input');
 const inputs_f1 = Array.from(inputs).slice(0, 5);
 const inputs_f2 = Array.from(inputs).slice(7, 11);
@@ -36,10 +37,12 @@ const cambiar_fomr_create = () =>{
             change_state(pasos_list[1], pasos_list[0], pasos_list[2],'pasos_inactive');
         }
     }
-    else{
+    else {
         if(isValidate(inputs_f2)){
             change_state(tercero_create_form,primer_create_form,segundo_create_form,'inactive');
             change_state(pasos_list[2], pasos_list[0], pasos_list[1],'pasos_inactive');
+            bnt_siguiente.classList.add('inactive');
+            bnt_crear_cuenta.classList.remove('inactive');
         }
     }
 }
@@ -59,5 +62,7 @@ pasos_list[2].addEventListener('click', () => {
     if(isValidate(inputs_f1) && isValidate(inputs_f2)){
         change_state(tercero_create_form,primer_create_form,segundo_create_form,'inactive');
         change_state(pasos_list[2], pasos_list[0], pasos_list[1],'pasos_inactive');
+        bnt_siguiente.classList.add('inactive');
+        bnt_crear_cuenta.classList.remove('inactive');
     }
 });
