@@ -13,12 +13,16 @@ const inputs_f2 = Array.from(inputs).slice(7, 11);
 // Validar formularios
 const isValidate = (array) =>{
     let flag = true;
-    array.forEach(element => {
-        if(!element.validity.valid){
+    let element;
+    for (let index in array) {
+        element = array[index];
+        if (!element.validity.valid) {
             flag = false;
             element.reportValidity();
+            break; // Aquí se realiza el break para salir del bucle
         }
-    });
+    }
+
     return flag;
 }
 
