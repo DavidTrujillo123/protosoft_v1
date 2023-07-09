@@ -1,0 +1,423 @@
+/* Ajustes generales */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-pink: #c7c7c7;
+    --text-input-field: #f7f7f7;
+    --hospital-green: #ACD9B2;
+    --hospital-green-black: #3bdb50;
+    --deep-ocean: #0a0e16;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --ssm: 24px;
+    --mmd: 28px;
+    --llg: 32px;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    background-image: linear-gradient(to bottom, #0a0e16, #182735, #1b4255, #136073, #007f8c);
+}
+a {
+    color: #000; 
+    text-decoration: none; 
+}
+a:hover {
+    text-decoration: none;
+}
+ul, li {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+  
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+.hamburgesa_menu{
+    display: none;
+}
+/* Cabezera y barra de navegacion */
+.navBar{
+    background-color: var(--deep-ocean);
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid var(--very-light-pink);
+    height: 70px;
+    width: auto;
+}
+.navBar .logo{
+    display: flex;
+    height: 70px;
+    align-items: center;
+}
+.navBar .logo p{
+    color: var(--white);
+}
+.navBar .logo span{
+    font-weight: bold;
+    color: var(--hospital-green-black);
+}
+.navBar .logo img{
+    height: 70px;
+    position: relative;
+}
+.opciones{
+    margin-left: 32px;
+    width: auto;
+}
+.general_nav{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    position: relative;
+    width: 100%;
+}
+.second_nav{
+    display: flex;
+}
+
+.into_btn{
+    padding: 10px;
+}
+.into_btn a{
+    color: var(--very-light-pink);
+}
+.into_btn a:hover{
+    color: var(--hospital-green-black);
+    font-weight: bold;
+}
+.into_btn:hover{
+    border: 2px solid var(--hospital-green-black);
+    border-radius: 10px;
+}
+.active_nav{
+    border: 2px solid var(--hospital-green-black);
+    border-radius: 10px;
+}
+.active_nav a{
+    color: var(--hospital-green-black);
+    font-weight: bold;
+}
+.perfil{
+    position: absolute;
+    right:0;
+    margin-right: 10px;
+}
+/* Barra de navegacion secundaria */
+nav{
+    height: 20px;
+    background-color: var(--hospital-green-black);
+
+}
+nav a:nth-child(1){
+    padding-left: 20px;
+    color: var(--deep-ocean);
+}
+nav a{
+    display: inline-block;
+    font-size: var(--sm);
+    color: var(--white);
+}
+.inactive{
+    display: none !important;
+}
+.container-title{
+    margin-top: 90px;
+    padding: 20px; 
+}
+.title{
+    color: var(--white);
+    font-size: var(--llg);
+}
+.subtitle {
+    /* padding: 50px 0 0px 100px; */
+    margin-bottom: 5px;
+    font-size: var(--mmd);
+    color: var(--white);
+    
+}
+
+/* Barra de busqueda */
+.land_busqueda{
+    margin: 20px;
+    height: 124px;
+    /* position: relative; */
+}
+.land_busqueda form{
+    display: flex;
+    align-items: center;
+}
+.land_buscar_input{
+    height: 44px;
+    width: 544px;
+    text-align: center;
+    background-color: var(--text-input-field);
+    font-size: var(--lg);
+    border-radius: 20px 0 0 20px;
+}
+.land_btn_buscar{
+    border-radius: 0 20px 20px 0;
+}
+.land_btn_buscar img{
+    height: 20px;
+}
+.buscar_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--hospital-green-black);
+    height: 44px;
+    width: 60px;
+    font-size: var(--sm);
+    border:none;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--white);
+
+}
+.container-filtos{
+    /* position: absolute;
+    top: 50px; */
+    margin-left: 20px;
+    padding: 20px;
+    background-color: var(--hospital-green-black);
+    border-radius:20px;
+    color: var(--white);
+}
+.filtros{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container_option{  
+    padding: 10px 20px 10px 10px;
+}
+
+/* Resultados */
+.container-resultados{
+    
+    min-height: 300px;
+}
+.subtitle-resultados{
+    padding: 20px;
+}
+.ejemplos{
+    background-image: url('../multimedia/fondo_ejem.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
+}
+.ejem_cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.ejem_cards_info{
+    margin: 0 20px 20px 20px;
+    padding-right: 20px;
+    position: relative;
+}
+.ejem_cards_info p{
+    background-color: var(--hospital-green-black);
+    color: var(--white);
+    padding: 8px;
+}
+.vermas{
+    position: absolute;
+    margin-right: 20px;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    /* background-color: rgba(2, 49, 8, 0.609); */
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    color: var(--white);
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vermas:hover{
+    opacity: 1;
+}
+.primary_btn{
+    width: 50%;
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    background-color: var(--hospital-green-black);
+    color: var(--white);
+    font-weight: bold;
+    font-size: var(--sm);
+}
+
+/* Sin resultados */
+.sin_resultados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sin_resultados h3{
+    font-size: var(--ssm);
+    color: var(--very-light-pink);
+
+}
+.sin_resultados img{
+    border-radius: 50%;
+    height: 400px;
+}
+
+/* Seccion de footer */
+footer{
+    height: 100px;
+    background-color: var(--deep-ocean);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+}
+.footer_logo img{
+    height: 100px;
+    position: absolute;
+    left: 0;
+}
+.footer_central_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer_info ul{
+    display: flex;
+    
+}
+.footer_info ul li{
+    padding: 20px;
+}
+.footer_info ul li a{
+    color: var(--white);
+    font-size: var(--sm);
+}
+.footer_add_info p{
+    color: var(--white);
+    font-size: var(--sm);
+}
+.footer_redes{
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+/* Mobile */
+@media (max-width:716px) {
+    :root{
+        --sm: 12px;
+        --md: 14px;
+        --lg: 16px;
+        --ssm: 18px;
+        --mmd: 22px;
+        --llg: 24px;
+    }
+    .general_nav{
+        display: inline-block;
+        position: absolute;
+        background-color: var(--deep-ocean);
+        top: 90px;
+        left: 0;
+        height: 300px;
+        width: 200px;
+        padding: 20px;
+        margin-bottom: 10px;
+        border: 1px solid var(--hospital-green-black);
+        border-radius: 0 0 20px 0;
+    }
+    .inactive_nav{
+        display: none !important;
+    }
+    .second_nav{
+        display: inline-block;
+    }
+    .opciones{
+        display: block;
+        margin: 0;
+    }
+    .perfil{
+        display: inline-block;
+        position: absolute;
+        bottom: 20px;
+        padding-top: 12px;
+        right: auto;
+        border-top: 1px solid black;
+    }
+    .navBar{
+        justify-content: center;
+        align-items: center;
+        /* position: relative; */
+    }
+    .hamburgesa_menu{
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        width: 30px;
+        margin-left: 20px;
+    }
+
+    /* busqueda y filtros */
+    .land_busqueda{
+        position: relative;
+    }
+    .container-filtos{
+        position: absolute;
+        top: 50px;
+        margin-left: 0px;
+        border-radius: 0 0 20px 20px;
+    }
+    .land_buscar_input{
+        border-radius: 20px 0 0 0;
+    }
+    .land_btn_buscar{
+        border-radius: 0 20px 0 0;
+    }
+    .container-resultados{
+        margin-top: 104px
+    }
+
+    .sin_resultados img{
+        height: 300px;
+    }
+
+    footer{
+        height: auto;
+        align-items: center;    
+    }
+    .footer_logo img {
+        height: 115px;
+        left: 0px;
+        top: 0;
+    }
+    .footer_info ul {
+        display: block;
+    }
+    .footer_redes {
+        bottom: auto;
+    }
+}
