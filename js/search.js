@@ -1,7 +1,7 @@
 const buscar_btn = document.querySelector('.buscar_btn');
 const sin_resultados_container = document.querySelector('.sin_resultados');
 const ejem_cards_container = document.querySelector('.ejem_cards');
-const btn_vermas = document.querySelector('.btn_vermas');
+const btn_vermas = document.getElementsByClassName('btn_vermas');
 
 const showNoFound = (flag) =>{
     // logica para activar
@@ -14,7 +14,6 @@ const showNoFound = (flag) =>{
         sin_resultados_container.classList.remove('inactive');
         ejem_cards_container.classList.add('inactive')
     }
-    
 }
 
 const goLogin = () =>{
@@ -23,5 +22,11 @@ const goLogin = () =>{
         window.location.href = '../html/login.html';
 }
 
+function putActionBtnVermas(){
+    for (let index = 0; index < btn_vermas.length; index++) {
+        btn_vermas[index].addEventListener('click', goLogin);        
+    }
+}
+
 buscar_btn.addEventListener('click', () => {showNoFound(true)});
-btn_vermas.addEventListener('click', goLogin);
+putActionBtnVermas();
