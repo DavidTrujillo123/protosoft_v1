@@ -94,18 +94,16 @@ header{
 .into_btn a:hover{
     color: var(--hospital-green-black);
     font-weight: bold;
-}
-.into_btn:hover{
     border: 2px solid var(--hospital-green-black);
     border-radius: 10px;
-}
-.active_nav{
-    border: 2px solid var(--hospital-green-black);
-    border-radius: 10px;
+    padding: 10px;
 }
 .active_nav a{
     color: var(--hospital-green-black);
     font-weight: bold;
+    border: 2px solid var(--hospital-green-black);
+    border-radius: 10px;
+    padding: 10px;
 }
 .perfil{
     position: absolute;
@@ -256,8 +254,8 @@ footer{
         background-color: var(--deep-ocean);
         top: 90px;
         left: 0;
-        height: 300px;
-        width: 200px;
+        height: 316px;
+        width: 228px;
         padding: 20px;
         margin-bottom: 10px;
         border: 1px solid var(--hospital-green-black);
