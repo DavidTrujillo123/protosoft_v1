@@ -190,16 +190,6 @@ nav a{
     color: var(--white);
 }
 
-/* Landscape pricipal  */
-.landscape{
-    background-image: url('../multimedia/landscape_home_auto_x2.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin-top: 90px;
-    height: 500px;
-    position: relative;
-}
 
 .title{
     color: var(--white);
@@ -211,38 +201,48 @@ nav a{
     font-size: var(--mmd);
     color: var(--white);
 }
-.title_bienvenida{
-    position: absolute;
-    bottom: 100px;
-}
-.title_bienvenida span{
-    color: var(--hospital-green-black);
-}
 
 
-/* Seccion de protistas destacados*/
-.ejemplos{
-    background-image: url('../multimedia/fondo_ejem.png');
+
+/* Landscape pricipal  */
+.landscape{
+    /* background-image: url('../../multimedia/f_vision-transformed\ \(2\).png'); */
+    background-image: url('../../multimedia/f_vision-transformed\ \(2\).png');
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    background-position: center;  
-}
-.ejem_cards{
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    
+}
+.landscape:nth-child(2){
+    background-image: url('../../multimedia/100ntificos-transformed.png');
+}
+
+
+.landscape h1{
+    color: var(--hospital-green-black);
+    background-color: #000000b6;
+    border-radius: 20px;
+    font-size: var(--llg);
+    width: 138px;
+    margin: 0px 0 0 100px;
     padding: 20px;
 }
-.ejem_cards_info{
-    margin: 0 20px 20px 20px;
-    padding-right: 20px;
+.landscape:nth-child(3) h1{
+    width: 156px;
 }
-.ejem_cards_info p{
-    background-color: var(--hospital-green-black);
+.landscape p{
+    /* ojo */
+    margin: 50px 120px 10px 120px;
+    padding: 20px;
+    font-size: var(--md);
     color: var(--white);
-    padding: 8px;
+    background-color: #00000081; 
+    border-radius: 20px;
+    border: 0;
 }
 
 /* Seccion de footer */
@@ -289,8 +289,6 @@ footer{
     right: 0;
     bottom: 0;
 }
-
-
 
 
 /* Mobile */
@@ -356,22 +354,6 @@ footer{
         margin-left: 20px;
     }
 
-    .landscape{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 500px;
-    }
-    .landscape h1{
-        text-align: center;
-        padding: 40px;
-    }
-    .title_bienvenida {
-        bottom: auto;
-    }
-    .landscape p{
-        margin: 38px;
-    }
     .subtitle{
         text-align: center;
         padding: 20px 0 0px 0px;
