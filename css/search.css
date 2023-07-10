@@ -270,6 +270,7 @@ nav a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 50vh;
 }
 .sin_resultados h3{
     font-size: var(--ssm);
