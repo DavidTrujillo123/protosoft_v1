@@ -17,11 +17,14 @@ const postDataUsers = async (url, data) => {
 async function isUser(url, uData){
     try {
         const response = await postDataUsers(`${url}/searchUser`, uData);
-        let encodedResult = encodeURIComponent(JSON.stringify(response));
-        let redirectURL = `./login/home_user.html?result=${encodedResult}`;
-        window.location.href = redirectURL;
+        // let encodedResult = encodeURIComponent(JSON.stringify(response));
+        // let redirectURL = `./login/home_user.html?result=${encodedResult}`;
+        localStorage.setItem('user', JSON.stringify(response));
+        localStorage.setItem('isAuthenticated', 'true');
+        window.location.href = './login/home_user.html';
     } catch (error) {
         console.log(error);
+        localStorage.setItem('isAuthenticated', 'false');
         alert('Usario o contraseña erroneas');
     }
 }

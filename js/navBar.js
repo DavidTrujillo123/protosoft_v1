@@ -7,6 +7,7 @@ const nav_perfil = document.querySelector('.perfil');
 
 const lanzarMenuMobile = () =>{
     general_nav.classList.toggle('inactive_nav');
+    menu_perfil.classList.toggle('inactive');
 };
 
 const lanzarMenuRegistros = () =>{
@@ -19,4 +20,4 @@ const lanzarMenuPerfil = () =>{
 
 hamburgesa_menu.addEventListener('click', lanzarMenuMobile);
 nav_registros.addEventListener('click', lanzarMenuRegistros);
-nav_perfil.addEventListener('click', lanzarMenuPerfil)
+nav_perfil.addEventListener('click', lanzarMenuPerfil);

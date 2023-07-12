@@ -140,16 +140,17 @@ header{
     var(--very-light-pink);
     border-radius: 6px;
     padding: 10px 10px 0 10px;
-    background-color: var(--white);
+    background-color: var(--white); 
     position: absolute;
-    
 }
 .menu_registros{
     left: 142px;
+    /* position: absolute; */
 }
 .menu_perfil{
     top:40px;
-    left: 56px;
+    right: 0;
+    /* position: absolute; */
 }
 .menu_perfil ul li{
     text-align: end;
@@ -305,17 +306,20 @@ footer{
     }
     .general_nav{
         display: inline-block;
-        position: absolute;
+        position: fixed;
         background-color: var(--deep-ocean);
         top: 90px;
         left: 0;
-        height: 316px;
-        width: 228px;
+        bottom: 0;
+        height: auto;
+        width: 214px;
         padding: 20px;
         margin-bottom: 10px;
         border: 1px solid var(--hospital-green-black);
         border-radius: 0 0 20px 0;
+        overflow: auto;
     }
+      
     .inactive_nav{
         display: none !important;
     }
@@ -331,13 +335,26 @@ footer{
         top: 102px;
         z-index: 1;
     }
-    .menu_perfil {
-        top: 32px;
-        left: 59px;
+    .menu_perfil{
+        position: static;
+        background-color: var(--deep-ocean);
+        border: 0;
+    }
+    .menu_perfil ul li{
+        text-align: left;
+    }
+    .menu_perfil ul li a {
+        color: var(--white);
+    }
+    .desktop-menu ul li:nth-child(2){
+        border-top: 0;
+        padding: 0;
+    }
+    .email_nav_inactive{
+        display: none !important;
     }
     .perfil{
-        display: inline-block;
-        position: absolute;
+        /* display: inline-block;  */
         bottom: 20px;
         padding-top: 12px;
         right: auto;
@@ -346,7 +363,6 @@ footer{
     .navBar{
         justify-content: center;
         align-items: center;
-        /* position: relative; */
     }
     .hamburgesa_menu{
         display: inline-block;

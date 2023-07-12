@@ -29,7 +29,7 @@
                     <ul class="second_nav">
                         <li class="into_btn"><a href="./search_login.html">Búsqueda</a></li>
                         <li class="into_btn" id="nav_registros"><a >Registros <img class="flecha_perfil" src="../../multimedia/flechita.svg" alt="flecha en registros"></a></li>
-                        <li class="into_btn active_nav"><a href="./about-us.html">Sobre nosotros</a></li>
+                        <li class="into_btn"><a href="./about-us-login.html">Sobre nosotros</a></li>
                     </ul>
                     <div class="desktop-menu menu_registros inactive">
                         <ul>
@@ -40,21 +40,21 @@
                 </div>
                 <div class="perfil">
                     <div class="perfil_email">
-                        <p>example@utn.edu.ec</p>
-                        <img class="flecha_perfil" src="../../multimedia/flechita.svg" alt="Icono de flecha en perfil">
+                        <p id="email_nav" class="email_nav_inactive"></p>
+                        <img class="flecha_perfil email_nav_inactive" src="../../multimedia/flechita.svg" alt="Icono de flecha en perfil">
                     </div>
                     <img class="icono_perfil" src="../../multimedia/icono_perfil.png" alt="Icono de perfil">
                     <div class="desktop-menu menu_perfil inactive">
                         <ul>
                             <li><a href="" class="">Mi Perfil</a></li>
-                            <li><a href="../home.html" class="">Cerrar sesión</a></li>
+                            <li><a href="../home.html" class="closeSesion">Cerrar sesión</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
         <nav>
-            <a href="">Home</a>
+            <a href="./home_user.html">Home/</a><a class="nav_active" href="#">Sobre nosotros</a>
         </nav>
     </header>
 
@@ -119,5 +119,9 @@
         </div>
     </footer>
 
+
+    <script src="../../js/src/isLoged.js"></script>
     <script src="../../js/navBar.js"></script>
+    <script src="../../js/src/navBar_user.js"></script>
+    <script src="../../js/src/closeSesion.js"></script>
 </body>

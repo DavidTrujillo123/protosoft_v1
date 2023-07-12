@@ -1,15 +1,12 @@
 // Obtener datos
-const urlParams = new URLSearchParams(window.location.search);
-const encodedResult = urlParams.get('result');
-const result = JSON.parse(decodeURIComponent(encodedResult));
-
+// const result = JSON.parse(localStorage.getItem('user'));
+ 
 let nombre = result.usunombre;
 let apellido = result.usuapellido;
-let email = result.usucorreo;
+
 
 const landscape = document.querySelector('.landscape');
-const email_nav = document.getElementById('email_nav');
-email_nav.textContent = email;
+
 
 
 function putNames() {
