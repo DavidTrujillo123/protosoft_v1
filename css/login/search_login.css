@@ -340,6 +340,7 @@ nav a{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
 }
 
 .ver_prot {
@@ -347,12 +348,12 @@ nav a{
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 3;
+    height: 100vh;
 }
 
 .container_ver_prot {
-    position: fixed;
-    top: 0px;
+    /* position: fixed;
+    top: 0px; */
     max-width: 700px;
     min-width: 300px;
     height: 550px;
@@ -361,7 +362,7 @@ nav a{
     background-color: var(--deep-ocean);
     overflow: auto;
     border: 1px solid var(--white);
-    margin-top: 150px;
+    /* margin-top: 150px; */
 }
 
 #img_protista {
@@ -636,6 +637,8 @@ footer {
     /* Ver protista */
     .container_ver_prot {
         height: 100%;
+        position: fixed;
+        top: 0px;
         margin-top: 0;
     }
     .principal_container_ver_prot {
