@@ -1,9 +1,10 @@
 /* Ajustes generales */
-*{
+* {
     margin: 0;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --white: #FFFFFF;
     --black: #000000;
     --very-light-pink: #c7c7c7;
@@ -18,44 +19,54 @@
     --mmd: 28px;
     --llg: 32px;
 }
-body{
+
+body {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
 }
+
 a {
-    color: #000; 
-    text-decoration: none; 
+    color: #000;
+    text-decoration: none;
 }
+
 a:hover {
     text-decoration: none;
 }
-ul, li {
-    list-style: none; 
-    padding: 0; 
-    margin: 0; 
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-header{
+
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 2;
 }
-.inactive{
+
+.inactive {
     display: none !important;
 }
-.active_nav a{
+
+.active_nav a {
     color: var(--hospital-green-black) !important;
     font-weight: bold;
     border: 2px solid var(--hospital-green-black);
     border-radius: 10px;
     padding: 10px;
 }
-.hamburgesa_menu{
+
+.hamburgesa_menu {
     display: none;
 }
+
 /* Cabezera y barra de navegacion */
-.navBar{
+.navBar {
     background-color: var(--deep-ocean);
     position: relative;
     display: flex;
@@ -63,67 +74,80 @@ header{
     height: 70px;
     width: auto;
 }
-.navBar .logo{
+
+.navBar .logo {
     display: flex;
     height: 70px;
     align-items: center;
 }
-.navBar .logo p{
+
+.navBar .logo p {
     color: var(--white);
 }
-.navBar .logo span{
+
+.navBar .logo span {
     font-weight: bold;
     color: var(--hospital-green-black);
 }
-.navBar .logo img{
+
+.navBar .logo img {
     height: 70px;
     position: relative;
 }
-.opciones{
+
+.opciones {
     margin-left: 32px;
     width: auto;
 }
-.general_nav{
+
+.general_nav {
     display: flex;
     align-items: center;
     height: 70px;
     position: relative;
     width: 100%;
 }
-.second_nav{
+
+.second_nav {
     display: flex;
 }
 
-.into_btn{
+.into_btn {
     padding: 10px;
 }
-.into_btn a{
+
+.into_btn a {
     color: var(--very-light-pink);
-}   
-.into_btn a:hover{
+}
+
+.into_btn a:hover {
     color: var(--hospital-green-black);
     font-weight: bold;
     border: 2px solid var(--hospital-green-black);
     border-radius: 10px;
     padding: 10px;
 }
-.perfil{
+
+.perfil {
     position: absolute;
-    right:0;
+    right: 0;
     margin-right: 10px;
     cursor: pointer;
     color: var(--white);
     display: flex;
     align-items: center;
 }
-.perfil_email{
+
+.perfil_email {
     display: flex;
 }
-.flecha_perfil{
+
+.flecha_perfil {
     margin: 0 10px 0 10px;
     transform: rotate(90deg);
 }
-.icono_perfil{
+
+.icono_perfil {
     border: 3px solid var(--hospital-green-black);
     border-radius: 60%;
     overflow: hidden;
@@ -133,66 +157,75 @@ header{
 }
 
 /* Menu de registro y perfil */
-.desktop-menu{
+.desktop-menu {
     width: 128px;
     height: auto;
-    border: 1px solid 
-    var(--very-light-pink);
+    border: 1px solid var(--very-light-pink);
     border-radius: 6px;
     padding: 10px 10px 0 10px;
-    background-color: var(--white); 
+    background-color: var(--white);
     position: absolute;
 }
-.menu_registros{
+
+.menu_registros {
     left: 142px;
     /* position: absolute; */
 }
-.menu_perfil{
-    top:40px;
+
+.menu_perfil {
+    top: 40px;
     right: 0;
     /* position: absolute; */
 }
-.menu_perfil ul li{
+
+.menu_perfil ul li {
     text-align: end;
 }
-.menu_perfil ul li:not(2){
+
+.menu_perfil ul li:not(2) {
     font-weight: bold;
 }
-.desktop-menu ul li a{
+
+.desktop-menu ul li a {
     display: inline-block;
     margin-bottom: 18px;
     color: var(--black);
     text-decoration: none;
 }
-.desktop-menu ul li a:hover{
+
+.desktop-menu ul li a:hover {
     color: var(--hospital-green-black);
 }
-.desktop-menu ul li:nth-child(2){
+
+.desktop-menu ul li:nth-child(2) {
     padding-top: 20px;
-    border-top: 1px solid 
-        var(--very-light-pink);
+    border-top: 1px solid var(--very-light-pink);
 }
-.menu_perfil ul li:nth-child(2) a{
+
+.menu_perfil ul li:nth-child(2) a {
     color: var(--hospital-green);
     font-size: var(--sm);
 }
-#nav_registros{
+
+#nav_registros {
     cursor: pointer;
 }
+
 /* Barra de navegacion secundaria */
-nav{
+nav {
     height: 20px;
     background-color: var(--hospital-green-black);
 
 }
-nav a{
+
+nav a {
     padding-left: 20px;
     font-size: var(--sm);
     color: var(--white);
 }
 
 /* Landscape pricipal  */
-.landscape{
+.landscape {
     background-image: url('../../multimedia/landscape_home_auto_x2.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -202,33 +235,37 @@ nav a{
     position: relative;
 }
 
-.title{
+.title {
     color: var(--white);
     font-size: var(--llg);
     padding: 50px 0 0 100px;
 }
-.subtitle{
+
+.subtitle {
     padding: 50px 0 0px 100px;
     font-size: var(--mmd);
     color: var(--white);
 }
-.title_bienvenida{
+
+.title_bienvenida {
     position: absolute;
     bottom: 100px;
 }
-.title_bienvenida span{
+
+.title_bienvenida span {
     color: var(--hospital-green-black);
 }
 
 
 /* Seccion de protistas destacados*/
-.ejemplos{
+.ejemplos {
     background-image: url('../../multimedia/fondo_ejem.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;  
+    background-position: center;
 }
-.ejem_cards{
+
+.ejem_cards {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -236,18 +273,133 @@ nav a{
     flex-wrap: wrap;
     padding: 20px;
 }
-.ejem_cards_info{
+
+.ejem_cards_info {
     margin: 0 20px 20px 20px;
     padding-right: 20px;
 }
-.ejem_cards_info p{
+
+.ejem_cards_info p {
     background-color: var(--hospital-green-black);
     color: var(--white);
     padding: 8px;
 }
 
+/* Ver mas container */
+.title_ver_prot {
+    color: var(--hospital-green-black);
+    font-size: var(--llg);
+}
+
+.subtitle_ver_prot {
+    font-size: var(--lg);
+    color: var(--black);
+}
+
+.principal_container_ver_prot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+.ver_prot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+
+.container_ver_prot {
+    /* position: fixed;
+    top: 0px; */
+    max-width: 700px;
+    min-width: 300px;
+    height: 550px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--deep-ocean);
+    overflow: auto;
+    border: 1px solid var(--white);
+    /* margin-top: 150px; */
+}
+
+#img_protista {
+    margin: 10px auto;
+    display: block;
+    max-width: 400px;
+    min-width: 150px;
+    border-radius: 20px;
+}
+
+.ver_prot_inicio {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.ver_prot_inicio img {
+    height: 20px;
+    left: 20px;
+    position: absolute;
+
+}
+
+.columns {
+    display: flex;
+    justify-content: space-around;
+    background-color: #330033;
+    border-radius: 20px;
+}
+
+
+.ver_prot_principal_info {
+    margin-top: 10px;
+}
+
+.container_pricipal_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    justify-items: center;
+
+}
+
+.container_pricipal_info h2 {
+    margin-right: 10px;
+    color: var(--hospital-green);
+}
+
+.container_pricipal_info p {
+    font-size: var(--lg);
+    color: var(--white);
+}
+
+.container_secondary_info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container_secondary_info h2 {
+    margin-right: 10px;
+    color: var(--hospital-green);
+}
+
+.container_secondary_info p {
+    font-size: var(--lg);
+    color: var(--white);
+}
+
+
+
 /* Seccion de footer */
-footer{
+footer {
     height: 100px;
     background-color: var(--deep-ocean);
     display: flex;
@@ -255,33 +407,40 @@ footer{
     justify-content: center;
     text-align: center;
 }
-.footer_logo img{
+
+.footer_logo img {
     height: 100px;
     position: absolute;
     left: 0;
 }
-.footer_central_info{
+
+.footer_central_info {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.footer_info ul{
+
+.footer_info ul {
     display: flex;
-    
+
 }
-.footer_info ul li{
+
+.footer_info ul li {
     padding: 20px;
 }
-.footer_info ul li a{
+
+.footer_info ul li a {
     color: var(--white);
     font-size: var(--sm);
 }
-.footer_add_info p{
+
+.footer_add_info p {
     color: var(--white);
     font-size: var(--sm);
 }
-.footer_redes{
+
+.footer_redes {
     display: flex;
     height: 100px;
     justify-content: center;
@@ -296,7 +455,7 @@ footer{
 
 /* Mobile */
 @media (max-width:716px) {
-    :root{
+    :root {
         --sm: 12px;
         --md: 14px;
         --lg: 16px;
@@ -304,7 +463,8 @@ footer{
         --mmd: 22px;
         --llg: 24px;
     }
-    .general_nav{
+
+    .general_nav {
         display: inline-block;
         position: fixed;
         background-color: var(--deep-ocean);
@@ -319,52 +479,63 @@ footer{
         border-radius: 0 0 20px 0;
         overflow: auto;
     }
-      
-    .inactive_nav{
+
+    .inactive_nav {
         display: none !important;
     }
-    .second_nav{
+
+    .second_nav {
         display: inline-block;
     }
-    .opciones{
+
+    .opciones {
         display: block;
         margin: 0;
     }
+
     .menu_registros {
         left: 48px;
         top: 102px;
         z-index: 1;
     }
-    .menu_perfil{
+
+    .menu_perfil {
         position: static;
         background-color: var(--deep-ocean);
         border: 0;
     }
-    .menu_perfil ul li{
+
+    .menu_perfil ul li {
         text-align: left;
     }
+
     .menu_perfil ul li a {
         color: var(--white);
     }
-    .desktop-menu ul li:nth-child(2){
+
+    .desktop-menu ul li:nth-child(2) {
         border-top: 0;
         padding: 0;
     }
-    .email_nav_inactive{
+
+    .email_nav_inactive {
         display: none !important;
     }
-    .perfil{
+
+    .perfil {
         /* display: inline-block;  */
         bottom: 20px;
         padding-top: 12px;
         right: auto;
         border-top: 1px solid var(--hospital-green-black);
     }
-    .navBar{
+
+    .navBar {
         justify-content: center;
         align-items: center;
     }
-    .hamburgesa_menu{
+
+    .hamburgesa_menu {
         display: inline-block;
         position: absolute;
         left: 0;
@@ -372,40 +543,66 @@ footer{
         margin-left: 20px;
     }
 
-    .landscape{
+    .landscape {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 500px;
     }
-    .landscape h1{
+
+    .landscape h1 {
         text-align: center;
         padding: 40px;
     }
+
     .title_bienvenida {
         bottom: auto;
     }
-    .landscape p{
+
+    .landscape p {
         margin: 38px;
     }
-    .subtitle{
+
+    .subtitle {
         text-align: center;
         padding: 20px 0 0px 0px;
     }
 
-    footer{
-        height: auto;
-        align-items: center;   
-        text-align: center; 
+    /* Ver protista */
+    .container-resultados {
+        margin-top: 104px
     }
+
+    .container_ver_prot {
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        margin-top: 0;
+    }
+
+    .container_pricipal_info {
+        display: block;
+    }
+    .principal_container_ver_prot {
+        position: relative;
+    }
+
+    footer {
+        height: auto;
+        align-items: center;
+        text-align: center;
+    }
+
     .footer_logo img {
         height: 115px;
         left: 0px;
         top: 0;
     }
+
     .footer_info ul {
         display: block;
     }
+
     .footer_redes {
         bottom: auto;
     }

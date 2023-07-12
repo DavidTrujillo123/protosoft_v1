@@ -625,10 +625,6 @@ footer {
         padding-right: 0;
     }
     
-    .container-resultados {
-        margin-top: 104px
-    }
-
     /* Sin resultados */
 
     .sin_resultados img {
@@ -637,6 +633,9 @@ footer {
     }
 
     /* Ver protista */
+    .container-resultados {
+        margin-top: 104px
+    }
     .container_ver_prot {
         height: 100%;
         position: fixed;
@@ -651,13 +650,6 @@ footer {
         height: auto;
         align-items: center;
     }
-/* 
-    .footer_logo img {
-        height: 115px;
-        left: 0px;
-        top: 0;
-    } */
-
     .footer_info ul {
         display: block;
     }
