@@ -388,7 +388,7 @@ nav a {
 }
 
 .principal_container_ver_prot {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -409,11 +409,13 @@ nav a {
     top: 0px;
     max-width: 700px;
     min-width: 300px;
-    height: 100%;
+    height: 550px;
     padding: 20px;
     border-radius: 20px;
     background-color: var(--deep-ocean);
     overflow: auto;
+    border: 1px solid var(--white);
+    margin-top: 150px;
 }
 
 #img_protista {
@@ -511,16 +513,19 @@ nav a {
 footer {
     height: 100px;
     background-color: var(--deep-ocean);
+   
+}
+.container_footer{
     display: flex;
-    position: relative;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 .footer_logo img {
     height: 100px;
-    position: absolute;
-    left: 0;
+    /* position: absolute;
+    left: 0; */
 }
 
 .footer_central_info {
@@ -547,6 +552,7 @@ footer {
 .footer_add_info p {
     color: var(--white);
     font-size: var(--sm);
+    text-align: center;
 }
 
 .footer_redes {
@@ -554,9 +560,9 @@ footer {
     height: 100px;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    /* position: absolute; */
+    /* right: 0;
+    bottom: 0; */
 }
 
 /* Mobile */
@@ -636,11 +642,16 @@ footer {
         position: relative;
     }
 
+    
     .container-filtos {
         position: absolute;
         top: 50px;
         margin-left: 0px;
         border-radius: 0 0 20px 20px;
+    }
+
+    .container_pricipal_info {
+        display: block;
     }
 
     .land_buscar_input {
@@ -651,24 +662,40 @@ footer {
         border-radius: 0 20px 0 0;
     }
 
+    .ejem_cards_info{
+        padding-right: 0;
+    }
+    
     .container-resultados {
         margin-top: 104px
     }
 
+    /* Sin resultados */
+
     .sin_resultados img {
         height: 300px;
+        width: 350px;
+    }
+
+    /* Ver protista */
+    .container_ver_prot {
+        height: 100%;
+        margin-top: 0;
+    }
+    .principal_container_ver_prot {
+        position: relative;
     }
 
     footer {
         height: auto;
         align-items: center;
     }
-
+/* 
     .footer_logo img {
         height: 115px;
         left: 0px;
         top: 0;
-    }
+    } */
 
     .footer_info ul {
         display: block;
