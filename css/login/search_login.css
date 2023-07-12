@@ -343,12 +343,11 @@ nav a {
     padding: 8px;
 }
 
-.vermas {
+/* .vermas {
     position: absolute;
     margin-right: 20px;
     width: 100%;
     height: 100%;
-    /* background-color: rgba(2, 49, 8, 0.609); */
     padding: 10px;
     border-radius: 20px 20px 0 0;
     color: var(--white);
@@ -362,7 +361,7 @@ nav a {
 
 .vermas:hover {
     opacity: 1;
-}
+} */
 
 .primary_btn {
     width: 50%;

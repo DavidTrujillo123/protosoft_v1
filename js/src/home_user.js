@@ -5,7 +5,11 @@ const result = JSON.parse(decodeURIComponent(encodedResult));
 
 let nombre = result.usunombre;
 let apellido = result.usuapellido;
+let email = result.usucorreo;
+
 const landscape = document.querySelector('.landscape');
+const email_nav = document.getElementById('email_nav');
+email_nav.textContent = email;
 
 
 function putNames() {
