@@ -225,6 +225,7 @@ nav a{
 .land_busqueda form {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .land_buscar_input {
@@ -261,8 +262,8 @@ nav a{
 .container-filtos {
     /* position: absolute;
     top: 50px; */
-    margin-left: 20px;
-    padding: 20px;
+    margin-right: 20px;
+    padding: 8px;
     background-color: var(--hospital-green-black);
     border-radius: 20px;
     color: var(--white);
