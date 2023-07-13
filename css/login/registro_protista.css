@@ -226,12 +226,13 @@ nav a{
 }
 .cuenta_pasos{
     display: flex;
-    padding: 0 20px 10px 10px;
+    padding: 0 0 10px 10px;
 }
 .cuenta_pasos li {
-    font-size: var(--md);
+    font-size: var(--sm);
     color: var(--hospital-green-black);
     cursor: pointer;
+    margin-right: 4px;
 }
 .cuenta_pasos .pasos_inactive{
     color: var(--white);
@@ -320,6 +321,16 @@ nav a{
     width: 50%;
     height: 30px;
     border-radius: 20px;
+    font-size: var(--sm);
+}
+.select_principal{
+    height: 30px;
+    border-radius: 4px;
+}
+.cursiva{
+    font-style: italic;
+}
+select{
     font-size: var(--sm);
 }
 
