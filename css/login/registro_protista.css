@@ -248,6 +248,8 @@ nav a{
     color: var(--white);
 }
 .login_into{
+    /* height: calc(100vh - 250px); */
+    overflow: auto;
     max-width: 100%;
     background-color: var(--deep-ocean); 
     border-radius: 20px;
@@ -330,6 +332,15 @@ nav a{
 .cursiva{
     font-style: italic;
 }
+.text_area{
+    font-family: 'Quicksand', sans-serif;
+    padding: 8px;
+    font-size: var(--sm);
+    border-radius: 8px;
+}
+.gigant_container{
+    height: calc(100vh - 250px);
+}
 select{
     font-size: var(--sm);
 }
@@ -337,9 +348,11 @@ select{
 /* Footer */
 footer{
     height: 100px;
+    width: 100%;
     background-color: var(--deep-ocean);
     display: flex;
-    position: relative;
+    position: fixed;
+    bottom: 0;
     justify-content: center;
     text-align: center;
 }
@@ -462,9 +475,15 @@ footer{
         width: 30px;
         margin-left: 20px;
     }
+
+    /* .login_into{
+        height: auto;
+    } */
+    
     footer{
         height: auto;
         align-items: center;    
+        position: relative;
     }
     .footer_logo img {
         height: 115px;

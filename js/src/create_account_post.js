@@ -3,9 +3,8 @@ const POST_password = document.getElementById('POST-password');
 const POST_nombres = document.getElementById('POST-nombres');
 const POST_apellidos = document.getElementById('POST-apellidos');
 const roles = document.getElementsByName("rol");
-// const bnt_crear_cuenta = document.querySelector('.bnt_crear_cuenta');
 let url = 'https://protosoft-api.azurewebsites.net';
-// const btn_
+
 
 const isRol = (rol) =>{
     if(rol == 'estudiante')

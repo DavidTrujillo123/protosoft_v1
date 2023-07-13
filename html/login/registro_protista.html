@@ -73,7 +73,7 @@
 
                     <!-- Primera parte del form -->
 
-                    <div class="primer_create_form inactive">
+                    <div class="primer_create_form">
                         <div class="container_option">
                             <label for="POST-email">Reino:</label>
                             <div class="create_two_op">
@@ -129,9 +129,7 @@
                     </div>
 
                     <!-- Tercera parte del form -->
-
-                    <div class="tercero_create_form">
-                        <!-- <h2 class="subtitle">Configuraciones opcionales</h2> -->
+                    <div class="tercero_create_form inactive">
                         <div class="container_option">
                             <label for="especies">Especies*:</label>
                             <select name="especies" id="especies" class="select_principal cursiva">
@@ -151,12 +149,25 @@
                         <div class="container_option">
                             <label for="nom_vulgar">Nombre vulgar:</label>
                             <div class="create_two_op">
-                                <input id="nom_vulgar" type="text" name="nom_vulgar" value="Alga unicelular" readonly>
+                                <input id="nom_vulgar" type="text" name="nom_vulgar" value="Alga unicelular">
                             </div>
                         </div>
                         <div class="container_option">
                             <label for="foto_prot">Foto:</label>
                             <input class="crear_foto_perfil" id="foto_post" type="file" name="POST-foto">
+                        </div>
+                    </div>
+
+                    <!-- Cuarta parte del form -->
+                    <div class="cuarto_create_form inactive">
+                        <h2 class="subtitle">Información Adicional</h2>
+                        <div class="container_option">
+                            <label for="descripcion">Descripción:</label>
+                            <textarea class="text_area" name="descripcion" id="descripcion" cols="10" rows="5"></textarea>
+                        </div>
+                        <div class="container_option">
+                            <label for="ubicacion">Ubicación y habitad:</label>
+                            <textarea class="text_area" name="ubicacion" id="ubicacion" cols="10" rows="5"></textarea>
                         </div>
                     </div>
                     <button class="primary_btn bnt_siguiente" type="button">Siguiente</button>
@@ -191,4 +202,5 @@
     </footer>
 
     <script src="../../js/navBar.js"></script>
+    <script src="../../js/registro_prot.js"></script>
 </body>
