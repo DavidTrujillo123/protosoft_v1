@@ -16,7 +16,7 @@ const postDataUsers = async (url, data) => {
 
 async function isUser(url, uData){
     try {
-        const response = await postDataUsers(`${url}/users`, uData);
+        const response = await postDataUsers(`${url}/login`, uData);
         localStorage.setItem('user', JSON.stringify(response));
         localStorage.setItem('isAuthenticated', 'true');
         window.location.href = './login/home_user.html';

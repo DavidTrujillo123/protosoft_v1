@@ -49,6 +49,4 @@ bnt_crear_cuenta.addEventListener('click', () => {
     let uData = { rol, email, password, name, lastName};
     console.log(uData);
     postDataNewUsers(`${url}/users`, uData);
-    
-    
 });
