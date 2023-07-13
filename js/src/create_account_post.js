@@ -3,26 +3,14 @@ const POST_password = document.getElementById('POST-password');
 const POST_nombres = document.getElementById('POST-nombres');
 const POST_apellidos = document.getElementById('POST-apellidos');
 const roles = document.getElementsByName("rol");
-// const bnt_crear_cuenta = document.querySelector('.bnt_crear_cuenta');
 let url = 'https://protosoft-api.azurewebsites.net';
-// const btn_
-
-const isRol = (rol) =>{
-    if(rol == 'estudiante')
-        return 'EST';
-    else if (rol == 'taxonomo'){
-        return 'TAX';
-    }
-    else{
-        return 'INV';
-    }
-}
 
 
-const getRol = (radios) => {
-    for (let i = 0; i < radios.length; i++) {
-        if (radios[i].checked) {
-            return radios[i].value;
+
+const getRol = (roles) => {
+    for (let i = 0; i < roles.length; i++) {
+        if (roles[i].checked) {
+            return roles[i].value;
         }
     }
 }
@@ -39,14 +27,31 @@ const postDataNewUsers = async (url, data) => {
     return result;
 }
 
+async function isNewUser(url, uData){
+    try {
+        const response = await postDataNewUsers(`${url}/users`, uData);
+        // localStorage.setItem('user', JSON.stringify(response));
+        // localStorage.setItem('isAuthenticated', 'true');
+        // window.location.href = './login/home_user.html';
+        console.log(response);
+        alert('NICEEE');
+    } catch (error) {
+        console.log(error);
+        localStorage.setItem('isAuthenticated', 'false');
+        alert('Usuario o contraseña erroneas');
+    }
+}
+
 
 bnt_crear_cuenta.addEventListener('click', () => {
     let email = POST_email.value+"@utn.edu.ec";
     let password = POST_password.value;
     let name = POST_nombres.value;
     let lastName = POST_apellidos.value;
-    let rol = isRol(getRol(roles));
+    let rol = getRol(roles);
     let uData = { rol, email, password, name, lastName};
-    console.log(uData);
-    postDataNewUsers(`${url}/users`, uData);
+    // console.log(uData);
+    // postDataNewUsers(`${url}/users`, uData);
+    console.log(JSON.stringify(uData));
+    isNewUser(url, uData);
 });
