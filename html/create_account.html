@@ -74,16 +74,15 @@
                             <label for="POST-password">Nombres completos*:</label>
                             <div class="create_two_op">
                                 <input placeholder="Nombres" id="POST-nombres" type="text" name="nombres" required>
-                                <input placeholder="Apellidos" id="POST-apellidos" type="text" name="apellidos"
-                                    required>
+                                <input placeholder="Apellidos" id="POST-apellidos" type="text" name="apellidos" required>
                             </div>
                         </div>
                         <div class="container_option">
-                            <label for="POST-password">Rol*:</label>
+                            <label for="POST-rol">Rol*:</label>
                             <div class="create_two_op">
                                 <label clas="input_rol" for="estudiante">Estudiante</label>
                                     <input type="radio" id="estudiante" name="rol" value="estudiante" required>
-                                <label class="input_rol" for="estudiante">Taxónomo</label>
+                                <label class="input_rol" for="taxonomo">Taxónomo</label>
                                     <input type="radio" id="taxonomo" name="rol" value="taxonomo" required>
                                 <label class="input_rol" for="investigador">Investigador</label>
                                     <input type="radio" id="investigador" name="rol" value="investigador" required>
@@ -136,7 +135,7 @@
                         </div>
                     </div>
                     <button class="primary_btn bnt_siguiente" type="button">Siguiente</button>
-                    <input type="submit" class="primary_btn bnt_crear_cuenta inactive" value="Crear Cuenta">
+                    <input type="button" class="primary_btn bnt_crear_cuenta inactive" value="Crear Cuenta">
                 </form>
                 
 
@@ -169,6 +168,7 @@
 
     <script src="../js/navBar.js"></script>
     <script src="../js/create_account.js"></script>
+    <script src="../js/src/create_account_post.js"></script>
 </body>
 
 </html>
