@@ -6,7 +6,6 @@ const roles = document.getElementsByName("rol");
 let url = 'https://protosoft-api.azurewebsites.net';
 
 
-
 const getRol = (roles) => {
     for (let i = 0; i < roles.length; i++) {
         if (roles[i].checked) {
@@ -16,6 +15,7 @@ const getRol = (roles) => {
 }
 
 const postDataNewUsers = async (url, data) => {
+    // console.log(JSON.stringify(data));
     const response = await fetch(url, {
         method: 'POST',
         headers: {
@@ -30,15 +30,11 @@ const postDataNewUsers = async (url, data) => {
 async function isNewUser(url, uData){
     try {
         const response = await postDataNewUsers(`${url}/users`, uData);
-        // localStorage.setItem('user', JSON.stringify(response));
-        // localStorage.setItem('isAuthenticated', 'true');
-        // window.location.href = './login/home_user.html';
-        console.log(response);
+        // console.log(response);
         alert('NICEEE');
     } catch (error) {
         console.log(error);
-        localStorage.setItem('isAuthenticated', 'false');
-        alert('Usuario o contraseña erroneas');
+        // alert('Usuario o contraseña erroneas');
     }
 }
 

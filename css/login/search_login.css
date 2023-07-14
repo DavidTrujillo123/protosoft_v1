@@ -45,12 +45,9 @@ header{
 .inactive{
     display: none !important;
 }
-.active_nav a{
+.active_nav a {
     color: var(--hospital-green-black) !important;
     font-weight: bold;
-    border: 2px solid var(--hospital-green-black);
-    border-radius: 10px;
-    padding: 10px;
 }
 .hamburgesa_menu{
     display: none;
@@ -103,10 +100,7 @@ header{
 }   
 .into_btn a:hover{
     color: var(--hospital-green-black);
-    font-weight: bold;
-    border: 2px solid var(--hospital-green-black);
-    border-radius: 10px;
-    padding: 10px;
+    font-weight: bold; 
 }
 .perfil{
     position: absolute;
@@ -260,8 +254,6 @@ nav a{
 }
 
 .container-filtos {
-    /* position: absolute;
-    top: 50px; */
     margin-right: 20px;
     padding: 8px;
     background-color: var(--hospital-green-black);
@@ -270,8 +262,8 @@ nav a{
 }
 
 .filtros {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
 }
 
 .container_option {
@@ -357,7 +349,7 @@ nav a{
     top: 0px; */
     max-width: 700px;
     min-width: 300px;
-    height: 550px;
+    height: calc(100vh - 200px);
     padding: 20px;
     border-radius: 20px;
     background-color: var(--deep-ocean);

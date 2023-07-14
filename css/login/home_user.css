@@ -56,9 +56,6 @@ header {
 .active_nav a {
     color: var(--hospital-green-black) !important;
     font-weight: bold;
-    border: 2px solid var(--hospital-green-black);
-    border-radius: 10px;
-    padding: 10px;
 }
 
 .hamburgesa_menu {
@@ -120,12 +117,9 @@ header {
     color: var(--very-light-pink);
 }
 
-.into_btn a:hover {
+.into_btn a:hover{
     color: var(--hospital-green-black);
-    font-weight: bold;
-    border: 2px solid var(--hospital-green-black);
-    border-radius: 10px;
-    padding: 10px;
+    font-weight: bold; 
 }
 
 .perfil {
@@ -319,7 +313,7 @@ nav a {
     top: 0px; */
     max-width: 700px;
     min-width: 300px;
-    height: 550px;
+    height: calc(100vh - 200px);
     padding: 20px;
     border-radius: 20px;
     background-color: var(--deep-ocean);

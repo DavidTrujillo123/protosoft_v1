@@ -45,12 +45,9 @@ header{
 .inactive{
     display: none !important;
 }
-.active_nav a{
+.active_nav a {
     color: var(--hospital-green-black) !important;
     font-weight: bold;
-    border: 2px solid var(--hospital-green-black);
-    border-radius: 10px;
-    padding: 10px;
 }
 .hamburgesa_menu{
     display: none;
@@ -103,10 +100,7 @@ header{
 }   
 .into_btn a:hover{
     color: var(--hospital-green-black);
-    font-weight: bold;
-    border: 2px solid var(--hospital-green-black);
-    border-radius: 10px;
-    padding: 10px;
+    font-weight: bold; 
 }
 .perfil{
     position: absolute;

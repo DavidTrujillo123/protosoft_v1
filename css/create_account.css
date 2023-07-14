@@ -93,17 +93,11 @@ header{
 }
 .into_btn a:hover{
     color: var(--hospital-green-black);
-    font-weight: bold;
-    border: 2px solid var(--hospital-green-black);
-    border-radius: 10px;
-    padding: 10px;
+    font-weight: bold; 
 }
-.active_nav a{
-    color: var(--hospital-green-black);
+.active_nav a {
+    color: var(--hospital-green-black) !important;
     font-weight: bold;
-    border: 2px solid var(--hospital-green-black);
-    border-radius: 10px;
-    padding: 10px;
 }
 .perfil{
     position: absolute;
@@ -206,6 +200,7 @@ nav a{
     color: var(--white);
     font-weight: bold;
     font-size: var(--sm);
+    cursor: pointer;
 }
 .tienes_cuenta{
     position: absolute;
