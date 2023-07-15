@@ -4,6 +4,7 @@ const POST_nombres = document.getElementById('POST-nombres');
 const POST_apellidos = document.getElementById('POST-apellidos');
 const roles = document.getElementsByName("rol");
 let url = 'https://protosoft-api.azurewebsites.net';
+// let url = 'http://localhost:8080';
 
 
 const getRol = (roles) => {
@@ -31,23 +32,23 @@ async function isNewUser(url, uData){
     try {
         const response = await postDataNewUsers(`${url}/users`, uData);
         // console.log(response);
-        alert('NICEEE');
+        alert(response.message);
     } catch (error) {
         console.log(error);
         // alert('Usuario o contraseña erroneas');
     }
 }
 
-
 bnt_crear_cuenta.addEventListener('click', () => {
-    let email = POST_email.value+"@utn.edu.ec";
-    let password = POST_password.value;
-    let name = POST_nombres.value;
-    let lastName = POST_apellidos.value;
-    let rol = getRol(roles);
-    let uData = { rol, email, password, name, lastName};
+    let rolid = getRol(roles);
+    let usucorreo = POST_email.value+"@utn.edu.ec";
+    let usucontrasenia = POST_password.value;
+    let usunombre = POST_nombres.value;
+    let usuapellido = POST_apellidos.value;
+    let usuestado = 'true';
+    let usuimagen = null;
+    let uData = { rolid, usucorreo, usucontrasenia, usunombre, usuapellido, usuestado, usuimagen};
     // console.log(uData);
     // postDataNewUsers(`${url}/users`, uData);
-    console.log(JSON.stringify(uData));
-    isNewUser(url, uData);
+    let ejem = isNewUser(url, uData);
 });

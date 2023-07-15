@@ -1,4 +1,4 @@
-window.onload = function () {
+window.ready = function () {
     const isAuthenticated = localStorage.getItem('isAuthenticated');
     console.log(isAuthenticated);
     if (isAuthenticated == 'false' || isAuthenticated == null) {
