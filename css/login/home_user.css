@@ -266,6 +266,8 @@ nav a {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 20px;
+    margin: 0 auto;
+    max-width: 1800px;
 }
 
 .ejem_cards_info {

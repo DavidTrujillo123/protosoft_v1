@@ -48,7 +48,5 @@ bnt_crear_cuenta.addEventListener('click', () => {
     let usuestado = 'true';
     let usuimagen = null;
     let uData = { rolid, usucorreo, usucontrasenia, usunombre, usuapellido, usuestado, usuimagen};
-    // console.log(uData);
-    // postDataNewUsers(`${url}/users`, uData);
     let ejem = isNewUser(url, uData);
 });
