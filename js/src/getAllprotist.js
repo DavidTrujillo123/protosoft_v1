@@ -6,8 +6,8 @@ const select_familias = document.getElementById("familia");
 const select_generos = document.getElementById("genero");
 const select_especies = document.getElementById("especies");
 const input_nom_cient = document.getElementById("nom_cient");
-
-let url = 'http://localhost:8080';
+let url = 'https://protosoft-api.azurewebsites.net';
+// let url = 'http://localhost:8080';
 
 //general functions fectchs
 const getDataProt = async (url) => {

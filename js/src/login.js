@@ -1,6 +1,6 @@
 const btn = document.querySelector('.login_crear_cuenta_btn');
-// let url = 'https://protosoft-api.azurewebsites.net';
-let url = 'http://localhost:8080';
+let url = 'https://protosoft-api.azurewebsites.net';
+// let url = 'http://localhost:8080';
 
 const postDataUsers = async (url, data) => {
     const response = await fetch(url, {

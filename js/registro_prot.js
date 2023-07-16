@@ -50,21 +50,21 @@ const cambiar_fomr_create = () => {
 }
 
 bnt_siguiente.addEventListener('click', cambiar_fomr_create);
-// pasos_list[0].addEventListener('click', () => {
-//     change_state(primer_create_form, segundo_create_form, tercero_create_form, 'inactive');
-//     change_state(pasos_list[0], pasos_list[1], pasos_list[2], 'pasos_inactive');
-// });
-// pasos_list[1].addEventListener('click', () => {
+pasos_list[0].addEventListener('click', () => {
+    change_state(primer_create_form, segundo_create_form, tercero_create_form, 'inactive');
+    change_state(pasos_list[0], pasos_list[1], pasos_list[2], 'pasos_inactive');
+});
+pasos_list[1].addEventListener('click', () => {
 
-//     change_state(segundo_create_form, primer_create_form, tercero_create_form, 'inactive');
-//     change_state(pasos_list[1], pasos_list[0], pasos_list[2], 'pasos_inactive');
+    change_state(segundo_create_form, primer_create_form, tercero_create_form, 'inactive');
+    change_state(pasos_list[1], pasos_list[0], pasos_list[2], 'pasos_inactive');
 
-// });
-// pasos_list[2].addEventListener('click', () => {
+});
+pasos_list[2].addEventListener('click', () => {
 
-//     change_state(tercero_create_form, primer_create_form, segundo_create_form, 'inactive');
-//     change_state(pasos_list[2], pasos_list[0], pasos_list[1], 'pasos_inactive');
-//     bnt_siguiente.classList.add('inactive');
-//     bnt_crear_cuenta.classList.remove('inactive');
+    change_state(tercero_create_form, primer_create_form, segundo_create_form, 'inactive');
+    change_state(pasos_list[2], pasos_list[0], pasos_list[1], 'pasos_inactive');
+    bnt_siguiente.classList.add('inactive');
+    bnt_crear_cuenta.classList.remove('inactive');
 
-// });
+});
