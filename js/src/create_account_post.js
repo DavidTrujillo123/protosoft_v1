@@ -2,9 +2,14 @@ const POST_email = document.getElementById('POST-email');
 const POST_password = document.getElementById('POST-password');
 const POST_nombres = document.getElementById('POST-nombres');
 const POST_apellidos = document.getElementById('POST-apellidos');
+const POST_telefono = document.getElementById('POST-telefono');
+const POST_pregunta_recuperacion_1 = document.getElementById('POST-pregunta-recuperacion-1');
+const POST_respuesta_recuperacion_1 = document.getElementById('POST-respuesta-recuperacion-1');
+const POST_pregunta_recuperacion_2 = document.getElementById('POST-pregunta-recuperacion-2');
+const POST_respuesta_recuperacion_2 = document.getElementById('POST-respuesta-recuperacion-2');
 const roles = document.getElementsByName("rol");
-let url = 'https://protosoft-api.azurewebsites.net';
-// let url = 'http://localhost:8080';
+// let url = 'https://protosoft-api.azurewebsites.net';
+let url = 'http://localhost:8080';
 
 
 const getRol = (roles) => {
@@ -31,8 +36,9 @@ const postDataNewUsers = async (url, data) => {
 async function isNewUser(url, uData){
     try {
         const response = await postDataNewUsers(`${url}/users`, uData);
-        // console.log(response);
         alert(response.message);
+        if (response.success == true)
+            window.location.href = './login.html';
     } catch (error) {
         console.log(error);
         // alert('Usuario o contraseña erroneas');
@@ -47,6 +53,12 @@ bnt_crear_cuenta.addEventListener('click', () => {
     let usuapellido = POST_apellidos.value;
     let usuestado = 'true';
     let usuimagen = null;
-    let uData = { rolid, usucorreo, usucontrasenia, usunombre, usuapellido, usuestado, usuimagen};
-    let ejem = isNewUser(url, uData);
+    let usutelefono = POST_telefono.value || null;
+    let pregunta1 = POST_pregunta_recuperacion_1.value;
+    let respuesta1 = POST_respuesta_recuperacion_1.value;
+    let pregunta2 = POST_pregunta_recuperacion_2.value;
+    let respuesta2 = POST_respuesta_recuperacion_2.value;
+    let uData = { rolid, usucorreo, usucontrasenia, usunombre, usuapellido, 
+                    usuestado, usuimagen, usutelefono, pregunta1, respuesta1, pregunta2, respuesta2};
+    isNewUser(url, uData);
 });
