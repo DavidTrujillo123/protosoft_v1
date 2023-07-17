@@ -242,15 +242,15 @@ nav a{
     color: var(--white);
 }
 .login_into{
-    /* height: calc(100vh - 250px); */
+    max-height: calc(100vh - 250px);
     overflow: auto;
     max-width: 100%;
     background-color: var(--deep-ocean); 
     border-radius: 20px;
     position: relative;
     box-shadow: 13px 15px 14px -3px rgba(0,0,0,0.76);
--webkit-box-shadow: 13px 15px 14px -3px rgba(0,0,0,0.76);
--moz-box-shadow: 13px 15px 14px -3px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 13px 15px 14px -3px rgba(0,0,0,0.76);
+    -moz-box-shadow: 13px 15px 14px -3px rgba(0,0,0,0.76);
 }
 .login_options{
     padding: 20px 32px 32px 32px;
@@ -331,9 +331,6 @@ nav a{
     padding: 8px;
     font-size: var(--sm);
     border-radius: 8px;
-}
-.gigant_container{
-    height: calc(100vh - 250px);
 }
 select{
     font-size: var(--sm);
