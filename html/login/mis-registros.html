@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/login/mis-registros.css">
+
+</head>
+<body>
+    <header>
+        <div class="navBar">
+            <a href="./home_user.html">
+                <div class="logo">
+                    <img src="../../multimedia/logo_proto.png" alt="logo de protosoft">
+                    <p><span>Proto</span>soft</p>
+                </div>
+            </a>
+            <img class="hamburgesa_menu" src="../../multimedia/icons8-menú-50.png" alt="menu de opciones">
+            <div class="general_nav inactive_nav">
+                <div class="opciones">
+                    <ul class="second_nav">
+                        <li class="into_btn"><a href="./search_login.html">Búsqueda</a></li>
+                        <li class="into_btn" id="nav_registros"><a>Registros <img class="flecha_perfil"
+                                    src="../../multimedia/flechita.svg" alt="flecha en registros"></a></li>
+                        <li class="into_btn"><a href="./about-us-login.html">Sobre nosotros</a></li>
+                    </ul>
+                    <div class="desktop-menu menu_registros inactive">
+                        <ul>
+                            <li><a href="" class="">Mis registros</a></li>
+                            <li><a href="./registro_protista.html" class="">Crear registro</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="perfil">
+                    <div class="perfil_email">
+                        <p id="email_nav" class="email_nav_inactive"></p>
+                        <img class="flecha_perfil email_nav_inactive" src="../../multimedia/flechita.svg"
+                            alt="Icono de flecha en perfil">
+                    </div>
+                    <img class="icono_perfil" src="../../multimedia/icono_perfil.png" alt="Icono de perfil">
+                    <div class="desktop-menu menu_perfil inactive">
+                        <ul>
+                            <li><a href="" class="">Mi Perfil</a></li>
+                            <li><a href="../home.html" class="closeSesion">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <a href="./home_user.html">Home/</a><a class="nav_active" href="#">Búsqueda</a>
+        </nav>
+    </header>
+
+    <section class="mis_registros">
+        <div class="mis_registros_container">
+            <h3 class="mis_registros_title">Resumen</h3>
+            <div class="mis_registros_info">
+                <!-- column 1 -->
+                <div class="mis_registros_column">
+                    <div class="registros_info">
+                        <h4 class="title_info_prot" id="label_estado">Estado:</h4>
+                        <p class="info_prot por_aprobar" id="input_estado">Por aprobar</p>
+                    </div>
+                    <div class="registros_info">
+                        <h4 class="title_info_prot">Reino:</h4>
+                        <p class="info_prot">Protista</p>
+                    </div>
+                    <div class="registros_info">
+                        <h4 class="title_info_prot" id="label_filo">Filo:</h4>
+                        <p class="info_prot" id="input_filo">Protista</p>
+                    </div>
+                </div>
+                <!-- column 2 -->
+                <div class="mis_registros_column">
+                    <div class="registros_info">
+                        <h4 class="title_info_prot" id="label_clase">Clase:</h4>
+                        <p class="info_prot" id="input_clase">Protista</p>
+                    </div>
+                    <div class="registros_info">
+                        <h4 class="title_info_prot" id="label_orden">Orden:</h4>
+                        <p class="info_prot" id="input_orden">Protista</p>
+                    </div>
+                    <div class="registros_info">
+                        <h4 class="title_info_prot" id="label_familia">Familia:</h4>
+                        <p class="info_prot" id="input_familia">Protista</p>
+                    </div>
+                </div>
+                <!-- column 3 -->
+                <div class="mis_registros_column">
+                    <div class="registros_info">
+                        <h4 class="title_info_prot" id="label_genero">Género:</h4>
+                        <p class="info_prot" id="input_genero">Protista</p>
+                    </div>
+                    <div class="registros_info">
+                        <h4 class="title_info_prot" id="label_nombre_cient">Nombre científico:</h4>
+                        <p class="info_prot" id="input_nombre_cient">Protista</p>
+                    </div>
+                    <div class="registros_info">
+                        <h4 class="title_info_prot" id="label_nombre_vul">Nombre vulgar:</h4>
+                        <p class="info_prot" id="input__nombre_vul">Protista</p>
+                    </div>
+                    <!-- <div class="registros_info">
+                        <h4 class="title_info_prot" id="reino">Clase:</h4>
+                        <p class="info_prot">Protista</p>
+                    </div> -->
+                </div>
+                <div class="mis_registros_column column_img">
+                    <img src="./BOSQUES_DE_ALGAS_GIGANTES_3_.jpg" alt="">
+                </div>
+            </div>
+            <div class="detalles_mis_reg">
+                <h4 class="title_info_prot" id="label_genero">Detalles:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt omnis unde cumque dolore voluptatem fugiat enim eum, sapiente laborum atque delectus maxime quod quos doloremque repellat soluta ab harum iure!</p><br>
+            </div>
+            <div class="detalles_mis_reg">
+                <h4 class="title_info_prot" id="label_genero">Ubicación y hábitat:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt omnis unde cumque dolore voluptatem fugiat enim eum, sapiente laborum atque delectus maxime quod quos doloremque repellat soluta ab harum iure!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container_footer">
+            <div class="footer_logo">
+                <img src="../../multimedia/logo_proto.png" alt="logo de protosoft">
+            </div>
+            <div class="footer_central_info">
+                <div class="footer_info">
+                    <ul>
+                        <li><a href="">Información de contacto</a></li>
+                        <li><a href="">Término de uso</a></li>
+                        <li><a href="">Créditos y atribuciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_redes">
+                <a href="https://www.facebook.com/eduardo.echeverria.581"><img
+                        src="../../multimedia/icons8-facebook-50 (1).png" alt="logo de facebook"></a>
+                <img src="../../multimedia/icons8-instagram-50.png" alt="logo de instagram">
+            </div>
+        </div>
+
+        <div class="footer_add_info">
+            <p>Página desarrollada por estudiantes de la Universidad Técnica del Norte</p>
+        </div>
+    </footer>
+
+    
+    <script src="../../js/src/isLoged.js"></script>
+    <script src="../../js/navBar.js"></script>
+    <!-- <script src="../../js/search_login.js"></script> -->
+    <!-- <script src="../../js/showNofound.js"></script> -->
+    <script src="../../js/src/navBar_user.js"></script>
+    <script src="../../js/src/closeSesion.js"></script>
+</body>
