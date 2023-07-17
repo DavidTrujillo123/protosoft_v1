@@ -8,7 +8,6 @@ const steps_list = cuenta_pasos.querySelectorAll('li');
 const bnt_siguiente = document.querySelector('.bnt_siguiente');
 const bnt_crear_cuenta = document.querySelector('.bnt_crear_cuenta');
 
-
 //cambiar form v2
 const change_state = (list, part, clase) =>{
     list.forEach(element => {
@@ -35,13 +34,6 @@ const openGiganForm = () =>{
     bnt_siguiente.classList.add('inactive');
     bnt_crear_cuenta.classList.remove('inactive');
 }
-//cambiar de formulario
-// const change_state = (form_active, form_inactive_1, form_inactive_2, form_inactive_3, clase) => {
-//     form_inactive_1.classList.add(clase);
-//     form_inactive_2.classList.add(clase);
-//     form_inactive_3.classList.add(clase);
-//     form_active.classList.remove(clase);
-// }
 
 // Cambiar en btn_siguiente
 const cambiar_fomr_create = () => {
@@ -77,6 +69,7 @@ steps_list[2].addEventListener('click', () => {
     // bnt_crear_cuenta.classList.remove('inactive');
 });
 steps_list[3].addEventListener('click', () => {
+    console.log('aaa');
     change_form(cuarto_create_form);
     change_state(steps_list[3]);
 });
