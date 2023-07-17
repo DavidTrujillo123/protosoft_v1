@@ -6,6 +6,11 @@ const select_familias = document.getElementById("familia");
 const select_generos = document.getElementById("genero");
 const select_especies = document.getElementById("especies");
 const input_nom_cient = document.getElementById("nom_cient");
+const input_nom_vulgar = document.getElementById("nom_vulgar");
+const btn_registrar_pro = document.getElementById("btn_registrar");
+const txtDescripcon = document.getElementById("descripcion");
+const txtUbicacion = document.getElementById("ubicacion");
+
 let url = 'https://protosoft-api.azurewebsites.net';
 // let url = 'http://localhost:8080';
 
@@ -155,6 +160,18 @@ async function getEspecies(url, id) {
     }
 }
 
+//post registro de protista
+async function postRegisto(url, data) {
+    try {
+        const response = await postDataProt(`${url}/registers`, data);
+        alert(response.message);
+        window.location.href = './registro_protista.html';
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
 const putNombreCient = () => {
     let selectGenero = select_generos.options[select_generos.selectedIndex].text;
     let selectEspecie = select_especies.options[select_especies.selectedIndex].text;
@@ -187,6 +204,29 @@ select_generos.addEventListener("change", () => {
 });
 
 select_especies.addEventListener("change", putNombreCient);
+
+btn_registrar_pro.addEventListener('click', ()=>{
+    let registro = {
+        usuid: JSON.parse(localStorage.getItem('user')).usuid,
+        regestado: true,
+        regnombre_cientifico: input_nom_cient.value,
+        regnombre_vulgar: input_nom_vulgar.value, //ojo
+        regespecie: select_especies.value,
+        reggenero: select_generos.value,
+        regfamilia: select_familias.value,
+        regorden: select_ordenes.value,
+        regclase: select_clases.value,
+        regfilo: select_filo.value,
+        regreino: reino_input.value,
+        regdescripcion: txtDescripcon.value,
+        reghabitat: txtUbicacion.value,
+        img: src,
+    };
+    postRegisto(url, registro);
+    console.log('aaa');
+});
+
+
 
 
 

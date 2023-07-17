@@ -1,5 +1,6 @@
 const img_preview = document.getElementById('img_preview');
 const img_upload = document.getElementById('foto_post');
+let src = null;
 
 const CLOURDINARY_URL = 'https://api.cloudinary.com/v1_1/dqhmyjlbv/image/upload';
 const CLOURDINARY_UPLOAD_PRESETS = 'ft2nlqqm';
@@ -18,5 +19,6 @@ img_upload.addEventListener('change', async (e) =>{
         }
     });
     img_preview.src = res.data.secure_url;
+    src = res.data.secure_url;
 
 });
