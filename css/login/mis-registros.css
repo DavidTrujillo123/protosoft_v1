@@ -185,6 +185,10 @@ header{
     color: var(--white);
     font-size: var(--llg);
 }
+.title_mis_reg{
+    margin: 20px 0 20px 20px;
+}
+
 
 .subtitle {
     /* padding: 50px 0 0px 100px; */
@@ -218,15 +222,19 @@ nav a{
     min-height: 100vh;
 }
 .mis_registros_container{
-    margin: 12px auto;
+    margin: 28px auto;
     display: block;
     overflow: hidden;
+    box-shadow: 1px 2px 17px 10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 2px 17px 10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 17px 10px rgba(0,0,0,0.75);
     background-color: var(--deep-ocean);
     height: auto;
     width: 90%;
     padding: 20px;
     border: 1px solid var(--white);
     border-radius: 20px;
+    z-index: 1;
     /* margin: 12px 0 12px 0; */
 }
 .mis_registros_title{
@@ -237,10 +245,12 @@ nav a{
 .mis_registros_info{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    
 }
 
 .mis_registros img{
     height: 125px;
+    border: 1px solid var(--white);
     border-radius: 20px;
 }
 
@@ -269,7 +279,8 @@ nav a{
 }
 
 .por_aprobar{
-    color: red !important;
+    font-weight: bold;
+    color: #FF6699 !important;
 }
 
 .detalles_mis_reg{

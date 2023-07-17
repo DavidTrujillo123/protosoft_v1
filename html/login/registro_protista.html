@@ -30,20 +30,22 @@
                 <div class="opciones">
                     <ul class="second_nav">
                         <li class="into_btn"><a href="./search_login.html">Búsqueda</a></li>
-                        <li class="into_btn active_nav" id="nav_registros"><a >Registros <img class="flecha_perfil" src="../../multimedia/flechita.svg" alt="flecha en registros"></a></li>
+                        <li class="into_btn active_nav" id="nav_registros"><a>Registros <img class="flecha_perfil"
+                                    src="../../multimedia/flechita.svg" alt="flecha en registros"></a></li>
                         <li class="into_btn"><a href="./about-us-login.html">Sobre nosotros</a></li>
                     </ul>
                     <div class="desktop-menu menu_registros inactive">
                         <ul>
-                            <li><a href="" class="">Mis registros</a></li>
-                            <li class="active_nav"><a href="" class="">Crear registro</a></li>
+                            <li><a href="./mis-registros.html" class="">Mis registros</a></li>
+                            <li class="active_nav"><a href="">Crear registro</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="perfil">
                     <div class="perfil_email">
                         <p id="email_nav" class="email_nav_inactive"></p>
-                        <img class="flecha_perfil email_nav_inactive" src="../../multimedia/flechita.svg" alt="Icono de flecha en perfil">
+                        <img class="flecha_perfil email_nav_inactive" src="../../multimedia/flechita.svg"
+                            alt="Icono de flecha en perfil">
                     </div>
                     <img class="icono_perfil" src="../../multimedia/icono_perfil.png" alt="Icono de perfil">
                     <div class="desktop-menu menu_perfil inactive">
@@ -73,96 +75,108 @@
                 </ul>
                 <form class="primary_login" action="" method="post">
 
-                    <!-- Primera parte del form -->
+                    <div id="gigant_from">
 
-                    <div class="primer_create_form">
-                        <div class="container_option">
-                            <label for="reino">Reino:</label>
-                            <div class="create_two_op">
-                                <input class="reino" type="text" name="email" value="" readonly>
+                        <div>
+                            <!-- Primera parte del form -->
+                            <div class="primer_create_form">
+                                <div class="container_option">
+                                    <label for="reino">Reino:</label>
+                                    <div class="create_two_op">
+                                        <input class="reino" type="text" name="email" value="" readonly>
+                                    </div>
+                                </div>
+                                <div class="container_option">
+                                    <label for="filo">Filo*:</label>
+                                    <select name="filo" id="filo" class="select_principal">
+                                        <!-- FILOS -->
+                                    </select>
+                                </div>
+                                <div class="container_option">
+                                    <label for="clase">Clase*:</label>
+                                    <select name="clase" id="clase" class="select_principal">
+                                        <!-- CLASES -->
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Segunda parte del form -->
+                            <div class="segundo_create_form inactive">
+                                <div class="container_option">
+                                    <label for="orden">Orden*:</label>
+                                    <select name="orden" id="orden" class="select_principal">
+                                        <!-- ORDENES -->
+                                    </select>
+                                </div>
+                                <div class="container_option">
+                                    <label for="familia">Familia*:</label>
+                                    <select name="familia" id="familia" class="select_principal">
+                                        <!-- FAMILIAS -->
+                                    </select>
+                                </div>
+                                <div class="container_option">
+                                    <label for="genero">Género*:</label>
+                                    <select name="genero" id="genero" class="select_principal cursiva">
+                                        <!-- GENEROS -->
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                        <div class="container_option">
-                            <label for="filo">Filo*:</label>
-                            <select name="filo" id="filo" class="select_principal">
-                                <!-- FILOS -->
-                            </select>
-                        </div>
-                        <div class="container_option">
-                            <label for="clase">Clase*:</label>
-                            <select name="clase" id="clase" class="select_principal">
-                                <!-- CLASES -->
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Segunda parte del form -->
-                    <div class="segundo_create_form inactive">
-                        <div class="container_option">
-                            <label for="orden">Orden*:</label>
-                            <select name="orden" id="orden" class="select_principal">
-                                <!-- ORDENES -->
-                            </select>
-                        </div>
-                        <div class="container_option">
-                            <label for="familia">Familia*:</label>
-                            <select name="familia" id="familia" class="select_principal">
-                               <!-- FAMILIAS -->
-                            </select>
-                        </div>
-                        <div class="container_option">
-                            <label for="genero">Género*:</label>
-                            <select name="genero" id="genero" class="select_principal cursiva">
-                                <!-- GENEROS -->
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Tercera parte del form -->
-                    <div class="tercero_create_form inactive">
-                        <div class="container_option">
-                            <label for="especies">Especies*:</label>
-                            <select name="especies" id="especies" class="select_principal cursiva">
-                                <!-- ESPECIES-->
-                            </select>
-                        </div>
-                        <div class="container_option">
-                            <label for="nom_cient">Nombre científico:</label>
-                            <div class="create_two_op">
-                                <input class="cursiva" id="nom_cient" type="text" name="nom_cient" readonly>
+                        <!-- Tercera parte del form -->
+                        <div class="tercero_create_form inactive">
+                            <div>
+                                <div class="container_option">
+                                    <label for="especies">Especies*:</label>
+                                    <select name="especies" id="especies" class="select_principal cursiva">
+                                        <!-- ESPECIES-->
+                                    </select>
+                                </div>
+                                <div class="container_option">
+                                    <label for="nom_cient">Nombre científico:</label>
+                                    <div class="create_two_op">
+                                        <input class="cursiva" id="nom_cient" type="text" name="nom_cient" readonly>
+                                    </div>
+                                </div>
+                                <div class="container_option">
+                                    <label for="nom_vulgar">Nombre vulgar:</label>
+                                    <div class="create_two_op">
+                                        <input id="nom_vulgar" type="text" name="nom_vulgar" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container_option">
+                                <label for="foto_prot">Foto:</label>
+                                <div class="container_img">
+                                    <img src="../../multimedia/proto.jpeg" alt="imagen por defecto de protista"
+                                        id="img_preview">
+                                </div>
+                                <input class="crear_foto_perfil" id="foto_post" type="file" name="POST-foto">
                             </div>
                         </div>
-                        <div class="container_option">
-                            <label for="nom_vulgar">Nombre vulgar:</label>
-                            <div class="create_two_op">
-                                <input id="nom_vulgar" type="text" name="nom_vulgar" value="">
+
+                        <!-- Cuarta parte del form -->
+                        <div class="cuarto_create_form inactive">
+                            <h2 class="subtitle">Información Adicional</h2>
+                            <div class="container_option">
+                                <label for="descripcion">Descripción:</label>
+                                <textarea class="text_area" name="descripcion" id="descripcion" cols="10"
+                                    rows="5"></textarea>
+                            </div>
+                            <div class="container_option">
+                                <label for="ubicacion">Ubicación y hábitad:</label>
+                                <textarea class="text_area" name="ubicacion" id="ubicacion" cols="10"
+                                    rows="5"></textarea>
                             </div>
                         </div>
-                        <div class="container_option">
-                            <label for="foto_prot">Foto:</label>
-                            <div class="container_img">
-                                <img src="../../multimedia/proto.jpeg" alt="imagen por defecto de protista" id="img_preview">
-                            </div>
-                            <input class="crear_foto_perfil" id="foto_post" type="file" name="POST-foto">
-                        </div>
+
                     </div>
 
-                    <!-- Cuarta parte del form -->
-                    <div class="cuarto_create_form inactive">
-                        <h2 class="subtitle">Información Adicional</h2>
-                        <div class="container_option">
-                            <label for="descripcion">Descripción:</label>
-                            <textarea class="text_area" name="descripcion" id="descripcion" cols="10" rows="5"></textarea>
-                        </div>
-                        <div class="container_option">
-                            <label for="ubicacion">Ubicación y hábitad:</label>
-                            <textarea class="text_area" name="ubicacion" id="ubicacion" cols="10" rows="5"></textarea>
-                        </div>
-                    </div>
-                    <button class="primary_btn bnt_siguiente" type="button">Siguiente</button>
-                    <input type="button" id="btn_registrar" class="primary_btn bnt_crear_cuenta inactive" value="Registrar protista">
+                    <button class="primary_btn btn_secondary bnt_siguiente" type="button">Siguiente →</button>
+                    <button class="primary_btn btn_secondary  bnt_atras inactive" type="button">← Atrás</button>
+                    <input type="button" id="btn_registrar" class="primary_btn bnt_crear_cuenta inactive"
+                        value="Registrar protista">
                 </form>
-                
+
 
             </div>
         </div>
@@ -185,7 +199,8 @@
             </div>
         </div>
         <div class="footer_redes">
-            <a href="https://www.facebook.com/eduardo.echeverria.581"><img src="../../multimedia/icons8-facebook-50 (1).png" alt="logo de facebook" ></a>
+            <a href="https://www.facebook.com/eduardo.echeverria.581"><img
+                    src="../../multimedia/icons8-facebook-50 (1).png" alt="logo de facebook"></a>
             <img src="../../multimedia/icons8-instagram-50.png" alt="logo de instagram">
         </div>
     </footer>

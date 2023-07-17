@@ -220,7 +220,7 @@ nav a{
 }
 .cuenta_pasos{
     display: flex;
-    padding: 0 0 10px 10px;
+    padding: 0 0 16px 10px;
 }
 .cuenta_pasos li {
     font-size: var(--sm);
@@ -273,7 +273,9 @@ nav a{
     border-radius: 8px;
     background-color: var(--text-input-field);
     font-size: var(--sm);
+    font-family: 'Quicksand';
     height: 30px;
+    width: 300px;
 }
 .container_option label{
     color: var(--very-light-pink);
@@ -283,8 +285,8 @@ nav a{
 .container_img{
     margin: 0 auto;
     display: block;
-    width: 300px;
-    height: 300px;  
+    width: 150px;
+    height: 150px;  
 }
 .container_img img{
     width: 100%;
@@ -292,23 +294,26 @@ nav a{
     border-radius: 20px;
 }
 .primary_btn{
-    width: 100%;
+    min-width: 300px;
     height: 40px;
-    margin: 0 auto;
     display: block;
+    right: 29px;
+    bottom: 32px;
+    position: absolute;
     border-radius: 10px;
     background-color: var(--hospital-green-black);
     color: var(--white);
     font-weight: bold;
     font-size: var(--sm);
 }
-.tienes_cuenta{
-    position: absolute;
-    margin: 14px auto !important;
-    bottom: 0;
+.btn_secondary{
+    margin: 8px auto 0px auto !important;
+    position: static !important;
 }
-.login_crear_cuenta{
-    margin: 20px 40px;
+.principal_form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
 }
 .create_two_op{
     display: flex;
@@ -332,8 +337,10 @@ nav a{
     font-size: var(--sm);
 }
 .select_principal{
+    max-width: 300px;
     height: 30px;
     border-radius: 4px;
+    font-family: 'Quicksand';
 }
 .cursiva{
     font-style: italic;
@@ -477,6 +484,15 @@ footer{
         left: 0;
         width: 30px;
         margin-left: 20px;
+    }
+
+    .principal_form{
+        display: block;
+    }
+
+    .primary_btn{
+        margin: 8px auto 0px auto;
+        position: static;
     }
 
     /* .login_into{
