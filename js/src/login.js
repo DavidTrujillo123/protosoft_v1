@@ -12,7 +12,7 @@ const postDataUsers = async (url, data) => {
     });
     const result = await response.json();
     return result;
-}
+};
 
 async function isUser(url, uData){
     try {
@@ -25,7 +25,7 @@ async function isUser(url, uData){
         localStorage.setItem('isAuthenticated', 'false');
         alert('Usuario o contraseña erroneas');
     }
-}
+};
 
 btn.addEventListener('click', () => {
     // getData(url);

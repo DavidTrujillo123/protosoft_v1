@@ -283,6 +283,10 @@ nav a{
     color: #FF6699 !important;
 }
 
+.special_p{
+    font-style: italic;
+}
+
 .detalles_mis_reg{
     font-size: var(--sm);
     color: var(--white);
