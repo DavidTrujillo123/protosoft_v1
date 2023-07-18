@@ -290,6 +290,7 @@ nav a{
 .detalles_mis_reg{
     font-size: var(--sm);
     color: var(--white);
+    margin-bottom: 12px;
 }
 .column_img{
     margin: 0 auto;
