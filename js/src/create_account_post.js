@@ -8,8 +8,8 @@ const POST_respuesta_recuperacion_1 = document.getElementById('POST-respuesta-re
 const POST_pregunta_recuperacion_2 = document.getElementById('POST-pregunta-recuperacion-2');
 const POST_respuesta_recuperacion_2 = document.getElementById('POST-respuesta-recuperacion-2');
 const roles = document.getElementsByName("rol");
-// let url = 'https://protosoft-api.azurewebsites.net';
-let url = 'http://localhost:8080';
+let url = 'https://protosoft-api.azurewebsites.net';
+// let url = 'http://localhost:8080';
 
 
 const getRol = (roles) => {
