@@ -302,6 +302,12 @@ nav a{
     color: var(--white);
     padding: 8px;
 }
+.ejem_cards img{
+    height: 250px;
+    width: 270px;
+    border-radius: 0 0 20px 20px;
+    object-fit: cover;
+}
 
 .primary_btn {
     width: 50%;
@@ -391,6 +397,7 @@ nav a{
 .ver_prot_principal_info {
     margin-top: 10px;
 }
+
 
 .container_pricipal_info {
     display: grid;

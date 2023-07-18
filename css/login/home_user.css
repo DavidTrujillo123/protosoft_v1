@@ -257,6 +257,7 @@ nav a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    min-height: 500px;
 }
 
 .ejem_cards {
@@ -279,6 +280,12 @@ nav a {
     background-color: var(--hospital-green-black);
     color: var(--white);
     padding: 8px;
+}
+.ejem_cards img{
+    height: 250px;
+    width: 270px;
+    border-radius: 0 0 20px 20px;
+    object-fit: cover;
 }
 
 /* Ver mas container */
@@ -311,17 +318,14 @@ nav a {
 }
 
 .container_ver_prot {
-    /* position: fixed;
-    top: 0px; */
     max-width: 700px;
     min-width: 300px;
     height: calc(100vh - 200px);
-    padding: 20px;
+    padding: 24px;
     border-radius: 20px;
     background-color: var(--deep-ocean);
     overflow: auto;
     border: 1px solid var(--white);
-    /* margin-top: 150px; */
 }
 
 #img_protista {
@@ -349,8 +353,9 @@ nav a {
 .columns {
     display: flex;
     justify-content: space-around;
-    background-color: #330033;
+    background-color: #00cc0038;
     border-radius: 20px;
+    padding: 10px 10px 0 10px;
 }
 
 
@@ -361,14 +366,15 @@ nav a {
 .container_pricipal_info {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 20px;
-    justify-items: center;
+    padding: 0px 0 10px 0;
+    /* justify-items: center; */
 
 }
 
 .container_pricipal_info h2 {
     margin-right: 10px;
     color: var(--hospital-green);
+    text-align: end;
 }
 
 .container_pricipal_info p {
@@ -379,7 +385,7 @@ nav a {
 .container_secondary_info {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 20px 0 0 0;
 }
 
 .container_secondary_info h2 {
@@ -578,6 +584,9 @@ footer {
 
     .container_pricipal_info {
         display: block;
+    }
+    .container_pricipal_info h2{
+        text-align: left;
     }
     .principal_container_ver_prot {
         position: relative;

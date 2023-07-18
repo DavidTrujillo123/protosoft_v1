@@ -249,9 +249,11 @@ nav a{
 }
 
 .mis_registros img{
-    height: 125px;
+    height: 148px;
+    width: 200px;
     border: 1px solid var(--white);
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .registros_info{
