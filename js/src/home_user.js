@@ -1,5 +1,5 @@
 // Obtener datos
-const loading_container = document.querySelector('.loading_container');
+// const loading_container = document.querySelector('.loading_container');
 const nombre = result.usunombre;
 const apellido = result.usuapellido;
 const landscape = document.querySelector('.landscape');
@@ -132,7 +132,7 @@ const getDataRegisters = async (url) => {
 async function getRegistes(url){
     try {
         const response = await getDataRegisters(`${url}/registers/users/ten`);
-        loading_container.classList.add('inactive');
+        // loading_container.classList.add('inactive');
         response.forEach(element => {
             createCardsEjem(element);
         });
@@ -157,7 +157,7 @@ async function getAllRegistes(url){
 
 //#endregion
 
-
+console.log(rutaPagina);
 if (rutaPagina === "/C:/Users/david/OneDrive/Escritorio/U/SEMESTRES/DISE%C3%91O/Prototipo/html/login/home_user.html" ||rutaPagina === "https://davidtrujillo123.github.io/protosoft_v1/html/login/home_user.html") {
     getRegistes(url);
     putNames();
