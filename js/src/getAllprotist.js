@@ -155,10 +155,6 @@ async function getEspecies(url, id) {
             optionElement.text = option.espnombre;
             select_especies.appendChild(optionElement);
         });
-        let optionElement = document.createElement("option");
-            optionElement.value = 'nuevo';
-            optionElement.text = 'nuevo';
-        select_especies.appendChild(optionElement);
         putNombreCient();
     } catch (error) {
         console.log(error);

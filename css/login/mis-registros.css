@@ -84,7 +84,7 @@ header{
     -webkit-animation-delay: 0.4s;
   }
 
-  
+
 .inactive{
     display: none !important;
 }
@@ -343,6 +343,27 @@ nav a{
 }
 
 
+/* Sin resultados */
+.sin_resultados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.sin_resultados h3 {
+    font-size: var(--ssm);
+    color: var(--very-light-pink);
+
+}
+
+.sin_resultados img {
+    border-radius: 50%;
+    border: none;
+    height: 500px;
+    width: 500px;
+}
 
 
 /* Seccion de footer */
@@ -516,6 +537,13 @@ footer {
         text-align: left;
     }
 
+
+     /* Sin resultados */
+
+     .sin_resultados img {
+        height: 300px;
+        width: 350px;
+    }
 
     footer {
         height: auto;

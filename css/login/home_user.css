@@ -390,6 +390,7 @@ nav a {
     background-color: var(--hospital-green-black);
     color: var(--white);
     padding: 8px;
+    font-style: italic;
 }
 .ejem_cards img{
     height: 250px;
@@ -402,6 +403,10 @@ nav a {
 .title_ver_prot {
     color: var(--hospital-green-black);
     font-size: var(--llg);
+    font-style: italic;
+}
+.special_font{
+    font-style: italic !important;
 }
 
 .subtitle_ver_prot {

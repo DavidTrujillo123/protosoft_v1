@@ -53,10 +53,10 @@ function putNames() {
 
 //#region Protistas descatados
 //Funcion que pone la infomacion cuando se da click
-function llenarInformacion(nombreComun, imgSrc, reino, filo, clase, sobrenombre, orden, familia, genero, autor, descripcion, ubicacionHabitat) {
+function llenarInformacion(nombre_cient, imgSrc, reino, filo, clase, sobrenombre, orden, familia, genero, autor, descripcion, ubicacionHabitat) {
     // Llenar información del div "ver_prot_inicio"
-    let nombreComunElement = document.getElementById("nombre_comun");
-    nombreComunElement.textContent = nombreComun;
+    let nombre_cientElement = document.getElementById("nombre_comun");
+    nombre_cientElement.textContent = nombre_cient;
 
     // Llenar información de la imagen
     let imgProtistaElement = document.getElementById("img_protista");
@@ -71,6 +71,7 @@ function llenarInformacion(nombreComun, imgSrc, reino, filo, clase, sobrenombre,
     document.getElementById("ver_prot_familia").textContent = familia;
     document.getElementById("ver_prot_genero").textContent = genero;
     document.getElementById("nombre_autor").textContent = autor;
+    document.getElementById("ver_prot_nomCient").textContent = nombre_cient;
 
     // Llenar información de los divs "container_secondary_info"
     document.getElementById("ver_prot_descripcion").textContent = descripcion;

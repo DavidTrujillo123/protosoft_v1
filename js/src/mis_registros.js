@@ -1,6 +1,7 @@
 const user_info = JSON.parse(localStorage.getItem('user'));
 
 const bouncing_loader = document.querySelector('.bouncing-loader');
+const sin_resultados = document.querySelector('.sin_resultados');
 const mis_registros = document.querySelector('.mis_registros');
 let url = 'https://protosoft-api.azurewebsites.net';
 // let url = 'http://localhost:8080';
@@ -77,7 +78,7 @@ const crearRegistros = (estado, reino, filo, clase, orden, familia, genero, nom_
     // Columna 1
     let putest;
     let classest;
-    if (estado){
+    if (estado) {
         putest = 'Aprobado';
         classest = 'aprobar'
     }
@@ -142,21 +143,26 @@ const postUserId = async (url, data) => {
 async function getMisregistros(url, uData) {
     try {
         const response = await postUserId(`${url}/registers/misregistros`, uData);
-        response.forEach(element => {
-            crearRegistros(element.estado_registro,
-                element.reino, 
-                element.filo, 
-                element.clase, 
-                element.orden, 
-                element.familia, 
-                element.genero, 
-                element.nombre_cientifico, 
-                element.nombre_vulgar, 
-                element.descripcion, 
-                element.habitat, 
-                element.ruta_imagen
+        console.log(response);
+        if (response == '')
+            sin_resultados.classList.remove('inactive');
+        else {
+            response.forEach(element => {
+                crearRegistros(element.estado_registro,
+                    element.reino,
+                    element.filo,
+                    element.clase,
+                    element.orden,
+                    element.familia,
+                    element.genero,
+                    element.nombre_cientifico,
+                    element.nombre_vulgar,
+                    element.descripcion,
+                    element.habitat,
+                    element.ruta_imagen
                 );
-        });
+            });
+        }
         bouncing_loader.classList.add('inactive');
 
     } catch (error) {
