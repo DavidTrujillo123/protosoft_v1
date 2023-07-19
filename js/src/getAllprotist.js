@@ -209,7 +209,7 @@ select_especies.addEventListener("change", putNombreCient);
 btn_registrar_pro.addEventListener('click', ()=>{
     let registro = {
         usuid: JSON.parse(localStorage.getItem('user')).usuid,
-        regestado: true,
+        regestado: '2', //Pendiente
         regnombre_cientifico: input_nom_cient.value,
         regnombre_vulgar: input_nom_vulgar.value, //ojo
         regespecie: select_especies.value,

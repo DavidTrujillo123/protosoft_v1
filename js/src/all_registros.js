@@ -1,4 +1,4 @@
-async function getMisregistros(url, uData) {
+async function getAllregistros(url, uData) {
     try {
         const response = await postUserId(`${url}/registers/misregistros`, uData);
         if (response == '')
@@ -28,4 +28,3 @@ async function getMisregistros(url, uData) {
 };
 
 getMisregistros(url, { usuid: user_info.usuid });
-

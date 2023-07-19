@@ -277,11 +277,27 @@ nav a{
     padding: 20px;
     border: 1px solid var(--white);
     border-radius: 20px;
-    z-index: 1;
-    /* margin: 12px 0 12px 0; */
+    position: relative;
 }
+
+/* Icono Eliminar */
+
+.mis_registros_container .container_eliminar {
+    position: absolute;
+    right: 17px;
+    top: 11px;
+    cursor: pointer;
+}
+
+.mis_registros_container .container_eliminar img {
+    width: 22px;
+    height: 22px;
+    border: none;
+}
+/**/
+
 .mis_registros_title{
-    color: var(--hospital-green-black);
+    color: var(--very-light-pink);
     font-size: var(--lg);
 }
 
@@ -320,10 +336,16 @@ nav a{
 }
 
 .aprobar{
+    font-weight: bold;
     color: var(--hospital-green-black) !important;
 }
 
 .por_aprobar{
+    font-weight: bold;
+    color: #e5ff66 !important;
+}
+
+.rechazado{
     font-weight: bold;
     color: #FF6699 !important;
 }
@@ -336,6 +358,9 @@ nav a{
     font-size: var(--sm);
     color: var(--white);
     margin-bottom: 12px;
+}
+.detalles_mis_reg p{
+    font-size: var(--sm);
 }
 .column_img{
     margin: 0 auto;
