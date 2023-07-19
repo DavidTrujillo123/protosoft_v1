@@ -1,4 +1,5 @@
 const div_ejem_cards = document.querySelector('.ejem_cards');
+const bouncing_loader = document.querySelector('.bouncing-loader');
 // let url = 'https://protosoft-api.azurewebsites.net';
 let url = 'http://localhost:8080';
 
@@ -23,9 +24,6 @@ function createCardsEjem(element) {
     img.src = `${src_img}`;
     img.alt = `ejemplo de una ${nombre_cientifico}`;
 
-    // <div class="vermas">
-    //             <button class="primary_btn btn_vermas">Ver más</button>
-    //         </div>
     let cont_vermas = document.createElement('div');
     cont_vermas.className = 'vermas';
 
