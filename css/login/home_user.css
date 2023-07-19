@@ -472,7 +472,7 @@ nav a {
 }
 
 .ver_prot_principal_info {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .container_pricipal_info {
@@ -680,6 +680,10 @@ footer {
     .subtitle {
         text-align: center;
         padding: 20px 0 0px 0px;
+    }
+
+    .ejem_cards_info {
+        padding: 0;
     }
 
     /* Ver protista */
