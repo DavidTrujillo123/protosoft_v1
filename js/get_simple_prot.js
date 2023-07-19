@@ -1,7 +1,7 @@
 const div_ejem_cards = document.querySelector('.ejem_cards');
 const bouncing_loader = document.querySelector('.bouncing-loader');
-// let url = 'https://protosoft-api.azurewebsites.net';
-let url = 'http://localhost:8080';
+let url = 'https://protosoft-api.azurewebsites.net';
+// let url = 'http://localhost:8080';
 
 const goLogin = () => {
     let respuesta = confirm('Necesitas una cuenta para ver más. Inicia sesión o crea una');
