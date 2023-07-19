@@ -380,7 +380,9 @@ nav a{
     border-radius: 20px;
     padding: 10px 10px 0 10px;
 }
-
+.first_column{
+    min-width: 50%;
+}
 
 .ver_prot_principal_info {
     margin-top: 10px;
@@ -624,6 +626,7 @@ footer {
         margin-top: 104px
     }
     .container_ver_prot {
+        max-width: 100%;
         height: 100%;
         position: fixed;
         top: 0px;
@@ -631,6 +634,9 @@ footer {
     }
     .principal_container_ver_prot {
         position: relative;
+    }
+    #img_protista {
+        max-width: 300px;
     }
 
     footer {
