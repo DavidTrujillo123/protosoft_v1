@@ -143,7 +143,6 @@ const postUserId = async (url, data) => {
 async function getMisregistros(url, uData) {
     try {
         const response = await postUserId(`${url}/registers/misregistros`, uData);
-        console.log(response);
         if (response == '')
             sin_resultados.classList.remove('inactive');
         else {

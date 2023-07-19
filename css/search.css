@@ -145,7 +145,7 @@ nav a{
 /* Barra de busqueda */
 .land_busqueda{
     margin: 20px;
-    height: 124px;
+    /* height: 124px; */
     /* position: relative; */
 }
 .land_busqueda form{
@@ -214,7 +214,6 @@ nav a{
   .bouncing-loader {
     display: flex;
     justify-content: center;
-    height: 50vh;
     align-items: center;
   }
   
@@ -240,7 +239,9 @@ nav a{
 
 
 /* Resultados */
-
+.container-resultados{
+    min-height: calc(100vh - 450px);
+}
 .subtitle-resultados{
     padding: 20px;
 }
@@ -267,6 +268,7 @@ nav a{
     background-color: var(--hospital-green-black);
     color: var(--white);
     padding: 8px;
+    font-style: italic;
 }
 .ejem_cards_info img{
     height: 200px;
@@ -426,6 +428,7 @@ footer{
     /* busqueda y filtros */
     .land_busqueda{
         position: relative;
+        height: 124px;
     }
     .container-filtos{
         position: absolute;

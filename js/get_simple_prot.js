@@ -9,10 +9,9 @@ const goLogin = () => {
         window.location.href = '../html/login.html';
 }
 
-function createCardsEjem(element) {
-
-    let nombre_cientifico = element.regnombre_cientifico;
-    let src_img = element.imgruta;
+function createCardsEjem(nombre_cientifico, src_img) {
+    // let nombre_cientifico = element.regnombre_cientifico;
+    // let src_img = element.imgruta;
 
     let ejemCardsInfo = document.createElement("div");
     ejemCardsInfo.className = "ejem_cards_info";

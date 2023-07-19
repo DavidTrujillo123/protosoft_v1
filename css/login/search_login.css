@@ -316,6 +316,10 @@ nav a{
 }
 
 /* Resultados */
+.container-resultados{
+    min-height: calc(100vh - 450px);
+}
+
 .subtitle-resultados {
     padding: 20px;
 }
@@ -636,6 +640,7 @@ footer {
     /* busqueda y filtros */
     .land_busqueda {
         position: relative;
+        height: 124px;
     }
 
     

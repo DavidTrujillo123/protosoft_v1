@@ -80,7 +80,6 @@ function llenarInformacion(nombre_cient, imgSrc, reino, filo, clase, sobrenombre
 
 //Funcion creadora de imagenes al inicio
 function createCardsEjem(element) {
-
     let nombre_cientifico = element.nombre_cientifico;
     let src_img = element.ruta_imagen;
 

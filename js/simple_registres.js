@@ -2,7 +2,7 @@ async function getRegisters(url) {
     try {
         const response = await getDataRegisters(`${url}/registers/tensimple`);
         response.forEach(element => { 
-            createCardsEjem(element); 
+            createCardsEjem(element.regnombre_cientifico, element.imgruta); 
         });
         bouncing_loader.classList.add('inactive');
     } catch (error) {
