@@ -1,5 +1,6 @@
 const user_info = JSON.parse(localStorage.getItem('user'));
 
+const bouncing_loader = document.querySelector('.bouncing-loader');
 const mis_registros = document.querySelector('.mis_registros');
 let url = 'https://protosoft-api.azurewebsites.net';
 // let url = 'http://localhost:8080';
@@ -156,6 +157,7 @@ async function getMisregistros(url, uData) {
                 element.ruta_imagen
                 );
         });
+        bouncing_loader.classList.add('inactive');
 
     } catch (error) {
         console.log(error);

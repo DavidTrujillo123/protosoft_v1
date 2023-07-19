@@ -682,8 +682,8 @@ footer {
         padding: 20px 0 0px 0px;
     }
 
-    .ejem_cards_info {
-        padding: 0;
+    .ejem_cards_info{
+        padding-right: 0;
     }
 
     /* Ver protista */

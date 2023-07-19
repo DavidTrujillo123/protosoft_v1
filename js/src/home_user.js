@@ -1,5 +1,6 @@
 // Obtener datos
 const loading_container = document.querySelector('.loading_container');
+const bouncing_loader = document.querySelector('.bouncing-loader');
 const nombre = result.usunombre;
 const apellido = result.usuapellido;
 const landscape = document.querySelector('.landscape');
@@ -132,11 +133,10 @@ const getDataRegisters = async (url) => {
 async function getRegistes(url) {
     try {
         const response = await getDataRegisters(`${url}/registers/users/ten`);
-        loading_container.classList.add('inactive');
         response.forEach(element => {
             createCardsEjem(element);
         });
-
+        loading_container.classList.add('inactive');
     } catch (error) {
         console.log(error);
         alert('Error interno del servidor');
@@ -149,6 +149,7 @@ async function getAllRegistes(url) {
         response.forEach(element => {
             createCardsEjem(element);
         });
+        bouncing_loader.classList.add('inactive');
     } catch (error) {
         console.log(error);
         alert('Error interno del servidor');
@@ -157,11 +158,14 @@ async function getAllRegistes(url) {
 
 //#endregion
 
-// if (rutaPagina === "/C:/Users/david/OneDrive/Escritorio/U/SEMESTRES/DISE%C3%91O/Prototipo/html/login/home_user.html") {
-if (rutaPagina === "/protosoft_v1/html/login/home_user.html" || rutaPagina === "/C:/Users/david/OneDrive/Escritorio/U/SEMESTRES/DISE%C3%91O/Prototipo/html/login/home_user.html") {
-    getRegistes(url);
-    putNames();
-} else {
-    getAllRegistes(url);
+function knowWindow() {
+    if (rutaPagina === "/protosoft_v1/html/login/home_user.html" || rutaPagina === "/C:/Users/david/OneDrive/Escritorio/U/SEMESTRES/DISE%C3%91O/Prototipo/html/login/home_user.html") {
+        getRegistes(url);
+        putNames();
+    } else {
+        getAllRegistes(url);
+    }    
 }
+
+knowWindow();
 
