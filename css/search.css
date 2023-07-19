@@ -178,7 +178,7 @@ nav a{
     border:none;
     font-family: 'Quicksand', sans-serif;
     color: var(--white);
-
+    cursor: pointer;
 }
 .container-filtos {
     margin-right: 20px;
