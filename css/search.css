@@ -148,6 +148,7 @@ nav a{
 .land_busqueda form{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .land_buscar_input{
     height: 44px;
@@ -219,6 +220,12 @@ nav a{
     background-color: var(--hospital-green-black);
     color: var(--white);
     padding: 8px;
+}
+.ejem_cards_info img{
+    height: 200px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 0 0 20px 20px;
 }
 .vermas{
     position: absolute;

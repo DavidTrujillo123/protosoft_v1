@@ -131,7 +131,7 @@ nav a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    align-items: center;
 }
 .landscape:nth-child(2){
     background-image: url('../multimedia/100ntificos-transformed.png');
@@ -144,14 +144,12 @@ nav a{
     border-radius: 20px;
     font-size: var(--llg);
     width: 138px;
-    margin: 0px 0 0 100px;
     padding: 20px;
 }
 .landscape:nth-child(3) h1{
     width: 156px;
 }
 .landscape p{
-    /* ojo */
     margin: 50px 120px 10px 120px;
     padding: 20px;
     font-size: var(--md);
@@ -159,6 +157,8 @@ nav a{
     background-color: #00000081; 
     border-radius: 20px;
     border: 0;
+    min-width: 300px;
+    max-width: 900px;
 }
 
 
