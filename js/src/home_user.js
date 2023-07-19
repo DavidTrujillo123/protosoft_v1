@@ -1,5 +1,5 @@
 // Obtener datos
-// const loading_container = document.querySelector('.loading_container');
+const loading_container = document.querySelector('.loading_container');
 const nombre = result.usunombre;
 const apellido = result.usuapellido;
 const landscape = document.querySelector('.landscape');
@@ -56,11 +56,11 @@ function llenarInformacion(nombreComun, imgSrc, reino, filo, clase, sobrenombre,
     // Llenar información del div "ver_prot_inicio"
     let nombreComunElement = document.getElementById("nombre_comun");
     nombreComunElement.textContent = nombreComun;
-  
+
     // Llenar información de la imagen
     let imgProtistaElement = document.getElementById("img_protista");
     imgProtistaElement.src = imgSrc;
-  
+
     // Llenar información de los divs "container_pricipal_info"
     document.getElementById("ver_prot_reino").textContent = reino;
     document.getElementById("ver_prot_filo").textContent = filo;
@@ -70,11 +70,11 @@ function llenarInformacion(nombreComun, imgSrc, reino, filo, clase, sobrenombre,
     document.getElementById("ver_prot_familia").textContent = familia;
     document.getElementById("ver_prot_genero").textContent = genero;
     document.getElementById("nombre_autor").textContent = autor;
-  
+
     // Llenar información de los divs "container_secondary_info"
     document.getElementById("ver_prot_descripcion").textContent = descripcion;
     document.getElementById("ver_prot_habitat").textContent = ubicacionHabitat;
-  }
+}
 
 //Funcion creadora de imagenes al inicio
 function createCardsEjem(element) {
@@ -96,23 +96,23 @@ function createCardsEjem(element) {
     ejemCardsInfo.appendChild(img);
 
     ejemCardsInfo.addEventListener('click', () => {
-        llenarInformacion(element.nombre_cientifico, 
-            element.ruta_imagen, 
+        llenarInformacion(element.nombre_cientifico,
+            element.ruta_imagen,
             element.reino,
-            element.filo, 
-            element.clase, 
-            element.nombre_vulgar, 
-            element.orden, 
-            element.familia, 
+            element.filo,
+            element.clase,
+            element.nombre_vulgar,
+            element.orden,
+            element.familia,
             element.genero,
-            element.usunombre, 
-            element.descripcion, 
+            element.usunombre,
+            element.descripcion,
             element.habitat);
     });
 
     div_ejem_cards.appendChild(ejemCardsInfo);
 
-    
+
     putActionBtnVermas(ejemCardsInfo);
 }
 
@@ -129,21 +129,21 @@ const getDataRegisters = async (url) => {
     return result;
 };
 
-async function getRegistes(url){
+async function getRegistes(url) {
     try {
         const response = await getDataRegisters(`${url}/registers/users/ten`);
-        // loading_container.classList.add('inactive');
+        loading_container.classList.add('inactive');
         response.forEach(element => {
             createCardsEjem(element);
         });
-        
+
     } catch (error) {
         console.log(error);
         alert('Error interno del servidor');
     }
 };
 
-async function getAllRegistes(url){
+async function getAllRegistes(url) {
     try {
         const response = await getDataRegisters(`${url}/registers/users`);
         response.forEach(element => {
@@ -157,8 +157,8 @@ async function getAllRegistes(url){
 
 //#endregion
 
-console.log(rutaPagina);
-if (rutaPagina === "/C:/Users/david/OneDrive/Escritorio/U/SEMESTRES/DISE%C3%91O/Prototipo/html/login/home_user.html" ||rutaPagina === "https://davidtrujillo123.github.io/protosoft_v1/html/login/home_user.html") {
+if (rutaPagina === "/C:/Users/david/OneDrive/Escritorio/U/SEMESTRES/DISE%C3%91O/Prototipo/html/login/home_user.html") {
+// if (rutaPagina === "/protosoft_v1/html/login/home_user.html") {
     getRegistes(url);
     putNames();
 } else {
