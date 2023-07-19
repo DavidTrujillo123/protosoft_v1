@@ -10,6 +10,7 @@ const input_nom_vulgar = document.getElementById("nom_vulgar");
 const btn_registrar_pro = document.getElementById("btn_registrar");
 const txtDescripcon = document.getElementById("descripcion");
 const txtUbicacion = document.getElementById("ubicacion");
+const input_new_especie = document.getElementById('new_especie');
 
 let url = 'https://protosoft-api.azurewebsites.net';
 // let url = 'http://localhost:8080';
@@ -154,6 +155,10 @@ async function getEspecies(url, id) {
             optionElement.text = option.espnombre;
             select_especies.appendChild(optionElement);
         });
+        let optionElement = document.createElement("option");
+            optionElement.value = 'nuevo';
+            optionElement.text = 'nuevo';
+        select_especies.appendChild(optionElement);
         putNombreCient();
     } catch (error) {
         console.log(error);
@@ -223,7 +228,6 @@ btn_registrar_pro.addEventListener('click', ()=>{
         img: src,
     };
     postRegisto(url, registro);
-    console.log('aaa');
 });
 
 

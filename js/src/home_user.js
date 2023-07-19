@@ -1,11 +1,12 @@
 // Obtener datos
+const loading_container = document.querySelector('.loading_container');
 const nombre = result.usunombre;
 const apellido = result.usuapellido;
 const landscape = document.querySelector('.landscape');
 const div_ejem_cards = document.querySelector('.ejem_cards');
 const rutaPagina = window.location.pathname;
-// let url = 'https://protosoft-api.azurewebsites.net';
-let url = 'http://localhost:8080';
+let url = 'https://protosoft-api.azurewebsites.net';
+// let url = 'http://localhost:8080';
 
 //#region Landscape
 
@@ -131,9 +132,11 @@ const getDataRegisters = async (url) => {
 async function getRegistes(url){
     try {
         const response = await getDataRegisters(`${url}/registers/users/ten`);
+        loading_container.classList.add('inactive');
         response.forEach(element => {
             createCardsEjem(element);
         });
+        
     } catch (error) {
         console.log(error);
         alert('Error interno del servidor');
