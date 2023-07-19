@@ -72,13 +72,13 @@
             <form>
                 <div class="container-filtos">
                     <h2 class="subtitle">Filtros</h2>
-                    <div class="filtros">
+                    <div class="filtros" id="filtros">
                         <div class="container_option">
                             <label clas="input_filtros" for="filo">Filo</label>
                             <input type="radio" id="filo" name="filtros" value="filo" required>
                         </div>
                         <div class="container_option">
-
+    
                             <label clas="input_filtros" for="clase">Clase</label>
                             <input type="radio" id="clase" name="filtros" value="clase" required>
                         </div>
@@ -87,7 +87,7 @@
                             <input type="radio" id="orden" name="filtros" value="orden" required>
                         </div>
                         <div class="container_option">
-
+    
                             <label clas="input_filtros" for="familia">Familia</label>
                             <input type="radio" id="familia" name="filtros" value="familia" required>
                         </div>
@@ -99,9 +99,9 @@
                             <label clas="input_filtros" for="especie">Especie</label>
                             <input type="radio" id="especie" name="filtros" value="especie" required>
                         </div>
-                    </div>
+                    </div> 
                 </div>
-                <input placeholder="Amebas" type="text" class="land_buscar_input" required>
+                <input placeholder="Amebas" type="text" class="land_buscar_input" id="texto_filtro" required>
                 <button type="button" class="land_btn_buscar buscar_btn">
                     <img src="../../multimedia/icons8-lupa-50.png" alt="icono de lupa">
                 </button>
@@ -226,4 +226,6 @@
     <script src="../../js/src/navBar_user.js"></script>
     <script src="../../js/src/home_user.js"></script>
     <script src="../../js/src/closeSesion.js"></script>
+    <script src="../../js/filtros.js"></script>
+    <script src="../../js/filtros_log.js"></script>
 </body>
