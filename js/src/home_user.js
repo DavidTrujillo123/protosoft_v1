@@ -157,8 +157,8 @@ async function getAllRegistes(url) {
 
 //#endregion
 
-if (rutaPagina === "/C:/Users/david/OneDrive/Escritorio/U/SEMESTRES/DISE%C3%91O/Prototipo/html/login/home_user.html") {
-// if (rutaPagina === "/protosoft_v1/html/login/home_user.html") {
+// if (rutaPagina === "/C:/Users/david/OneDrive/Escritorio/U/SEMESTRES/DISE%C3%91O/Prototipo/html/login/home_user.html") {
+if (rutaPagina === "/protosoft_v1/html/login/home_user.html") {
     getRegistes(url);
     putNames();
 } else {
