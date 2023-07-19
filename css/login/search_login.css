@@ -632,6 +632,9 @@ footer {
         top: 0px;
         margin-top: 0;
     }
+    .container_pricipal_info h2 {
+        text-align: left;
+    }
     .principal_container_ver_prot {
         position: relative;
     }
