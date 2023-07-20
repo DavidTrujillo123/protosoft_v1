@@ -3,8 +3,8 @@ const user_info = JSON.parse(localStorage.getItem('user'));
 const bouncing_loader = document.querySelector('.bouncing-loader');
 const sin_resultados = document.querySelector('.sin_resultados');
 const mis_registros = document.querySelector('.mis_registros');
-let url = 'https://protosoft-api.azurewebsites.net';
-// let url = 'http://localhost:8080';
+// let url = 'https://protosoft-api.azurewebsites.net';
+let url = 'http://localhost:8080';
 
 // Función para crear información
 function createInfo(titleClass, labelId, labelText, infoClass, inputId, inputText) {
@@ -56,8 +56,9 @@ function createColumn(columnClass) {
 
 const crearRegistros = (element) => {
 
+    let id = element.registro_id;
     let estado = element.estado_registro;
-    let reino = element.reino; 
+    let reino = element.reino;
     let filo = element.filo;
     let clase = element.clase;
     let orden = element.orden;
@@ -67,35 +68,13 @@ const crearRegistros = (element) => {
     let nom_vulg = element.nombre_vulgar;
     let detalles = element.descripcion;
     let ubicacion = element.habitat;
-    let p_img = element.ruta_image;
-    
+    let p_img = element.ruta_imagen;
 
     // Crear el elemento del contenedor
     const container = document.createElement('div');
     container.setAttribute('class', 'mis_registros_container');
 
-    //Icono Rechazar
-    const container_eliminar = document.createElement('div');
-    container_eliminar.setAttribute('class', 'container_eliminar');
 
-
-    const eliminar_icono = document.createElement('img');
-    eliminar_icono.setAttribute('src', '../../multimedia/icons8-basura-llena-30.png');
-    eliminar_icono.setAttribute('alt', 'icono para eliminar');
-
-    container_eliminar.appendChild(eliminar_icono);
-    
-    // Icono Aprobar
-    const container_aceptar = document.createElement('div');
-    container_aceptar.setAttribute('class', 'container_aceptar')
-
-    const aceptar_icono = document.createElement('img');
-    aceptar_icono.setAttribute('src', '../../multimedia/icons8-basura-llena-30.png');
-    aceptar_icono.setAttribute('alt', 'icono para eliminar');
-
-    container_aceptar.appendChild(aceptar_icono);
-
-    
     // Crear elementos HTML
     const h3 = document.createElement('h3');
     h3.setAttribute('class', 'mis_registros_title');
@@ -124,7 +103,9 @@ const crearRegistros = (element) => {
         putest = 'Rechazado';
         classest = 'rechazado'
     }
-    divColumn1.appendChild(createInfo('title_info_prot', 'label_estado', 'Estado:', `info_prot ${classest}`, 'input_estado', `${putest}`));
+
+    let cont_div_estado = createInfo('title_info_prot', 'label_estado', 'Estado:', `info_prot ${classest}`, 'input_estado', `${putest}`);
+    divColumn1.appendChild(cont_div_estado);
     divColumn1.appendChild(createInfo('title_info_prot', '', 'Reino:', 'info_prot', '', `${reino}`));
     divColumn1.appendChild(createInfo('title_info_prot', 'label_filo', 'Filo:', 'info_prot', 'input_filo', `${filo}`));
 
@@ -137,6 +118,58 @@ const crearRegistros = (element) => {
     divColumn3.appendChild(createInfo('title_info_prot', 'label_genero', 'Género:', 'info_prot special_p', 'input_genero', `${genero}`));
     divColumn3.appendChild(createInfo('title_info_prot', 'label_nombre_cient', 'Nombre científico:', 'info_prot special_p', 'input_nombre_cient', `${nom_cient}`));
     divColumn3.appendChild(createInfo('title_info_prot', 'label_nombre_vul', 'Nombre vulgar:', 'info_prot', 'input__nombre_vul', `${nom_vulg}`));
+
+
+
+
+
+
+    //Icono Rechazar
+    const container_eliminar = document.createElement('div');
+    container_eliminar.setAttribute('class', 'container_eliminar');
+
+
+    const eliminar_icono = document.createElement('img');
+    eliminar_icono.setAttribute('src', '../../multimedia/icons8-cancelar-48.png');
+    eliminar_icono.setAttribute('alt', 'icono para rechazar');
+
+    container_eliminar.appendChild(eliminar_icono);
+
+    container_eliminar.addEventListener('click', () => {
+        const resultado = window.confirm('¿Estás seguro que deseas rechazar el registro?');
+        if (resultado) {
+            let h4 = cont_div_estado.querySelector('p');
+            h4.className = 'info_prot rechazado';
+            h4.textContent = 'Rechazado';
+            updateRegister(url, { id: `${id}`, state: '1' });
+        }
+    });
+
+    // Icono Aprobar
+    const container_aceptar = document.createElement('div');
+    container_aceptar.setAttribute('class', 'container_aceptar')
+
+    const aceptar_icono = document.createElement('img');
+    aceptar_icono.setAttribute('src', '../../multimedia/icons8-aceptar-30.png');
+    aceptar_icono.setAttribute('alt', 'icono para aceptar');
+
+    container_aceptar.appendChild(aceptar_icono);
+
+    container_aceptar.addEventListener('click', () => {
+        const resultado = window.confirm('¿Estás seguro que deseas aceptar el registro?');
+        if (resultado) {
+            let h4 = cont_div_estado.querySelector('p');
+            h4.className = 'info_prot aprobar';
+            h4.textContent = 'Aprobado';
+            updateRegister(url, { id: `${id}`, state: '3' });
+        }
+    });
+
+
+
+
+
+
 
     // Imagen
     const divImg = document.createElement('div');
@@ -187,7 +220,7 @@ async function getAllRegistes(url) {
             sin_resultados.classList.remove('inactive');
         else {
             response.forEach(element => {
-                crearRegistros(  element  );
+                crearRegistros(element);
             });
         }
         bouncing_loader.classList.add('inactive');
@@ -196,4 +229,29 @@ async function getAllRegistes(url) {
         alert('Error interno del servidor');
     }
 };
+
+const putEstateRegisters = async (url, data) => {
+    const response = await fetch(url, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data) // Aquí enviamos los datos en el cuerpo de la solicitud.
+    });
+    const result = await response.json();
+    return result;
+}
+
+const updateRegister = async (url, data) => {
+    try {
+        const response = await putEstateRegisters(`${url}/registers/updatestate`, data);
+        alert(response.message);
+        return response;
+
+    } catch (error) {
+        console.log(error);
+        alert('Error interno del servidor');
+    }
+}
+
 getAllRegistes(url);
