@@ -135,7 +135,8 @@ async function getRegistes(url) {
     try {
         const response = await getDataRegisters(`${url}/registers/users/ten`);
         response.forEach(element => {
-            createCardsEjem(element);
+            if(element.estado_registro == '3')
+                createCardsEjem(element);
         });
         loading_container.classList.add('inactive');
     } catch (error) {

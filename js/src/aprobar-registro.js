@@ -220,7 +220,8 @@ async function getAllRegistes(url) {
             sin_resultados.classList.remove('inactive');
         else {
             response.forEach(element => {
-                crearRegistros(element);
+                if(element.estado_registro == '2')
+                    crearRegistros(element);
             });
         }
         bouncing_loader.classList.add('inactive');
