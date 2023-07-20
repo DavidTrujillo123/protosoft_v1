@@ -131,11 +131,12 @@ nav a{
 .title{
     color: var(--white);
     font-size: var(--llg);
-    padding: 50px 0 0 100px;
+    padding: 20px;
+    margin: 0 auto;
 }
 .landscape p{
-    /* ojo */
-    margin: 50px 120px 10px 120px;
+    margin: 0 auto;
+    width: 40%;
     padding: 20px;
     font-size: var(--md);
     color: var(--white);

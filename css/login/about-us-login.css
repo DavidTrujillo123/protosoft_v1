@@ -44,6 +44,14 @@ header{
 .inactive{
     display: none !important;
 }
+.foto_grupo{
+    object-fit: cover;
+    height: 400px;
+    width: 500px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
 .active_nav a{
     color: var(--hospital-green-black) !important;
     font-weight: bold;
@@ -225,10 +233,10 @@ nav a{
     color: var(--hospital-green-black);
     background-color: #000000b6;
     border-radius: 20px;
-    font-size: var(--llg);
-    width: 138px;
+    font-size: var(--llg); 
     margin: 0px 0 0 100px;
     padding: 20px;
+    margin: 0 auto;
 }
 .landscape:nth-child(3) h1{
     width: 156px;
@@ -243,7 +251,9 @@ nav a{
     border-radius: 20px;
     border: 0;
 }
-
+.landscape:nth-child(4){
+    background-image: url('../../multimedia/pexels-fauxels-3183150.jpg');
+}
 /* Seccion de footer */
 footer{
     height: 100px;
@@ -356,6 +366,12 @@ footer{
         right: auto;
         border-top: 1px solid var(--hospital-green-black);
     }
+
+    .foto_grupo{
+        height: 200px;
+        width: 300px;
+    }
+
     .navBar{
         justify-content: center;
         align-items: center;

@@ -121,6 +121,13 @@ nav a{
 }
 
 
+.foto_grupo{
+    object-fit: cover;
+    height: 400px;
+    width: 500px;
+    border-radius: 20px;
+}
+
 /* Landscape pricipal  */
 .landscape{
     background-image: url('../multimedia/f_vision-transformed\ \(2\).png');
@@ -136,14 +143,16 @@ nav a{
 .landscape:nth-child(2){
     background-image: url('../multimedia/100ntificos-transformed.png');
 }
-
+.landscape:nth-child(4){
+    background-image: url('../multimedia/pexels-fauxels-3183150.jpg');
+}
 
 .landscape h1{
     color: var(--hospital-green-black);
     background-color: #000000b6;
     border-radius: 20px;
     font-size: var(--llg);
-    width: 138px;
+    /* width: 138px; */
     padding: 20px;
 }
 .landscape:nth-child(3) h1{
@@ -261,6 +270,11 @@ footer{
         left: 0;
         width: 30px;
         margin-left: 20px;
+    }
+
+    .foto_grupo{
+        height: 200px;
+        width: 300px;
     }
 
     .landscape{
