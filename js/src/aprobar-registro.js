@@ -69,7 +69,7 @@ const crearRegistros = (element) => {
     let detalles = element.descripcion;
     let ubicacion = element.habitat;
     let p_img = element.ruta_imagen;
-
+    
     // Crear el elemento del contenedor
     const container = document.createElement('div');
     container.setAttribute('class', 'mis_registros_container');

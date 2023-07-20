@@ -54,22 +54,25 @@ function createColumn(columnClass) {
 }
 
 
-const crearRegistros = (estado, reino, filo, clase, orden, familia, genero, nom_cient, nom_vulg, detalles, ubicacion, p_img) => {
-
+const crearRegistros = (element) => {
+    
+    let estado = element.estado_registro;
+    let reino = element.reino;
+    let filo = element.filo;
+    let clase = element.clase;
+    let orden = element.orden;
+    let familia = element.familia;
+    let genero = element.genero;
+    let nom_cient = element.nombre_cientifico;
+    let nom_vulg = element.nombre_vulgar;
+    let detalles = element.descripcion;
+    let ubicacion = element.habitat;
+    let p_img = element.ruta_imagen;
+    
+    
     // Crear el elemento del contenedor
     const container = document.createElement('div');
     container.setAttribute('class', 'mis_registros_container');
-
-    //Icono eliminar
-    const container_eliminar = document.createElement('div');
-    container_eliminar.setAttribute('class', 'container_eliminar')
-
-    const eliminar_icono = document.createElement('img');
-    eliminar_icono.setAttribute('src', '../../multimedia/icons8-basura-llena-30.png');
-    eliminar_icono.setAttribute('alt', 'icono para eliminar');
-
-    container_eliminar.appendChild(eliminar_icono);
-
 
     // Crear elementos HTML
     const h3 = document.createElement('h3');
@@ -91,7 +94,7 @@ const crearRegistros = (estado, reino, filo, clase, orden, familia, genero, nom_
         putest = 'Aprobado';
         classest = 'aprobar'
     }
-    else if (estado == '2'){
+    else if (estado == '2') {
         putest = 'Por aprobar';
         classest = 'por_aprobar'
     }
@@ -99,6 +102,7 @@ const crearRegistros = (estado, reino, filo, clase, orden, familia, genero, nom_
         putest = 'Rechazado';
         classest = 'rechazado'
     }
+    
     divColumn1.appendChild(createInfo('title_info_prot', 'label_estado', 'Estado:', `info_prot ${classest}`, 'input_estado', `${putest}`));
     divColumn1.appendChild(createInfo('title_info_prot', '', 'Reino:', 'info_prot', '', `${reino}`));
     divColumn1.appendChild(createInfo('title_info_prot', 'label_filo', 'Filo:', 'info_prot', 'input_filo', `${filo}`));
@@ -113,10 +117,32 @@ const crearRegistros = (estado, reino, filo, clase, orden, familia, genero, nom_
     divColumn3.appendChild(createInfo('title_info_prot', 'label_nombre_cient', 'Nombre científico:', 'info_prot special_p', 'input_nombre_cient', `${nom_cient}`));
     divColumn3.appendChild(createInfo('title_info_prot', 'label_nombre_vul', 'Nombre vulgar:', 'info_prot', 'input__nombre_vul', `${nom_vulg}`));
 
+
+    
+    //Icono eliminar
+    const container_eliminar = document.createElement('div');
+    container_eliminar.setAttribute('class', 'container_eliminar')
+
+    const eliminar_icono = document.createElement('img');
+    eliminar_icono.setAttribute('src', '../../multimedia/icons8-basura-llena-30.png');
+    eliminar_icono.setAttribute('alt', 'icono para eliminar');
+
+    container_eliminar.appendChild(eliminar_icono);
+
+    container_eliminar.addEventListener('click', () => {
+        const resultado = window.confirm('¿Estás seguro que deseas eliminar el registro?');
+        if (resultado) {
+            container.classList.add('inactive');
+            deleteRegister(url, { id: `${element.registro_id}` });
+        }
+    });
+
+
     // Imagen
     const divImg = document.createElement('div');
     divImg.setAttribute('class', 'mis_registros_column column_img');
     const img = document.createElement('img');
+    
     img.setAttribute('src', `${p_img}`);
     img.setAttribute('alt', '');
     divImg.appendChild(img);
@@ -161,19 +187,7 @@ async function getMisregistros(url, uData) {
             sin_resultados.classList.remove('inactive');
         else {
             response.forEach(element => {
-                crearRegistros(element.estado_registro,
-                    element.reino,
-                    element.filo,
-                    element.clase,
-                    element.orden,
-                    element.familia,
-                    element.genero,
-                    element.nombre_cientifico,
-                    element.nombre_vulgar,
-                    element.descripcion,
-                    element.habitat,
-                    element.ruta_imagen
-                );
+                crearRegistros(element);
             });
         }
         bouncing_loader.classList.add('inactive');
@@ -182,6 +196,29 @@ async function getMisregistros(url, uData) {
         console.log(error);
     }
 };
+
+const deleteData = async (url, data) => {
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+    const result = await response.json();
+    return result;
+};
+const deleteRegister = async (url, data) => {
+    try {
+        const response = await deleteData(`${url}/registers/eraserregister`, data);
+        alert(response.message);
+        return response;
+
+    } catch (error) {
+        console.log(error);
+        alert('Error interno del servidor');
+    }
+}
 
 getMisregistros(url, { usuid: user_info.usuid });
 
