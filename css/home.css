@@ -503,6 +503,7 @@ footer{
     }
     .landscape p{
         margin: 0 auto;
+        width: 100%;
     }
     .subtitle{
         text-align: center;
