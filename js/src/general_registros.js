@@ -91,7 +91,7 @@ const crearRegistros = (estado, reino, filo, clase, orden, familia, genero, nom_
         putest = 'Aprobado';
         classest = 'aprobar'
     }
-    else if (estado == '2'){
+    else if (estado == '2') {
         putest = 'Por aprobar';
         classest = 'por_aprobar'
     }
@@ -142,14 +142,44 @@ const crearRegistros = (estado, reino, filo, clase, orden, familia, genero, nom_
 }
 
 
-const postUserId = async (url, data) => {
+const getAllRegistesUsers = async (url, data) => {
     const response = await fetch(url, {
-        method: 'POST',
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data)
     });
     const result = await response.json();
     return result;
 };
+
+
+async function getAllRegistes(url) {
+    try {
+        const response = await getAllRegistesUsers(`${url}/registers/users`);
+        if (response == '')
+            sin_resultados.classList.remove('inactive');
+        else {
+            response.forEach(element => {
+                crearRegistros(element.estado_registro,
+                    element.reino,
+                    element.filo,
+                    element.clase,
+                    element.orden,
+                    element.familia,
+                    element.genero,
+                    element.nombre_cientifico,
+                    element.nombre_vulgar,
+                    element.descripcion,
+                    element.habitat,
+                    element.ruta_imagen
+                );
+            });
+        }
+        bouncing_loader.classList.add('inactive');
+    } catch (error) {
+        console.log(error);
+        alert('Error interno del servidor');
+    }
+};
+getAllRegistes(url);

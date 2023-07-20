@@ -144,29 +144,20 @@ async function getRegistes(url) {
     }
 };
 
-async function getAllRegistes(url) {
-    try {
-        const response = await getDataRegisters(`${url}/registers/users`);
-        response.forEach(element => {
-            createCardsEjem(element);
-        });
-        bouncing_loader.classList.add('inactive');
-    } catch (error) {
-        console.log(error);
-        alert('Error interno del servidor');
-    }
-};
+
 
 //#endregion
 
-function knowWindow() {
-    if (rutaPagina === "/protosoft_v1/html/login/home_user.html" || rutaPagina === "/C:/Users/david/OneDrive/Escritorio/U/SEMESTRES/DISE%C3%91O/Prototipo/html/login/home_user.html") {
-        getRegistes(url);
-        putNames();
-    } else {
-        getAllRegistes(url);
-    }    
-}
+// function knowWindow() {
+//     if (rutaPagina === "/protosoft_v1/html/login/home_user.html" || 
+//             rutaPagina === "/C:/Users/david/OneDrive/Escritorio/U/SEMESTRES/DISE%C3%91O/Prototipo/html/login/home_user.html" ||
+//             rutaPagina === "/C:/Users/david/OneDrive/Escritorio/U/SEMESTRES/DISEÑO/Prototipo/html/login/home_dig.html") {
+//         getRegistes(url);
+//         putNames();
+//     } else {
+//         getAllRegistes(url);
+//     }    
+// }
 
-knowWindow();
+// knowWindow();
 
