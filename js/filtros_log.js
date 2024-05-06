@@ -23,5 +23,6 @@ button.addEventListener('click', () => {
     radio = GetFilterRadio()
     let name = GetFilterName()
     let uData = { radio, name };
+    console.log(uData);
     getRegistersFilter(url, uData);
 });

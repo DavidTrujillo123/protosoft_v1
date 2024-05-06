@@ -3,7 +3,7 @@ const user_info = JSON.parse(localStorage.getItem('user'));
 const bouncing_loader = document.querySelector('.bouncing-loader');
 const sin_resultados = document.querySelector('.sin_resultados');
 const mis_registros = document.querySelector('.mis_registros');
-let url = 'https://protosoft-api.azurewebsites.net';
+const url = "https://protosoft-backend-ww9z.vercel.app";
 // let url = 'http://localhost:8080';
 
 // Función para crear información

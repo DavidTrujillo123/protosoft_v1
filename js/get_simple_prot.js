@@ -1,6 +1,6 @@
 const div_ejem_cards = document.querySelector('.ejem_cards');
 const bouncing_loader = document.querySelector('.bouncing-loader');
-let url = 'https://protosoft-api.azurewebsites.net';
+const url = "https://protosoft-backend-ww9z.vercel.app";
 // let url = 'http://localhost:8080';
 
 const goLogin = () => {

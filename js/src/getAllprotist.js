@@ -1,3 +1,4 @@
+// import apiUrl from "./config.js"
 const reino_input = document.querySelector('.reino');
 const select_filo = document.getElementById("filo");
 const select_clases = document.getElementById("clase");
@@ -12,8 +13,8 @@ const txtDescripcon = document.getElementById("descripcion");
 const txtUbicacion = document.getElementById("ubicacion");
 const input_new_especie = document.getElementById('new_especie');
 
-let url = 'https://protosoft-api.azurewebsites.net';
-// let url = 'http://localhost:8080';
+const url = "https://protosoft-backend-ww9z.vercel.app";
+
 
 //general functions fectchs
 const getDataProt = async (url) => {
@@ -166,7 +167,7 @@ async function postRegisto(url, data) {
     try {
         const response = await postDataProt(`${url}/registers`, data);
         alert(response.message);
-        window.location.href = './registro_protista.html';
+        // window.location.href = './registro_protista.html';
     } catch (error) {
         console.log(error);
     }
@@ -223,6 +224,7 @@ btn_registrar_pro.addEventListener('click', ()=>{
         reghabitat: txtUbicacion.value,
         img: src,
     };
+    console.log(registro);
     postRegisto(url, registro);
 });
 

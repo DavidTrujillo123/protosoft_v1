@@ -1,4 +1,5 @@
 // Obtener datos
+// import url from "./config.js"
 const loading_container = document.querySelector('.loading_container');
 const bouncing_loader = document.querySelector('.bouncing-loader');
 const nombre = result.usunombre;
@@ -6,7 +7,7 @@ const apellido = result.usuapellido;
 const landscape = document.querySelector('.landscape');
 const div_ejem_cards = document.querySelector('.ejem_cards');
 const rutaPagina = window.location.pathname;
-let url = 'https://protosoft-api.azurewebsites.net';
+const url = "https://protosoft-backend-ww9z.vercel.app";
 // let url = 'http://localhost:8080';
 
 //#region Landscape

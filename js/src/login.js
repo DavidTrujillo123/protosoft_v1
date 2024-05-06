@@ -1,5 +1,6 @@
+// import apiUrl from "./config.js"
 const btn = document.querySelector('.login_crear_cuenta_btn');
-let url = 'https://protosoft-api.azurewebsites.net';
+const url = "https://protosoft-backend-ww9z.vercel.app";
 // let url = 'http://localhost:8080';
 
 const postDataUsers = async (url, data) => {
