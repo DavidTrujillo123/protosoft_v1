@@ -1,6 +1,5 @@
 @import url("../general.css");
 
-
 /* Cabezera y barra de navegacion */
 .navBar {
   background-color: var(--deep-ocean);
@@ -56,9 +55,9 @@
   color: var(--very-light-pink);
 }
 
-.into_btn a:hover{
+.into_btn a:hover {
   color: var(--hospital-green-black);
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .perfil {
@@ -144,8 +143,6 @@
   cursor: pointer;
 }
 
-
-
 /* LOADGING */
 .loading_container {
   display: flex;
@@ -219,39 +216,122 @@
 }
 
 @-webkit-keyframes animate {
-  0%, 100% {
-      -webkit-transform: scale(0.2);
-      transform: scale(0.2);
-      background-color: var(--hospital-green);
+  0%,
+  100% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    background-color: var(--hospital-green);
   }
   40% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-      background-color: var(--hospital-green);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: var(--hospital-green);
   }
   50% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-      background-color: var(--hospital-green-black);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: var(--hospital-green-black);
   }
 }
 
 @keyframes animate {
-  0%, 100% {
-      -webkit-transform: scale(0.2);
-      transform: scale(0.2);
-      background-color: var(--hospital-green);
+  0%,
+  100% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    background-color: var(--hospital-green);
   }
   40% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-      background-color: var(--hospital-green);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: var(--hospital-green);
   }
   50% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-      background-color: var(--hospital-green-black);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: var(--hospital-green-black);
   }
 }
 
 /* FIN LOADING */
+
+@media (max-width: 716px) {
+  .general_nav {
+    display: inline-block;
+    position: fixed;
+    background-color: var(--deep-ocean);
+    top: 90px;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    width: 214px;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid var(--hospital-green-black);
+    border-radius: 0 0 20px 0;
+    overflow: auto;
+  }
+
+  .inactive_nav {
+    display: none !important;
+  }
+
+  .second_nav {
+    display: inline-block;
+  }
+
+  .opciones {
+    display: block;
+    margin: 0;
+  }
+
+  .menu_registros {
+    left: 48px;
+    top: 102px;
+    z-index: 1;
+  }
+
+  .menu_perfil {
+    position: static;
+    background-color: var(--deep-ocean);
+    border: 0;
+  }
+
+  .menu_perfil ul li {
+    text-align: left;
+  }
+
+  .menu_perfil ul li a {
+    color: var(--white);
+  }
+
+  .desktop-menu ul li:nth-child(2) {
+    border-top: 0;
+    padding: 0;
+  }
+
+  .email_nav_inactive {
+    display: none !important;
+  }
+
+  .perfil {
+    /* display: inline-block;  */
+    bottom: 20px;
+    padding-top: 12px;
+    right: auto;
+    border-top: 1px solid var(--hospital-green-black);
+  }
+
+  .navBar {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hamburgesa_menu {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    margin-left: 20px;
+  }
+}

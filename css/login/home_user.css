@@ -178,99 +178,10 @@
 
 /* Mobile */
 @media (max-width:716px) {
-    :root {
-        --sm: 12px;
-        --md: 14px;
-        --lg: 16px;
-        --ssm: 18px;
-        --mmd: 22px;
-        --llg: 24px;
-    }
-
-    .general_nav {
-        display: inline-block;
-        position: fixed;
-        background-color: var(--deep-ocean);
-        top: 90px;
-        left: 0;
-        bottom: 0;
-        height: auto;
-        width: 214px;
-        padding: 20px;
-        margin-bottom: 10px;
-        border: 1px solid var(--hospital-green-black);
-        border-radius: 0 0 20px 0;
-        overflow: auto;
-    }
-
-    .inactive_nav {
-        display: none !important;
-    }
-
-    .second_nav {
-        display: inline-block;
-    }
-
-    .opciones {
-        display: block;
-        margin: 0;
-    }
-
-    .menu_registros {
-        left: 48px;
-        top: 102px;
-        z-index: 1;
-    }
-
-    .menu_perfil {
-        position: static;
-        background-color: var(--deep-ocean);
-        border: 0;
-    }
-
-    .menu_perfil ul li {
-        text-align: left;
-    }
-
-    .menu_perfil ul li a {
-        color: var(--white);
-    }
-
-    .desktop-menu ul li:nth-child(2) {
-        border-top: 0;
-        padding: 0;
-    }
-
-    .email_nav_inactive {
-        display: none !important;
-    }
-
-    .perfil {
-        /* display: inline-block;  */
-        bottom: 20px;
-        padding-top: 12px;
-        right: auto;
-        border-top: 1px solid var(--hospital-green-black);
-    }
-
-    .navBar {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hamburgesa_menu {
-        display: inline-block;
-        position: absolute;
-        left: 0;
-        width: 30px;
-        margin-left: 20px;
-    }
-
     .landscape {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 500px;
     }
 
     .landscape h1 {
@@ -294,6 +205,11 @@
 
     .ejem_cards_info{
         padding-right: 0;
+        width: 100%;
+    }
+
+    .ejem_cards_info img{
+        width: 100%;
     }
 
     /* Ver protista */
@@ -320,24 +236,5 @@
     }
     #img_protista {
         max-width: 300px;
-    }
-    footer {
-        height: auto;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer_logo img {
-        height: 115px;
-        left: 0px;
-        top: 0;
-    }
-
-    .footer_info ul {
-        display: block;
-    }
-
-    .footer_redes {
-        bottom: auto;
     }
 }

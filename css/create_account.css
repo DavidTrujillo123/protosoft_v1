@@ -115,5 +115,7 @@ main{
 }
 
 @media (max-width:716px) {
-
+    main{
+        min-height: 100vh;
+    }
 }

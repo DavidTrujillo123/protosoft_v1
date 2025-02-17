@@ -64,134 +64,135 @@
         </nav>
     </header>
 
-    
-    <section>
-        <div class="container-title">
-            <h1 class="title">Búsqueda avanzada</h1>
-        </div>
-        <div class="land_busqueda">
-            <form>
-                <div class="container-filtos">
-                    <h2 class="subtitle">Filtros</h2>
-                    <div class="filtros" id="filtros">
-                        <div class="container_option">
-                            <label clas="input_filtros" for="filo">Filo</label>
-                            <input type="radio" id="filo" name="filtros" value="filo" required>
-                        </div>
-                        <div class="container_option">
-    
-                            <label clas="input_filtros" for="clase">Clase</label>
-                            <input type="radio" id="clase" name="filtros" value="clase" required>
-                        </div>
-                        <div class="container_option">
-                            <label clas="input_filtros" for="orden">Orden</label>
-                            <input type="radio" id="orden" name="filtros" value="orden" required>
-                        </div>
-                        <div class="container_option">
-    
-                            <label clas="input_filtros" for="familia">Familia</label>
-                            <input type="radio" id="familia" name="filtros" value="familia" required>
-                        </div>
-                        <div class="container_option">
-                            <label clas="input_filtros" for="genero">Género</label>
-                            <input type="radio" id="genero" name="filtros" value="genero" required>
-                        </div>
-                        <div class="container_option">
-                            <label clas="input_filtros" for="especie">Especie</label>
-                            <input type="radio" id="especie" name="filtros" value="especie" required>
-                        </div>
-                    </div> 
-                </div>
-                <input placeholder="Amebas" type="text" class="land_buscar_input" id="texto_filtro" required>
-                <button type="button" class="land_btn_buscar buscar_btn">
-                    <img src="../../multimedia/icons8-lupa-50.png" alt="icono de lupa">
-                </button>
-                
-            </form>
-        </div>
-    </section>
+    <main>
+        <section>
+            <div class="container-title">
+                <h1 class="title">Búsqueda avanzada</h1>
+            </div>
+            <div class="land_busqueda">
+                <form>
+                    <div class="container-filtos">
+                        <h2 class="subtitle">Filtros</h2>
+                        <div class="filtros" id="filtros">
+                            <div class="container_option">
+                                <label clas="input_filtros" for="filo">Filo</label>
+                                <input type="radio" id="filo" name="filtros" value="filo" required>
+                            </div>
+                            <div class="container_option">
 
-    <section class="container-resultados">
-        <h2 class="subtitle subtitle-resultados">Resultados</h2>
-        <!-- animacion de carga -->
-        <div class="bouncing-loader">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="sin_resultados inactive">
-            <h3 class="subsubtitle">Sin resultados</h3>
-            <img src="../../multimedia/no_results.png" alt="Ilustracion de una persona con lupa">
-        </div>
-        <div class="ejem_cards">
-        </div>
-    </section>
+                                <label clas="input_filtros" for="clase">Clase</label>
+                                <input type="radio" id="clase" name="filtros" value="clase" required>
+                            </div>
+                            <div class="container_option">
+                                <label clas="input_filtros" for="orden">Orden</label>
+                                <input type="radio" id="orden" name="filtros" value="orden" required>
+                            </div>
+                            <div class="container_option">
 
-    <section class="principal_container_ver_prot inactive">
-        <div class="ver_prot">
-            <div class="container_ver_prot">
-                <div class="ver_prot_inicio">
-                    <img class="btn_cerrar" src="../../multimedia/icons8-eliminar-30.png"
-                        alt="Icono para cerrar pestaña">
-                    <h1 class="title_ver_prot" id="nombre_comun">Ameba</h1>
-                </div>
-                <img id="img_protista" src="../../multimedia/ameba.png" alt="Imágen de amebas">
-                <div class="ver_prot_principal_info">
-                    <div class="columns">
-                        <div class="first_column">
-                            <div class="container_pricipal_info">
-                                <h2 class="subtitle_ver_prot">Reino: </h2>
-                                <p class="principal_info_text" id="ver_prot_reino"></p>
+                                <label clas="input_filtros" for="familia">Familia</label>
+                                <input type="radio" id="familia" name="filtros" value="familia" required>
                             </div>
-                            <div class="container_pricipal_info">
-                                <h2 class="subtitle_ver_prot">Filo: </h2>
-                                <p class="principal_info_text" id="ver_prot_filo"></p>
+                            <div class="container_option">
+                                <label clas="input_filtros" for="genero">Género</label>
+                                <input type="radio" id="genero" name="filtros" value="genero" required>
                             </div>
-                            <div class="container_pricipal_info">
-                                <h2 class="subtitle_ver_prot">Clase: </h2>
-                                <p class="principal_info_text" id="ver_prot_clase"></p>
-                            </div>
-                            <div class="container_pricipal_info">
-                                <h2 class="subtitle_ver_prot">Nombre vulgar:</h2>
-                                <p class="principal_info_text" id="ver_prot_sobrenombre"></p>
-                            </div>
-                        </div>
-                        <div class="second_column">
-                            <div class="container_pricipal_info">
-                                <h2 class="subtitle_ver_prot">Orden: </h2>
-                                <p class="principal_info_text" id="ver_prot_orden"></p>
-                            </div>
-                            <div class="container_pricipal_info">
-                                <h2 class="subtitle_ver_prot">Familia: </h2>
-                                <p class="principal_info_text" id="ver_prot_familia"></p>
-                            </div>
-                            <div class="container_pricipal_info">
-                                <h2 class="subtitle_ver_prot">Género: </h2>
-                                <p class="principal_info_text special_font" id="ver_prot_genero"></p>
-                            </div>
-                            <div class="container_pricipal_info">
-                                <h2 class="subtitle_ver_prot">Nombre científico: </h2>
-                                <p class="principal_info_text special_font" id="ver_prot_nomCient"></p>
+                            <div class="container_option">
+                                <label clas="input_filtros" for="especie">Especie</label>
+                                <input type="radio" id="especie" name="filtros" value="especie" required>
                             </div>
                         </div>
                     </div>
-                    <div class="container_secondary_info">
-                        <h2 class="subtitle_ver_prot">Descripción: </h2>
-                        <p class="secondary_info_text" id="ver_prot_descripcion"></p>
+                    <input placeholder="Amebas" type="text" class="land_buscar_input" id="texto_filtro" required>
+                    <button type="button" class="land_btn_buscar buscar_btn">
+                        <img src="../../multimedia/icons8-lupa-50.png" alt="icono de lupa">
+                    </button>
+
+                </form>
+            </div>
+        </section>
+
+        <section class="container-resultados">
+            <h2 class="subtitle subtitle-resultados">Resultados</h2>
+            <!-- animacion de carga -->
+            <div class="bouncing-loader">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="sin_resultados inactive">
+                <h3 class="subsubtitle">Sin resultados</h3>
+                <img src="../../multimedia/no_results.png" alt="Ilustracion de una persona con lupa">
+            </div>
+            <div class="ejem_cards">
+            </div>
+        </section>
+
+        <section class="principal_container_ver_prot inactive">
+            <div class="ver_prot">
+                <div class="container_ver_prot">
+                    <div class="ver_prot_inicio">
+                        <img class="btn_cerrar" src="../../multimedia/icons8-eliminar-30.png"
+                            alt="Icono para cerrar pestaña">
+                        <h1 class="title_ver_prot" id="nombre_comun">Ameba</h1>
                     </div>
-                    <div class="container_secondary_info">
-                        <h2 class="subtitle_ver_prot">Ubicación y hábitad: </h2>
-                        <p class="secondary_info_text" id="ver_prot_habitat"> </p>
-                    </div>
-                    <div class="container_secondary_info">
-                        <h2 class="subtitle_ver_prot">Autor: </h2>
-                        <p class="principal_info_text" id="nombre_autor"></p>
+                    <img id="img_protista" src="../../multimedia/ameba.png" alt="Imágen de amebas">
+                    <div class="ver_prot_principal_info">
+                        <div class="columns">
+                            <div class="first_column">
+                                <div class="container_pricipal_info">
+                                    <h2 class="subtitle_ver_prot">Reino: </h2>
+                                    <p class="principal_info_text" id="ver_prot_reino"></p>
+                                </div>
+                                <div class="container_pricipal_info">
+                                    <h2 class="subtitle_ver_prot">Filo: </h2>
+                                    <p class="principal_info_text" id="ver_prot_filo"></p>
+                                </div>
+                                <div class="container_pricipal_info">
+                                    <h2 class="subtitle_ver_prot">Clase: </h2>
+                                    <p class="principal_info_text" id="ver_prot_clase"></p>
+                                </div>
+                                <div class="container_pricipal_info">
+                                    <h2 class="subtitle_ver_prot">Nombre vulgar:</h2>
+                                    <p class="principal_info_text" id="ver_prot_sobrenombre"></p>
+                                </div>
+                            </div>
+                            <div class="second_column">
+                                <div class="container_pricipal_info">
+                                    <h2 class="subtitle_ver_prot">Orden: </h2>
+                                    <p class="principal_info_text" id="ver_prot_orden"></p>
+                                </div>
+                                <div class="container_pricipal_info">
+                                    <h2 class="subtitle_ver_prot">Familia: </h2>
+                                    <p class="principal_info_text" id="ver_prot_familia"></p>
+                                </div>
+                                <div class="container_pricipal_info">
+                                    <h2 class="subtitle_ver_prot">Género: </h2>
+                                    <p class="principal_info_text special_font" id="ver_prot_genero"></p>
+                                </div>
+                                <div class="container_pricipal_info">
+                                    <h2 class="subtitle_ver_prot">Nombre científico: </h2>
+                                    <p class="principal_info_text special_font" id="ver_prot_nomCient"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container_secondary_info">
+                            <h2 class="subtitle_ver_prot">Descripción: </h2>
+                            <p class="secondary_info_text" id="ver_prot_descripcion"></p>
+                        </div>
+                        <div class="container_secondary_info">
+                            <h2 class="subtitle_ver_prot">Ubicación y hábitad: </h2>
+                            <p class="secondary_info_text" id="ver_prot_habitat"> </p>
+                        </div>
+                        <div class="container_secondary_info">
+                            <h2 class="subtitle_ver_prot">Autor: </h2>
+                            <p class="principal_info_text" id="nombre_autor"></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container_footer">
@@ -218,8 +219,6 @@
             <p>Página desarrollada por estudiantes de la Universidad Técnica del Norte</p>
         </div>
     </footer>
-
-
     <script src="../../js/src/isLoged.js"></script>
     <script src="../../js/navBar.js"></script>
     <script src="../../js/search_login.js"></script>
