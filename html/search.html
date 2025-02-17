@@ -47,68 +47,68 @@
             <a href="./home.html">Home/</a><a href="">Búsqueda</a>
         </nav>
     </header>
-
-    <section>
-        <div class="container-title">
-            <h1 class="title">Busqueda avanzada</h1>
-        </div>
-        <div class="land_busqueda">
-            <form>
-                <div class="container-filtos">
-                    <h2 class="subtitle">Filtros</h2>
-                    <div class="filtros" id="filtros">
-                        <div class="container_option">
-                            <label clas="input_filtros" for="filo">Filo</label>
-                            <input type="radio" id="filo" name="filtros" value="filo" required>
-                        </div>
-                        <div class="container_option">
-    
-                            <label clas="input_filtros" for="clase">Clase</label>
-                            <input type="radio" id="clase" name="filtros" value="clase" required>
-                        </div>
-                        <div class="container_option">
-                            <label clas="input_filtros" for="orden">Orden</label>
-                            <input type="radio" id="orden" name="filtros" value="orden" required>
-                        </div>
-                        <div class="container_option">
-    
-                            <label clas="input_filtros" for="familia">Familia</label>
-                            <input type="radio" id="familia" name="filtros" value="familia" required>
-                        </div>
-                        <div class="container_option">
-                            <label clas="input_filtros" for="genero">Género</label>
-                            <input type="radio" id="genero" name="filtros" value="genero" required>
-                        </div>
-                        <div class="container_option">
-                            <label clas="input_filtros" for="especie">Especie</label>
-                            <input type="radio" id="especie" name="filtros" value="especie" required>
-                        </div>
-                    </div> 
-                </div>
-                <input placeholder="Amebas" type="text" class="land_buscar_input" id="texto_filtro" required>
-                <button type="button" class="land_btn_buscar buscar_btn">
-                    <img src="../multimedia/icons8-lupa-50.png" alt="icono de lupa">
-                </button>
+    <main>
+        <section>
+            <div class="container-title">
+                <h1 class="title">Busqueda avanzada</h1>
+            </div>
+            <div class="land_busqueda">
+                <form>
+                    <div class="container-filtos">
+                        <h2 class="subtitle">Filtros</h2>
+                        <div class="filtros" id="filtros">
+                            <div class="container_option">
+                                <label clas="input_filtros" for="filo">Filo</label>
+                                <input type="radio" id="filo" name="filtros" value="filo" required>
+                            </div>
+                            <div class="container_option">
+        
+                                <label clas="input_filtros" for="clase">Clase</label>
+                                <input type="radio" id="clase" name="filtros" value="clase" required>
+                            </div>
+                            <div class="container_option">
+                                <label clas="input_filtros" for="orden">Orden</label>
+                                <input type="radio" id="orden" name="filtros" value="orden" required>
+                            </div>
+                            <div class="container_option">
+        
+                                <label clas="input_filtros" for="familia">Familia</label>
+                                <input type="radio" id="familia" name="filtros" value="familia" required>
+                            </div>
+                            <div class="container_option">
+                                <label clas="input_filtros" for="genero">Género</label>
+                                <input type="radio" id="genero" name="filtros" value="genero" required>
+                            </div>
+                            <div class="container_option">
+                                <label clas="input_filtros" for="especie">Especie</label>
+                                <input type="radio" id="especie" name="filtros" value="especie" required>
+                            </div>
+                        </div> 
+                    </div>
+                    <input placeholder="Amebas" type="text" class="land_buscar_input" id="texto_filtro" required>
+                    <button type="button" class="land_btn_buscar buscar_btn">
+                        <img src="../multimedia/icons8-lupa-50.png" alt="icono de lupa">
+                    </button>
+                    
+                </form>
+            </div>
+        </section>
+        <section class="container-resultados">
+            <h2 class="subtitle subtitle-resultados">Resultados</h2>
+            <div class="bouncing-loader">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="sin_resultados inactive">
+                <h3 class="subsubtitle">Sin resultados</h3>
+                <img src="../multimedia/no_results.png" alt="Ilustracion de una persona con lupa">
+            </div>
+            <div class="ejem_cards">
                 
-            </form>
-        </div>
-    </section>
-    <section class="container-resultados">
-        <h2 class="subtitle subtitle-resultados">Resultados</h2>
-        <div class="bouncing-loader">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="sin_resultados inactive">
-            <h3 class="subsubtitle">Sin resultados</h3>
-            <img src="../multimedia/no_results.png" alt="Ilustracion de una persona con lupa">
-        </div>
-        <div class="ejem_cards">
-            
-        </div>
-    </section>
-
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="footer_logo">
             <img src="../multimedia/logo_proto.png" alt="logo de protosoft">

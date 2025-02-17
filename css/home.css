@@ -1,131 +1,25 @@
-/* Ajustes generales */
-*{
-    margin: 0;
-    box-sizing: border-box;
-}
-:root{
-    --white: #FFFFFF;
-    --black: #000000;
-    --very-light-pink: #c7c7c7;
-    --text-input-field: #f7f7f7;
-    --hospital-green: #ACD9B2;
-    --hospital-green-black: #3bdb50;
-    --deep-ocean: #0a0e16;
-    --sm: 14px;
-    --md: 16px;
-    --lg: 18px;
-    --ssm: 24px;
-    --mmd: 28px;
-    --llg: 32px;
-}
-body{
-    font-family: 'Quicksand', sans-serif;
-    margin: 0;
-}
-a {
-    color: #000; 
-    text-decoration: none; 
-}
-a:hover {
-    text-decoration: none;
-}
-ul, li {
-    list-style: none; 
-    padding: 0; 
-    margin: 0; 
-}
-  
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-}
-.inactive{
-    display: none !important;
-}
-.hamburgesa_menu{
-    display: none;
-}
-/* Cabezera y barra de navegacion */
-.navBar{
-    background-color: var(--deep-ocean);
-    position: relative;
-    display: flex;
-    border-bottom: 1px solid var(--very-light-pink);
-    height: 70px;
-    width: auto;
-}
-.navBar .logo{
-    display: flex;
-    height: 70px;
-    align-items: center;
-}
-.navBar .logo p{
-    color: var(--white);
-}
-.navBar .logo span{
-    font-weight: bold;
-    color: var(--hospital-green-black);
-}
-.navBar .logo img{
-    height: 70px;
-    position: relative;
-}
-.opciones{
-    margin-left: 32px;
-    width: auto;
-}
-.general_nav{
-    display: flex;
-    align-items: center;
-    height: 70px;
-    position: relative;
-    width: 100%;
-}
-.second_nav{
-    display: flex;
-}
-
-.into_btn{
-    padding: 10px;
-}
-.into_btn a{
-    color: var(--very-light-pink);
-}
-.into_btn a:hover{
-    color: var(--hospital-green-black);
-    font-weight: bold; 
-}
-.perfil{
-    position: absolute;
-    right:0;
-    margin-right: 10px;
-}
-
-/* Barra de navegacion secundaria */
-nav{
-    height: 20px;
-    background-color: var(--hospital-green-black);
-
-}
-nav a{
-    padding-left: 20px;
-    font-size: var(--sm);
-    color: var(--white);
-}
+@import url('./general.css');
 
 /* Landscape pricipal  */
 .landscape{
-    background-image: url('../multimedia/landscape_home_auto_x2.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
     display: flex;
+    width: 100%;
+    justify-content: center;
+    place-items: center;
+}
+.landscape-content{
+    display: flex;
+    width: 50%;
+    padding: 28px;
     flex-direction: column;
     justify-content: center;
+}
+.landscape img{
+    /* height: 380px;
+    width: 400px; */
+    width: 40%;
+    height: 100%;
+    border-radius: 32px;
 }
 
 .title{
@@ -136,10 +30,8 @@ nav a{
 }
 .landscape p{
     margin: 0 auto;
-    width: 40%;
     padding: 20px;
     font-size: var(--md);
-    color: var(--white);
     background-color: #00000081; 
     border-radius: 20px;
 }
@@ -155,7 +47,7 @@ nav a{
 }
 .land_buscar_input{
     height: 44px;
-    width: 500px;
+    width: 80%;
     border-radius: 20px 0 0 20px;
     text-align: center;
     background-color: var(--text-input-field);
@@ -163,11 +55,14 @@ nav a{
     
 }
 .land_btn_buscar{
+    width: 20%;
     height: 44px;
 }
 .land_btn_buscar img{
     height: 20px;
-    padding-left: 10px;
+    width: 20px;
+    margin-left: 10px;
+    object-fit: cover;
 }
 .buscar_btn{
     display: flex;
@@ -181,112 +76,76 @@ nav a{
     color: var(--white)
 }
 
-/* Seccion de funcionalidades */
-.funcionalidades{
-    background-image: linear-gradient(to bottom, #0a0e16, #182735, #1b4255, #136073, #007f8c); 
-}
 .subtitle{
-    padding: 50px 0 0px 100px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     font-size: var(--mmd);
     color: var(--white);
 }
-.funcionalidades .fun_cards{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-bottom: 48px;
-}
-.funcionalidades .fun_cards .cards_into{
-    border: 1px solid var(--black);
-    border-radius: 20px;
-    margin: 20px;
-    width: 254px;
-    position: relative;
-    box-shadow: 16px 12px 16px 4px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 16px 12px 16px 4px rgba(0,0,0,0.75);
-    -moz-box-shadow: 16px 12px 16px 4px rgba(0,0,0,0.75);
-}
-.funcionalidades .fun_cards .cards_into:hover{
-    box-shadow: -2px 1px 43px 5px rgba(20,224,73,0.78);
-    -webkit-box-shadow: -2px 1px 43px 5px rgba(20,224,73,0.78);
-    -moz-box-shadow: -2px 1px 43px 5px rgba(20,224,73,0.78);
-    
-}
-.funcionalidades .fun_cards .cards_into img{
-    position: relative;
-    width: 250px;
-    height: 250px;
-}
-.cards_info{
-    background-color: var(--hospital-green-black);
-    border-radius: 0 0 20px 20px;
-    height: 48px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.cards_info p{
-    color: var(--white);
-}
-.fun_extra_info{
-    position: absolute;
-    background-color: rgba(2, 49, 8, 0.609);
-    height: 255px;
-    padding: 10px;
-    border-radius: 20px 20px 0 0;
-    color: var(--white);
-    top: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-.fun_extra_info:hover{
-    opacity: 1;
+
+/* Seccion de funcionalidades */
+/* Sección sin background */
+.funcionalidades {
+  
+  /* Sin background */
 }
 
+/* Contenedor de cards en formato grid: 3 filas */
+.fun_cards {
+  /* width: 80%; */
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+}
 
-/* LOADING */
-@keyframes bouncing-loader {
-    to {
-      opacity: 0.1;
-      transform: translate3d(0, -16px, 0);
-    }
-  }
-  
-  @-webkit-keyframes bouncing-loader {
-    to {
-      opacity: 0.1;
-      -webkit-transform: translate3d(0, -16px, 0);
-    }
-  }
-  
-  .bouncing-loader {
-    display: flex;
-    justify-content: center;
-    height: 50vh;
-    align-items: center;
-  }
-  
-  .bouncing-loader > div {
-    width: 16px;
-    height: 16px;
-    margin: 3rem 0.2rem;
-    background: var(--hospital-green-black);
-    border-radius: 50%;
-    animation: bouncing-loader 0.6s infinite alternate;
-    -webkit-animation: bouncing-loader 0.6s infinite alternate;
-  }
-  
-  .bouncing-loader > div:nth-child(2) {
-    animation-delay: 0.2s;
-    -webkit-animation-delay: 0.2s;
-  }
-  
-  .bouncing-loader > div:nth-child(3) {
-    animation-delay: 0.4s;
-    -webkit-animation-delay: 0.4s;
-  }
+/* Cada card es un grid de 2 columnas */
+.card {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  gap: 20px; 
+  border-radius: 20px;
+  padding: 20px;
+  background-color: transparent;
+}
+
+/* Imagen: se adapta al contenedor */
+.card-img img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/* Contenido de la card */
+.card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+.card-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: var(--very-light-pink)
+}
+
+/* Botón */
+.card_button {
+  background-color: #14e049;
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.card_button:hover {
+  background-color: #0fa83a;
+}
 
 /* Seccion de ejemplos */
 .vermas{
@@ -310,10 +169,7 @@ nav a{
 }
 
 .ejemplos{
-    background-image: url('../multimedia/fondo_ejem.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;  
+    
 }
 .ejem_cards{
     display: flex;
@@ -321,11 +177,10 @@ nav a{
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 20px;
 }
 .ejem_cards_info{
-    margin: 0 20px 20px 20px;
-    padding-right: 20px;
+    margin: 20px;
+    /* padding-right: 20px; */
     position: relative;
 }
 .ejem_cards_info p{
@@ -354,7 +209,6 @@ nav a{
 /* Seccion de unete */
 .unete_container{
     height: 400px;
-    background-image: linear-gradient(to bottom, #0a0e16, #182735, #1b4255, #136073, #007f8c);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -392,143 +246,42 @@ nav a{
     font-size: var(--md);
     font-weight: bold; 
 }
-/* Seccion de footer */
-footer{
-    height: 100px;
-    background-color: var(--deep-ocean);
-    display: flex;
-    position: relative;
-    justify-content: center;
-    text-align: center;
-}
-.footer_logo img{
-    height: 100px;
-    position: absolute;
-    left: 0;
-}
-.footer_central_info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.footer_info ul{
-    display: flex;
-    
-}
-.footer_info ul li{
-    padding: 20px;
-}
-.footer_info ul li a{
-    color: var(--white);
-    font-size: var(--sm);
-}
-.footer_add_info p{
-    color: var(--white);
-    font-size: var(--sm);
-}
-.footer_redes{
-    display: flex;
-    height: 100px;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-
 
 /* Mobile */
 @media (max-width:716px) {
-    :root{
-        --sm: 12px;
-        --md: 14px;
-        --lg: 16px;
-        --ssm: 18px;
-        --mmd: 22px;
-        --llg: 24px;
-    }
-    .general_nav{
-        display: inline-block;
-        position: absolute;
-        background-color: var(--deep-ocean);
-        top: 90px;
-        left: 0;
-        height: 316px;
-        width: 228px;
-        padding: 20px;
-        margin-bottom: 10px;
-        border: 1px solid var(--hospital-green-black);
-        border-radius: 0 0 20px 0;
-    }
-    .inactive_nav{
-        display: none !important;
-    }
-    .second_nav{
-        display: inline-block;
-    }
-    .opciones{
-        display: block;
-        margin: 0;
-    }
-    .perfil{
-        display: inline-block;
-        position: absolute;
-        bottom: 20px;
-        padding-top: 12px;
-        right: auto;
-        border-top: 1px solid var(--hospital-green-black);
-    }
-    .navBar{
-        justify-content: center;
-        align-items: center;
-        /* position: relative; */
-    }
-    .hamburgesa_menu{
-        display: inline-block;
-        position: absolute;
-        left: 0;
-        width: 30px;
-        margin-left: 20px;
-    }
-
     .landscape{
-        display: block;
-        height: 500px;
-        margin-top: 90px;
+      display: block;
+      
+    }
+    .landscape-content{
+        width: 100%;
+        padding: 0;
     }
     .landscape h1{
-        text-align: center;
-        padding: 50px 0 0 0;
+      text-align: center;
     }
     .landscape p{
-        margin: 0 auto;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .landscape img{
         width: 100%;
     }
     .subtitle{
-        text-align: center;
-        padding: 20px 0 0px 0px;
+      text-align: center;
+      padding: 20px 0 0px 0px;
     }
-
+    .card {
+      grid-template-columns: 1fr;
+    }
+    .ejem_cards_info{
+        width: 100%;
+    }
+    .ejem_cards_info img{
+        width: 100%;
+    }
     .ejemplos .video_ejem iframe{
         width: 350px;
         height: 200px;
-    }
-
-    footer{
-        height: auto;
-        align-items: center;   
-        text-align: center; 
-    }
-    .footer_logo img {
-        height: 115px;
-        left: 0px;
-        top: 0;
-    }
-    .footer_info ul {
-        display: block;
-    }
-    .footer_redes {
-        bottom: auto;
     }
 }

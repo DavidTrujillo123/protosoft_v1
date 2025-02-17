@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,122 +13,133 @@
 
     <link rel="stylesheet" href="../css/home.css">
 </head>
+
 <body>
     <header>
         <div class="navBar">
-            <a href="./home.html"><div class="logo">
-                <img src="../multimedia/logo_proto.png" alt="logo de protosoft">
-                <p><span>Proto</span>soft</p>
+            <a href="./home.html">
+                <div class="logo">
+                    <img src="../multimedia/logo_proto.png" alt="logo de protosoft">
+                    <p><span>Proto</span>soft</p>
                 </div>
             </a>
             <!-- <div class="menu"> -->
-                <img class="hamburgesa_menu" src="../multimedia/icons8-menú-50.png" alt="menu de opciones">
-                <div class="general_nav inactive_nav">
-                    <div class="opciones">
-                        <ul class="second_nav">
-                            <li class="into_btn"><a href="./search.html">Búsqueda</a></li>
-                            <li class="into_btn"><a href="">Registros</a></li>
-                            <li class="into_btn"><a href="./about-us.html">Sobre nosotros</a></li>
-                        </ul>
-                    </div>
-                    <div class="perfil">
-                        <ul class="second_nav">
-                            <li class="into_btn"><a href="./login.html">Iniciar Sesión</a></li>
-                            <li class="into_btn"><a href="./create_account.html">Crear Cuenta</a></li>
-                        </ul>
-                    </div>
-
+            <img class="hamburgesa_menu" src="../multimedia/icons8-menú-50.png" alt="menu de opciones">
+            <div class="general_nav inactive_nav">
+                <div class="opciones">
+                    <ul class="second_nav">
+                        <li class="into_btn"><a href="./search.html">Búsqueda</a></li>
+                        <li class="into_btn"><a href="">Registros</a></li>
+                        <li class="into_btn"><a href="./about-us.html">Sobre nosotros</a></li>
+                    </ul>
                 </div>
+                <div class="perfil">
+                    <ul class="second_nav">
+                        <li class="into_btn"><a href="./login.html">Iniciar Sesión</a></li>
+                        <li class="into_btn"><a href="./create_account.html">Crear Cuenta</a></li>
+                    </ul>
+                </div>
+
+            </div>
             <!-- </div> -->
         </div>
         <nav>
             <a href="">Home</a>
         </nav>
     </header>
-    
-    <section class="landscape">
-        <h1 class="title">Reino protista</h1>
-        <p>
-            El reino Protista o el reino de los protistas o protoctistas, 
-            uno de los grandes reinos de la naturaleza, esconde todo un 
-            sin fin de organismos y formas de vida de lo más intrigantes y peculiares. 
-            Pese a aquellos primeros descubrimientos científicos sobre el reino 
-            Protista, en la actualidad sabemos que los protistas no son considerados 
-            ni mini-plantas o mini-animales, ni tampoco una combinación de ambos.
-        </p>
-        <div class="land_busqueda">
-            <form>
-                <input type="text" class="land_buscar_input">
-                <button type="submit" class="land_btn_buscar buscar_btn">
-                    Buscar<img src="../multimedia/icons8-lupa-50.png" alt="icono de lupa">
-                </button>
-            </form>
-        </div>
-    </section>
-    <section class="funcionalidades">
-        <h2 class="subtitle">Funcionalidades</h2>
-        <div class="fun_cards">
-            <div class="cards_into">
-                <img src="../multimedia/bdd_img.png" alt="icono de una base de datos">
-                <div class="cards_info">
-                    <p>Base de datos</p>
-                </div>
-                <div class="fun_extra_info">
-                    <p>
-                        
-                    </p>
+
+    <main>
+        <section class="landscape">
+            <div class="landscape-content">
+                <h1 class="title">Reino protista</h1>
+                <p>
+                    El reino Protista o el reino de los protistas o protoctistas,
+                    uno de los grandes reinos de la naturaleza, esconde todo un
+                    sin fin de organismos y formas de vida de lo más intrigantes y peculiares.
+                    Pese a aquellos primeros descubrimientos científicos sobre el reino
+                    Protista, en la actualidad sabemos que los protistas no son considerados
+                    ni mini-plantas o mini-animales, ni tampoco una combinación de ambos.
+                </p>
+                <div class="land_busqueda">
+                    <form>
+                        <input type="text" class="land_buscar_input">
+                        <button type="submit" class="land_btn_buscar buscar_btn">
+                            Buscar<img src="../multimedia/icons8-lupa-50.png" alt="icono de lupa">
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="cards_into">
-                <img src="../multimedia/update.png" alt="icono de un engranaje">
-                <div class="cards_info">
-                    <p>Actualizaciones constantes</p>
+            <img src="../multimedia/amoeba.gif" />
+        </section>
+
+        <section class="funcionalidades">
+            <h2 class="subtitle">Funcionalidades</h2>
+            <div class="fun_cards">
+                <!-- Card 1: Base de datos -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="../multimedia/bdd_img.png" alt="Base de datos">
+                    </div>
+                    <div class="card-content">
+                        <h3>Base de datos segura</h3>
+                        <p>
+                            Almacena y gestiona tus datos de manera eficiente con nuestra base de datos
+                            cifrada y de alto rendimiento.
+                        </p>
+                        <a href="#" class="card_button">Saber más</a>
+                    </div>
                 </div>
-                <div class="fun_extra_info">
-                    <p>
-                        
-                    </p>
+
+                <!-- Card 2: Actualizaciones constantes -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="../multimedia/update.png" alt="Actualizaciones constantes">
+                    </div>
+                    <div class="card-content">
+                        <h3>Mantente actualizado</h3>
+                        <p>
+                            Recibe actualizaciones automáticas con nuevas funciones y mejoras de seguridad.
+                        </p>
+                        <a href="#" class="card_button">Saber más</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Contenido multimedia -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="../multimedia/multimedia.png" alt="Contenido multimedia">
+                    </div>
+                    <div class="card-content">
+                        <h3>Multimedia integrado</h3>
+                        <p>
+                            Sube y comparte imágenes, videos y archivos de audio con facilidad.
+                        </p>
+                        <a href="#" class="card_button">Saber más</a>
+                    </div>
                 </div>
             </div>
-            <div class="cards_into">
-                <img src="../multimedia/multimedia.png" alt="icono de multimedia">
-                <div class="cards_info">
-                    <p>Contenido multimedia</p>
-                </div>
-                <div class="fun_extra_info">
-                    <p>
-                        
-                    </p>
-                </div>
+        </section>
+
+
+        <section class="ejemplos">
+            <h2 class="subtitle">Protistas recientes</h2>
+            <div class="bouncing-loader">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-        </div>
-    </section>
+            <div class="ejem_cards">
+            </div>
+        </section>
 
-    <section class="ejemplos">
-        <h2 class="subtitle">Protistas recientes</h2>
-        <div class="bouncing-loader">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="ejem_cards">
-        </div>
-        <div class="video_ejem">
-            <iframe src="https://www.youtube.com/embed/70ZUED8syCw" 
-                title="El REINO PROTISTA explicado: características, ejemplos, clasificación🦠🔬" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen>
-            </iframe>
-        </div>
-    </section>
+        <section>
+            <div class="unete_container">
+                <h2 class="subtitle">Únete a esta comunidad para investigar y conocer más Protistas</h2>
+                <a href="./login.html"><button type="submit" class="primary_btn unete_btn">Empieza ahora</button></a>
+            </div>
+        </section>
 
-    <section>
-        <div class="unete_container">
-            <h2 class="subtitle">Únete a esta comunidad para investigar y conocer más Protistas</h2>
-            <a href="./login.html"><button type="submit" class="primary_btn unete_btn">Empieza ahora</button></a>
-        </div>
-    </section>
-
+    </main>
 
     <footer>
         <div class="footer_logo">
@@ -146,7 +158,8 @@
             </div>
         </div>
         <div class="footer_redes">
-            <a href="https://www.facebook.com/eduardo.echeverria.581"><img src="../multimedia/icons8-facebook-50 (1).png" alt="logo de facebook" ></a>
+            <a href="https://www.facebook.com/eduardo.echeverria.581"><img
+                    src="../multimedia/icons8-facebook-50 (1).png" alt="logo de facebook"></a>
             <img src="../multimedia/icons8-instagram-50.png" alt="logo de instagram">
         </div>
     </footer>
@@ -155,4 +168,5 @@
     <script src="../js/get_simple_prot.js"></script>
     <script src="../js/simple_registres.js"></script>
 </body>
+
 </html>
