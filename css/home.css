@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content: center;
 }
-.landscape img{
+.land-img{
     /* height: 380px;
     width: 400px; */
     width: 40%;
@@ -38,7 +38,7 @@
 
 /* Barra de busqueda */
 .land_busqueda{
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .land_busqueda form{
     display: flex;
@@ -264,7 +264,11 @@
       margin: 0 auto;
       width: 100%;
     }
-    .landscape img{
+    .land-img{
+        width: 100%;
+        margin-top: 24px;
+    }
+    .land_buscar_input{
         width: 100%;
     }
     .subtitle{

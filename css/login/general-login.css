@@ -1,0 +1,257 @@
+@import url("../general.css");
+
+
+/* Cabezera y barra de navegacion */
+.navBar {
+  background-color: var(--deep-ocean);
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid var(--very-light-pink);
+  height: 70px;
+  width: auto;
+}
+
+.navBar .logo {
+  display: flex;
+  height: 70px;
+  align-items: center;
+}
+
+.navBar .logo p {
+  color: var(--white);
+}
+
+.navBar .logo span {
+  font-weight: bold;
+  color: var(--hospital-green-black);
+}
+
+.navBar .logo img {
+  height: 70px;
+  position: relative;
+}
+
+.opciones {
+  margin-left: 32px;
+  width: auto;
+}
+
+.general_nav {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  position: relative;
+  width: 100%;
+}
+
+.second_nav {
+  display: flex;
+}
+
+.into_btn {
+  padding: 10px;
+}
+
+.into_btn a {
+  color: var(--very-light-pink);
+}
+
+.into_btn a:hover{
+  color: var(--hospital-green-black);
+  font-weight: bold; 
+}
+
+.perfil {
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+  cursor: pointer;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+.perfil_email {
+  display: flex;
+}
+
+.flecha_perfil {
+  margin: 0 10px 0 10px;
+  transform: rotate(90deg);
+}
+
+.icono_perfil {
+  border: 3px solid var(--hospital-green-black);
+  border-radius: 60%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: block;
+  height: 40px;
+}
+
+/* Menu de registro y perfil */
+.desktop-menu {
+  width: 128px;
+  height: auto;
+  border: 1px solid var(--very-light-pink);
+  border-radius: 6px;
+  padding: 10px 10px 0 10px;
+  background-color: var(--white);
+  position: absolute;
+}
+
+.menu_registros {
+  left: 142px;
+  /* position: absolute; */
+}
+
+.menu_perfil {
+  top: 40px;
+  right: 0;
+  /* position: absolute; */
+}
+
+.menu_perfil ul li {
+  text-align: end;
+}
+
+.menu_perfil ul li:not(2) {
+  font-weight: bold;
+}
+
+.desktop-menu ul li a {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.desktop-menu ul li a:hover {
+  color: var(--hospital-green-black);
+}
+
+.desktop-menu ul li:nth-child(2) {
+  padding-top: 20px;
+  border-top: 1px solid var(--very-light-pink);
+}
+
+.menu_perfil ul li:nth-child(2) a {
+  color: var(--hospital-green);
+  font-size: var(--sm);
+}
+
+#nav_registros {
+  cursor: pointer;
+}
+
+
+
+/* LOADGING */
+.loading_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--deep-ocean);
+  z-index: 9999;
+}
+
+.loading_container img {
+  height: 200px;
+}
+
+.loading-area {
+  display: grid;
+  place-items: center;
+}
+
+.loader div {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-animation: animate 1.5s ease-in-out infinite;
+  animation: animate 1.5s ease-in-out infinite;
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.loader div:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.loader div:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.loader div:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.loader div:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.loader div:nth-child(5) {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.loader div:nth-child(6) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.loader div:nth-child(7) {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+@-webkit-keyframes animate {
+  0%, 100% {
+      -webkit-transform: scale(0.2);
+      transform: scale(0.2);
+      background-color: var(--hospital-green);
+  }
+  40% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      background-color: var(--hospital-green);
+  }
+  50% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      background-color: var(--hospital-green-black);
+  }
+}
+
+@keyframes animate {
+  0%, 100% {
+      -webkit-transform: scale(0.2);
+      transform: scale(0.2);
+      background-color: var(--hospital-green);
+  }
+  40% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      background-color: var(--hospital-green);
+  }
+  50% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      background-color: var(--hospital-green-black);
+  }
+}
+
+/* FIN LOADING */
